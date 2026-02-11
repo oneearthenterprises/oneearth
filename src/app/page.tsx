@@ -40,7 +40,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
       <div className="relative z-10 flex h-full items-center">
-        <div className="container max-w-screen-2xl">
+        <div className="container mx-auto max-w-screen-2xl">
           <div className="max-w-xl animate-fade-in-up">
             <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
               One Earth Enterprises
@@ -92,7 +92,7 @@ const verticals = [
 function VerticalsSection() {
   return (
     <section id="verticals" className="py-16 sm:py-24">
-      <div className="container max-w-screen-2xl">
+      <div className="container mx-auto max-w-screen-2xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Our Business Verticals
@@ -159,7 +159,7 @@ const values = [
 function ValuesSection() {
   return (
     <section id="values" className="bg-secondary py-16 sm:py-24">
-      <div className="container max-w-screen-2xl">
+      <div className="container mx-auto max-w-screen-2xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Why One Earth
@@ -192,14 +192,14 @@ function ValuesSection() {
 function ContactSection() {
   return (
     <section id="contact" className="py-16 sm:py-24">
-      <div className="container max-w-screen-2xl">
+      <div className="container mx-auto max-w-screen-2xl">
         <ContactForm />
       </div>
     </section>
   );
 }
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <HeroSection />

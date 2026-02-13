@@ -100,28 +100,30 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-auto gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {aboutSubLinks.map((subLink) => (
-                      <ListItem
-                        key={subLink.title}
-                        href={subLink.href}
-                        title={subLink.title}
-                      >
-                        {subLink.description}
-                      </ListItem>
-                    ))}
-                  </ul>
+                  <div className="container mx-auto max-w-screen-2xl">
+                    <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
+                      {aboutSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        >
+                          {subLink.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#investments" legacyBehavior passHref>
+                <Link href="#investments" asChild>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Investments
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#people-careers" legacyBehavior passHref>
+                <Link href="#people-careers" asChild>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     People & Careers
                   </NavigationMenuLink>
@@ -130,17 +132,19 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-auto gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    {newsSubLinks.map((subLink) => (
-                      <ListItem
-                        key={subLink.title}
-                        href={subLink.href}
-                        title={subLink.title}
-                      >
-                        {subLink.description}
-                      </ListItem>
-                    ))}
-                  </ul>
+                  <div className="container mx-auto max-w-screen-2xl">
+                    <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
+                      {newsSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        >
+                          {subLink.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>

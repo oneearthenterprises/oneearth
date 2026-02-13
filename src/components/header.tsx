@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import * as React from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -15,21 +15,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { 
-    NavigationMenu, 
-    NavigationMenuList, 
-    NavigationMenuItem, 
-    NavigationMenuTrigger, 
-    NavigationMenuContent, 
-    NavigationMenuLink,
-    navigationMenuTriggerStyle
-} from '@/components/ui/navigation-menu';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from '@/lib/utils';
 
 const aboutSubLinks: { title: string; href: string }[] = [
   { title: 'About', href: '/aboutus' },
   { title: 'Novo Group', href: '#' },
-  { title: 'Leadership', href: '/founders-note' },
   { title: 'Responsibility', href: '/core-values' },
   { title: 'Novo Nordisk Foundation', href: '#' },
 ];
@@ -43,13 +39,20 @@ const mainNavLinks: { title: string; href: string }[] = [
 const mobileNavLinks = [
     {
         label: 'About',
-        subLinks: aboutSubLinks,
+        subLinks: [
+          { title: 'About', href: '/aboutus' },
+          { title: 'Novo Group', href: '#' },
+          { title: 'Leadership', href: '/founders-note'},
+          { title: 'Responsibility', href: '/core-values' },
+          { title: 'Novo Nordisk Foundation', href: '#' },
+        ],
     },
     ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
 ];
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
+  const [isDropdownOpen, setDropdownOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
@@ -61,34 +64,39 @@ export function Header() {
         
         <div className="flex items-center gap-2">
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>About</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[600px] gap-4 p-6 md:w-[700px] md:grid-cols-3 lg:w-[800px] ">
-                      {aboutSubLinks.map((link) => (
-                          <ListItem
-                              key={link.title}
-                              title={link.title}
-                              href={link.href}
-                          />
-                      ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+          <nav className="hidden items-center gap-2 md:flex">
+            <DropdownMenu open={isDropdownOpen} onOpenChange={setDropdownOpen}>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "gap-1 px-4 py-2 text-sm font-medium hover:bg-accent focus:bg-accent data-[state=open]:bg-accent",
+                    isDropdownOpen && "bg-accent"
+                  )}
+                >
+                  About
+                  <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-[400px] bg-white p-4">
+                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                    {aboutSubLinks.map((link) => (
+                      <DropdownMenuItem key={link.title} asChild className="p-2 text-base font-medium">
+                        <Link href={link.href}>{link.title}</Link>
+                      </DropdownMenuItem>
+                    ))}
+                 </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-              {mainNavLinks.map((link) => (
-                <NavigationMenuItem key={link.title}>
-                  <Link href={link.href} legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      {link.title}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+            {mainNavLinks.map((link) => (
+              <Button asChild variant="ghost" key={link.title} className="px-4 py-2 text-sm font-medium">
+                <Link href={link.href}>
+                  {link.title}
+                </Link>
+              </Button>
+            ))}
+          </nav>
 
           {/* Mobile Navigation */}
           <div className="flex items-center md:hidden">
@@ -162,26 +170,3 @@ export function Header() {
     </header>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className
-          )}
-          {...props}
-        >
-          <div className="text-lg font-semibold leading-none">{title}</div>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';

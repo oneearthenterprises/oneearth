@@ -63,7 +63,7 @@ function FoundersNoteSection() {
     <section id="founders-note" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-          <div className="relative h-[600px] w-full overflow-hidden rounded-lg">
+          <div className="relative h-screen w-full overflow-hidden rounded-lg">
             <Image
               src="/assets/images/founders.png"
               alt="A portrait of the company founder."
@@ -268,7 +268,7 @@ function GuidingPrinciplesSection() {
               Our Guiding Principles
             </h2>
           </div>
-          <div className="md:col-span-1 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {principles.map((principle) => (
               <div key={principle.title}>
                 <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>

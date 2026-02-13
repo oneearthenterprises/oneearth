@@ -38,10 +38,6 @@ const aboutSubLinks: { title: string; href: string }[] = [
     href: '/core-values',
   },
   {
-    title: 'Leadership',
-    href: '#',
-  },
-  {
     title: 'Responsibility',
     href: '#',
   },

@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-16 md:grid-cols-4 md:px-6">
+      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-16 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="flex flex-col items-start gap-4 md:col-span-2">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="h-8 w-8 text-primary" />
@@ -20,6 +20,7 @@ export function Footer() {
           <ul className="space-y-2">
             <li><Link href="#overview" className="text-sm text-muted-foreground hover:text-primary">Overview</Link></li>
             <li><Link href="#verticals" className="text-sm text-muted-foreground hover:text-primary">Business Verticals</Link></li>
+            <li><Link href="#projects" className="text-sm text-muted-foreground hover:text-primary">Projects</Link></li>
             <li><Link href="#values" className="text-sm text-muted-foreground hover:text-primary">Why One Earth</Link></li>
             <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact Us</Link></li>
           </ul>
@@ -43,7 +44,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4 md:px-6">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} One Earth Enterprises. All rights reserved.
           </p>

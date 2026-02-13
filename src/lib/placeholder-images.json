@@ -5,6 +5,24 @@
       "description": "A lush, green landscape representing growth and nature, with a modern building in the distance.",
       "imageUrl": "https://images.unsplash.com/photo-1571475549372-7e8ee93796dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzcwODExMzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "nature corporate"
+    },
+    {
+      "id": "project-forestgate",
+      "description": "A lush, green forest representing sustainable living for Forestgate.",
+      "imageUrl": "https://images.unsplash.com/photo-1612865305345-7cc1deb313d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3Jlc3QlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcwOTYxMDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest architecture"
+    },
+    {
+      "id": "project-ayubhava",
+      "description": "A serene wellness-oriented setting for Ayubhava.",
+      "imageUrl": "https://images.unsplash.com/photo-1666009711663-a9c51b15a05b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3ZWxsbmVzcyUyMG5hdHVyZXxlbnwwfHx8fDE3NzA5NjEwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wellness nature"
+    },
+    {
+      "id": "project-royalinfra",
+      "description": "Modern infrastructure representing Royal Infra.",
+      "imageUrl": "https://images.unsplash.com/photo-1759111135279-a5c517599412?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NzA5NjEwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern infrastructure"
     }
   ]
 }

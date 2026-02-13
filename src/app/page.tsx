@@ -40,7 +40,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
       <div className="relative z-10 flex h-full items-center">
-        <div className="container mx-auto max-w-screen-2xl px-4 md:px-6">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl animate-fade-in-up">
             <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
               One Earth Enterprises
@@ -92,7 +92,7 @@ const verticals = [
 function VerticalsSection() {
   return (
     <section id="verticals" className="py-16 sm:py-24">
-      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Our Business Verticals
@@ -129,6 +129,69 @@ function VerticalsSection() {
   );
 }
 
+function ProjectsSection() {
+  const projects = [
+    {
+      title: 'Forestgate',
+      description: 'Sustainable residential development focused on green living and thoughtful planning.',
+      imageId: 'project-forestgate',
+    },
+    {
+      title: 'Ayubhava',
+      description: 'A wellness-oriented project designed around nature, balance, and lifestyle.',
+      imageId: 'project-ayubhava',
+    },
+    {
+      title: 'Royal Infra',
+      description: 'An infrastructure-focused brand delivering quality-driven real estate solutions.',
+      imageId: 'project-royalinfra',
+    },
+  ];
+
+  return (
+    <section id="projects" className="py-16 sm:py-24">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Our Projects
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Building communities and infrastructure for a better tomorrow.
+          </p>
+        </div>
+        <div className="mt-12 flex h-[60vh] w-full flex-col gap-4 md:flex-row">
+          {projects.map((project) => {
+            const image = PlaceHolderImages.find((p) => p.id === project.imageId);
+            return (
+              <div
+                key={project.title}
+                className="group relative flex-1 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out hover:flex-[3]"
+              >
+                {image && (
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+                    data-ai-hint={image.imageHint}
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold">{project.title}</h3>
+                  <p className="mt-2 text-sm opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const values = [
   {
     icon: Lightbulb,
@@ -159,7 +222,7 @@ const values = [
 function ValuesSection() {
   return (
     <section id="values" className="bg-secondary py-16 sm:py-24">
-      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Why One Earth
@@ -192,7 +255,7 @@ function ValuesSection() {
 function ContactSection() {
   return (
     <section id="contact" className="py-16 sm:py-24">
-      <div className="container mx-auto max-w-screen-2xl px-4 md:px-6">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <ContactForm />
       </div>
     </section>
@@ -204,6 +267,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <VerticalsSection />
+      <ProjectsSection />
       <ValuesSection />
       <ContactSection />
     </>

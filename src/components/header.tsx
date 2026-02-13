@@ -30,10 +30,14 @@ const aboutSubLinks: { title: string; href: string }[] = [
   { title: 'Novo Nordisk Foundation', href: '#' },
 ];
 
+const newsSubLinks: { title: string; href: string }[] = [
+    { title: 'News', href: '/news' },
+    { title: 'Blogs', href: '/blogs' },
+];
+
 const mainNavLinks: { title: string; href: string }[] = [
     { title: 'Investments', href: '#' },
     { title: 'People & Careers', href: '#' },
-    { title: 'News & Reports', href: '/news' },
 ];
 
 const mobileNavLinks = [
@@ -48,11 +52,16 @@ const mobileNavLinks = [
         ],
     },
     ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
+    {
+        label: 'News & Updates',
+        subLinks: newsSubLinks,
+    }
 ];
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
-  const [isDropdownOpen, setDropdownOpen] = React.useState(false);
+  const [isAboutDropdownOpen, setAboutDropdownOpen] = React.useState(false);
+  const [isNewsDropdownOpen, setNewsDropdownOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
@@ -65,20 +74,20 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-2 md:flex">
-            <DropdownMenu open={isDropdownOpen} onOpenChange={setDropdownOpen}>
+            <DropdownMenu open={isAboutDropdownOpen} onOpenChange={setAboutDropdownOpen}>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
                   className={cn(
                     "gap-1 px-4 py-2 text-sm font-medium hover:bg-accent focus:bg-accent data-[state=open]:bg-accent",
-                    isDropdownOpen && "bg-accent"
+                    isAboutDropdownOpen && "bg-accent"
                   )}
                 >
                   About
                   <ChevronDown className="h-4 w-4 transition-transform duration-200" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-[400px] bg-white p-4">
+              <DropdownMenuContent align="start" className="w-[400px] border-none bg-white p-4 shadow-lg">
                  <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                     {aboutSubLinks.map((link) => (
                       <DropdownMenuItem key={link.title} asChild className="p-2 text-base font-medium">
@@ -96,6 +105,28 @@ export function Header() {
                 </Link>
               </Button>
             ))}
+
+            <DropdownMenu open={isNewsDropdownOpen} onOpenChange={setNewsDropdownOpen}>
+                <DropdownMenuTrigger asChild>
+                    <Button
+                    variant="ghost"
+                    className={cn(
+                        "gap-1 px-4 py-2 text-sm font-medium hover:bg-accent focus:bg-accent data-[state=open]:bg-accent",
+                        isNewsDropdownOpen && "bg-accent"
+                    )}
+                    >
+                    News & Updates
+                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+                    </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="border-none bg-white p-2 shadow-lg">
+                    {newsSubLinks.map((link) => (
+                        <DropdownMenuItem key={link.title} asChild className="p-2 text-base font-medium">
+                        <Link href={link.href}>{link.title}</Link>
+                        </DropdownMenuItem>
+                    ))}
+                </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
 
           {/* Mobile Navigation */}

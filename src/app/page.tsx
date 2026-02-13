@@ -64,7 +64,7 @@ function AboutUsSection() {
         <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
           About us in Brief
         </p>
-        <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl">
+        <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl" style={{color: '#27272a', fontSize: '16px'}}>
           The One Earth Enterprises was founded with a clear vision: to build
           businesses that are resilient, scalable, and designed for long-term
           impact. As a diversified parent company operating across IT services,
@@ -89,21 +89,25 @@ function ProjectsSection() {
       title: 'Intgelico',
       description: 'Sustainable residential development focused on green living and thoughtful planning.',
       imageId: 'project-intgelico',
+      tags: ['Sustainable', 'Green Living', 'Residential'],
     },
     {
       title: 'Ayubhava',
       description: 'A wellness-oriented project designed around nature, balance, and lifestyle.',
       imageId: 'project-ayubhava',
+      tags: ['Wellness', 'Nature', 'Lifestyle'],
     },
     {
       title: 'Royal Infra',
       description: 'An infrastructure-focused brand delivering quality-driven real estate solutions.',
       imageId: 'project-royalinfra',
+      tags: ['Infrastructure', 'Quality', 'Real Estate'],
     },
     {
       title: 'Global Roots',
       description: 'Connecting communities through globally-inspired and locally-rooted projects.',
       imageId: 'project-globalroots',
+      tags: ['Community', 'Global', 'Local'],
     },
   ];
 
@@ -139,8 +143,18 @@ function ProjectsSection() {
                 <div className="absolute right-6 top-6 z-10 scale-0 rounded-full bg-background/90 p-3 text-primary backdrop-blur-sm transition-all duration-300 group-hover:scale-100">
                   <ArrowUpRight className="h-6 w-6" />
                 </div>
-                <div className="absolute bottom-0 left-0 p-6 text-white">
+                <div className="absolute bottom-0 left-0 w-full p-6 text-white">
                   <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                  <div className="mt-4 flex flex-wrap gap-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/50 bg-white/20 px-3 py-1 text-xs text-white backdrop-blur-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                   <p className="mt-2 text-sm opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     {project.description}
                   </p>

@@ -62,20 +62,22 @@ function AboutUsSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Aspiration
-        </p>
-        <p
-          className="mt-4 font-thin text-foreground"
-          style={{
-            fontSize: 'clamp(2.5rem, 5vw + 1rem, 5rem)',
-            lineHeight: 1.175,
-            color: '#27272a',
-            fontWeight: 100,
-          }}
-        >
-          Our aspiration is to build and scale businesses that deliver consistent performance, long-term growth, and enduring stakeholder confidence.
-        </p>
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Aspiration
+          </h2>
+          <p
+            className="mt-4 font-thin text-foreground"
+            style={{
+              fontSize: 'clamp(2.5rem, 5vw + 1rem, 5rem)',
+              lineHeight: 1.175,
+              color: '#27272a',
+              fontWeight: 100,
+            }}
+          >
+            Our aspiration is to build and scale businesses that deliver consistent performance, long-term growth, and enduring stakeholder confidence.
+          </p>
+        </div>
       </div>
     </section>
   );

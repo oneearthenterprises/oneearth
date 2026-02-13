@@ -71,7 +71,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out md:absolute",
+      "left-0 top-0 w-full md:absolute",
       className
     )}
     {...props}
@@ -89,6 +89,8 @@ const NavigationMenuViewport = React.forwardRef<
     className={cn(
       "absolute left-0 top-full flex h-0 w-full justify-center overflow-hidden bg-background transition-[height] duration-300 ease-out",
       "data-[state=open]:h-[400px]",
+      "data-[state=open]:animate-in data-[state=open]:fade-in-0",
+      "data-[state=closed]:animate-out data-[state=closed]:fade-out-0",
       "md:fixed md:left-0 md:top-14 md:w-screen",
       className
     )}

@@ -94,7 +94,7 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6">
+                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6" style={{height: '400px'}}>
                       {aboutSubLinks.map((subLink) => (
                         <ListItem
                           key={subLink.title}
@@ -110,7 +110,7 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6">
+                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6" style={{height: '400px'}}>
                       {newsSubLinks.map((subLink) => (
                           <ListItem
                           key={subLink.title}

@@ -231,31 +231,35 @@ function ProjectsSection() {
 function GuidingPrinciplesSection() {
   const principles = [
     {
-      title: 'Values Driven',
-      subtitle: 'A values-based company:',
+      title: 'Purpose-Led Values',
+      subtitle: 'Performance guided by integrity',
       points: [
-        'We strive for high performance with respect and responsibility',
-        'Leading by example',
+        'High performance with accountability and respect',
+        'Leadership through example',
       ],
     },
     {
-      title: 'Ambitious Strategy',
-      subtitle: '',
+      title: 'Long-Term Strategy',
+      subtitle: 'Focused on sustainable growth',
       points: [
-        'Return Driven',
-        'Life Science Allocation',
-        'Diversified Capital Investments Allocation',
-        'Significant Direct Investments',
+        'Disciplined capital allocation',
+        'Diversified investments across core sectors',
       ],
     },
     {
-      title: 'Excellence in operations',
-      subtitle: '',
+      title: 'Operational Excellence',
+      subtitle: 'Built on strong foundations',
       points: [
-        'Ensuring solid foundations for success',
-        'Talent Nurture & Development',
-        'Governance & Processes',
-        'Strong collaboration and cohesion',
+        'Scalable systems and execution',
+        'Talent development and governance',
+      ],
+    },
+    {
+      title: 'Trust & Stewardship',
+      subtitle: 'Responsible and transparent leadership',
+      points: [
+        'Long-term partnerships',
+        'Ethical governance and risk discipline',
       ],
     },
   ];

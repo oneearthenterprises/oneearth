@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Logo } from '@/components/icons';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -46,8 +46,8 @@ const aboutSubLinks: { title: string; href: string }[] = [
     href: '#',
   },
   {
-    title: 'Novo Nordisk Foundation',
-    href: '#',
+    title: 'Core Values',
+    href: '/core-values',
   },
 ];
 
@@ -73,7 +73,6 @@ const navLinks = [
     subLinks: aboutSubLinks,
   },
   { href: "/founders-note", label: "Founder's Note" },
-  { href: '#people-careers', label: 'People & Careers' },
   {
     href: '#news-reports',
     label: 'News & Reports',
@@ -83,6 +82,12 @@ const navLinks = [
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
@@ -96,52 +101,47 @@ export function Header() {
           </Link>
         </div>
         <div className="hidden flex-1 items-center justify-end md:flex">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>About</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
-                    {aboutSubLinks.map((subLink) => (
-                      <ListItem
-                        key={subLink.title}
-                        href={subLink.href}
-                        title={subLink.title}
-                      />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/founders-note" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Founder's Note
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#people-careers" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    People & Careers
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
-                    {newsSubLinks.map((subLink) => (
-                       <ListItem
-                        key={subLink.title}
-                        href={subLink.href}
-                        title={subLink.title}
-                      />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+         {isClient && (
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
+                      {aboutSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        />
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/founders-note" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      Founder's Note
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
+                      {newsSubLinks.map((subLink) => (
+                         <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        />
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          )}
         </div>
         <div className="flex items-center md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>

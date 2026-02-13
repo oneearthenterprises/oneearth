@@ -128,6 +128,7 @@ function ProjectsSection() {
       description: 'Sustainable residential development focused on green living and thoughtful planning.',
       imageId: 'project-intgelico',
       tags: ['Sustainable', 'Green Living', 'Residential'],
+      href: 'https://intellicoit.com/',
     },
     {
       title: 'Ayubhava',
@@ -161,13 +162,11 @@ function ProjectsSection() {
           </p>
         </div>
         <div className="mt-12 flex h-[60vh] w-full flex-col gap-4 md:flex-row">
-          {projects.map((project) => {
+          {projects.map((project: any) => {
             const image = PlaceHolderImages.find((p) => p.id === project.imageId);
-            return (
-              <div
-                key={project.title}
-                className="group relative flex-1 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out hover:flex-[3]"
-              >
+            
+            const cardInner = (
+              <>
                 {image && (
                   <Image
                     src={image.imageUrl}
@@ -184,7 +183,7 @@ function ProjectsSection() {
                 <div className="absolute bottom-0 left-0 w-full p-6 text-white">
                   <h3 className="text-2xl font-bold text-white transition-all duration-300 ease-in-out group-hover:text-3xl group-hover:font-extrabold">{project.title}</h3>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                    {project.tags.map((tag: string) => (
                       <span
                         key={tag}
                         className="rounded-full border border-white/50 bg-white/20 px-3 py-1 text-xs text-white backdrop-blur-sm"
@@ -197,6 +196,29 @@ function ProjectsSection() {
                     {project.description}
                   </p>
                 </div>
+              </>
+            );
+
+            if (project.href) {
+              return (
+                <Link
+                  href={project.href}
+                  key={project.title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex-1 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out hover:flex-[3]"
+                >
+                  {cardInner}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={project.title}
+                className="group relative flex-1 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out hover:flex-[3]"
+              >
+                {cardInner}
               </div>
             );
           })}

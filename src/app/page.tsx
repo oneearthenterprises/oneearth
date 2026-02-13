@@ -187,9 +187,9 @@ function FoundersNoteSection() {
             )}
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Founder’s Note
-            </p>
+            </h2>
             <p className="mt-4 text-lg font-light leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
               The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
             </p>

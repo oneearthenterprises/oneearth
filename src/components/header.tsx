@@ -24,10 +24,8 @@ import {
 import { cn } from '@/lib/utils';
 
 const aboutSubLinks: { title: string; href: string }[] = [
-  { title: 'About', href: '/aboutus' },
-  { title: 'Novo Group', href: '#' },
-  { title: 'Responsibility', href: '/core-values' },
-  { title: 'Novo Nordisk Foundation', href: '#' },
+  { title: 'About us', href: '/aboutus' },
+  { title: 'Core Values', href: '/core-values' },
 ];
 
 const newsSubLinks: { title: string; href: string }[] = [

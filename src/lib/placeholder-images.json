@@ -71,6 +71,12 @@
       "description": "Image representing an integrated enterprise",
       "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbnRlZ3JhdGVkJTIwZW50ZXJwcmlzZXxlbnwwfHx8fDE3NzA5NzQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "integrated enterprise"
+    },
+    {
+      "id": "about-us-banner",
+      "description": "A large flock of birds flying in formation against a dusky sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1516733989602-4b6e51de1f76?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "birds flock"
     }
   ]
 }

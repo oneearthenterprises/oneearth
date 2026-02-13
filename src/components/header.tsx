@@ -34,7 +34,11 @@ const aboutMenuItems: { title: string; href: string }[] = [
 const mainNavLinks: { title: string; href: string }[] = [
     { title: 'Investments', href: '#' },
     { title: 'People & Careers', href: '#' },
-    { title: 'News & Reports', href: '/news' },
+];
+
+const newsAndUpdatesLinks = [
+  { title: 'News', href: '/news' },
+  { title: 'Blogs', href: '/blogs' },
 ];
 
 const mobileNavLinks = [
@@ -43,6 +47,10 @@ const mobileNavLinks = [
         subLinks: aboutMenuItems,
     },
     ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
+    {
+        label: 'News & Updates',
+        subLinks: newsAndUpdatesLinks
+    },
 ];
 
 export function Header() {
@@ -90,6 +98,27 @@ export function Header() {
                 </Link>
               </NavigationMenuItem>
             ))}
+            
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:underline">News & Updates</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-auto min-w-[200px] gap-3 p-4">
+                    {newsAndUpdatesLinks.map((link) => (
+                        <li key={link.title}>
+                            <NavigationMenuLink asChild>
+                                <Link
+                                    href={link.href}
+                                    className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                >
+                                    {link.title}
+                                </Link>
+                            </NavigationMenuLink>
+                        </li>
+                    ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
           </NavigationMenuList>
         </NavigationMenu>
 

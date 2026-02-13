@@ -155,7 +155,7 @@ function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <p className="mt-2 text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <p className="mt-2 text-sm">
                     {project.description}
                   </p>
                 </div>

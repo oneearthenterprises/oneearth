@@ -60,7 +60,7 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="data-[state=open]:bg-secondary">About</Button>
+                <Button variant="ghost" className="data-[state=open]:bg-accent data-[state=open]:text-accent-foreground">About</Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-[240px] bg-white">
                 {aboutSubLinks.map((subLink) => (

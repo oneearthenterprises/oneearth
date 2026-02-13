@@ -28,29 +28,25 @@ import {
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
 
-const aboutSubLinks: { title: string; href: string, description: string }[] = [
+const aboutSubLinks: { title: string; href: string }[] = [
   {
     title: 'About',
     href: '/aboutus',
-    description: 'Learn more about our company, mission, and values.'
   },
   {
     title: 'Core Values',
     href: '/core-values',
-    description: 'Discover the principles that guide our work and culture.'
   },
 ];
 
-const newsSubLinks: { title: string; href: string, description: string }[] = [
+const newsSubLinks: { title: string; href: string }[] = [
   {
     title: 'News',
     href: '/news',
-    description: 'Read our latest announcements and press releases.'
   },
   {
     title: 'Blogs',
     href: '/blogs',
-    description: 'Explore articles and insights from our team.'
   },
 ];
 
@@ -215,30 +211,3 @@ export function Header() {
     </header>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, href, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <Link
-          ref={ref}
-          href={href || '#'}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';

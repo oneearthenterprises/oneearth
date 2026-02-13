@@ -62,7 +62,7 @@ function AboutUsSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Aspiration
           </h2>

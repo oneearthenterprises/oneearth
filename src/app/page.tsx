@@ -39,7 +39,7 @@ function HeroSection() {
       <div className="w-full">
         <video
           className="h-full w-full object-cover"
-          src="https://videos.pexels.com/video-files/3205624/3205624-hd.mp4"
+          src="/assets/videos/herosectionbanner.mp4"
           autoPlay
           loop
           muted

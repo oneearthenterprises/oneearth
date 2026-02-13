@@ -37,7 +37,7 @@ function WhatWeDoSection() {
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto grid max-w-screen-xl grid-cols-1 gap-y-8 px-4 md:grid-cols-3 md:gap-x-16 lg:px-8">
         <div className="md:col-span-1">
-          <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             What We Do
           </p>
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-foreground">
@@ -61,7 +61,7 @@ function AboutUsSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+        <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
           About us in Brief
         </p>
         <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl" style={{color: '#27272a', fontSize: '16px'}}>
@@ -187,7 +187,7 @@ function FoundersNoteSection() {
             )}
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+            <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
               Founder’s Note
             </p>
             <p className="mt-4 text-lg font-light leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>

@@ -144,7 +144,7 @@ function ProjectsSection() {
                   <ArrowUpRight className="h-6 w-6" />
                 </div>
                 <div className="absolute bottom-0 left-0 w-full p-6 text-white">
-                  <h3 className="text-2xl font-bold text-white">{project.title}</h3>
+                  <h3 className="text-2xl font-bold text-white transition-all duration-300 ease-in-out group-hover:text-3xl group-hover:font-extrabold">{project.title}</h3>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
@@ -155,7 +155,7 @@ function ProjectsSection() {
                       </span>
                     ))}
                   </div>
-                  <p className="mt-2 text-sm">
+                  <p className="mt-2 text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     {project.description}
                   </p>
                 </div>

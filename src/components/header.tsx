@@ -95,15 +95,20 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    <ul className="grid gap-3 p-4 md:w-[200px]">
                       {aboutSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        >
-                          {subLink.description}
-                        </ListItem>
+                        <li key={subLink.title}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={subLink.href}
+                              className={cn(
+                                'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+                              )}
+                            >
+                              <div className="text-sm font-medium leading-none">{subLink.title}</div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
                       ))}
                     </ul>
                   </NavigationMenuContent>
@@ -111,15 +116,20 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                     <ul className="grid gap-3 p-4 md:w-[200px]">
                       {newsSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        >
-                          {subLink.description}
-                        </ListItem>
+                        <li key={subLink.title}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={subLink.href}
+                              className={cn(
+                                'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+                              )}
+                            >
+                              <div className="text-sm font-medium leading-none">{subLink.title}</div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
                       ))}
                     </ul>
                   </NavigationMenuContent>

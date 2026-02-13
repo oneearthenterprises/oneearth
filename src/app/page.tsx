@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -64,7 +65,14 @@ function AboutUsSection() {
         <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
           Our Aspiration
         </p>
-        <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl" style={{color: '#27272a', fontSize: '16px'}}>
+        <p
+          className="mt-4 font-thin text-foreground"
+          style={{
+            fontSize: 'clamp(2.5rem, 5vw + 1rem, 5rem)',
+            lineHeight: 1.175,
+            color: '#27272a',
+          }}
+        >
           Our aspiration is to build and scale businesses that deliver consistent performance, long-term growth, and enduring stakeholder confidence.
         </p>
       </div>

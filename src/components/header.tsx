@@ -26,14 +26,13 @@ import {
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 
-const aboutSubLinks: { title: string; href: string, description: string }[] = [
-  { title: 'About', href: '/aboutus', description: 'Learn more about the vision, mission, and values of novo holdings.' },
-  { title: 'Novo Group', href: '#', description: 'Explore the companies and partnerships within our portfolio.' },
-  { title: 'Leadership', href: '/founders-note', description: 'A message from the founder of novo holdings.' },
-  { title: 'Responsibility', href: '/core-values', description: 'Discover the principles that guide our long-term strategy.' },
-  { title: 'Novo Nordisk Foundation', href: '#', description: 'The holding and investment company of the Novo Nordisk Foundation.' },
+const aboutSubLinks: { title: string; href: string }[] = [
+  { title: 'About', href: '/aboutus' },
+  { title: 'Novo Group', href: '#' },
+  { title: 'Leadership', href: '/founders-note' },
+  { title: 'Responsibility', href: '/core-values' },
+  { title: 'Novo Nordisk Foundation', href: '#' },
 ];
-
 
 const mainNavLinks: { title: string; href: string }[] = [
     { title: 'Investments', href: '#' },
@@ -73,9 +72,7 @@ export function Header() {
                               key={link.title}
                               title={link.title}
                               href={link.href}
-                          >
-                              {link.description}
-                          </ListItem>
+                          />
                       ))}
                   </ul>
                 </NavigationMenuContent>
@@ -169,7 +166,7 @@ export function Header() {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -182,9 +179,6 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-lg font-semibold leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
         </a>
       </NavigationMenuLink>
     </li>

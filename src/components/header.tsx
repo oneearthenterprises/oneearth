@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import * as React from 'react';
-import { Menu, ChevronDown } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -16,50 +16,40 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import { cn } from '@/lib/utils';
 
-const aboutSubLinks: { title: string; href: string }[] = [
-  { title: 'About us', href: '/aboutus' },
-  { title: 'Core Values', href: '/core-values' },
-];
-
-const newsSubLinks: { title: string; href: string }[] = [
-    { title: 'News', href: '/news' },
-    { title: 'Blogs', href: '/blogs' },
+const aboutMenuItems: { title: string; href: string }[] = [
+  { title: 'About', href: '/aboutus' },
+  { title: 'Novo Group', href: '#' },
+  { title: 'Leadership', href: '/founders-note'},
+  { title: 'Responsibility', href: '/core-values' },
+  { title: 'Novo Nordisk Foundation', href: '#' },
 ];
 
 const mainNavLinks: { title: string; href: string }[] = [
     { title: 'Investments', href: '#' },
     { title: 'People & Careers', href: '#' },
+    { title: 'News & Reports', href: '/news' },
 ];
 
 const mobileNavLinks = [
     {
         label: 'About',
-        subLinks: [
-          { title: 'About', href: '/aboutus' },
-          { title: 'Novo Group', href: '#' },
-          { title: 'Leadership', href: '/founders-note'},
-          { title: 'Responsibility', href: '/core-values' },
-          { title: 'Novo Nordisk Foundation', href: '#' },
-        ],
+        subLinks: aboutMenuItems,
     },
     ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
-    {
-        label: 'News & Updates',
-        subLinks: newsSubLinks,
-    }
 ];
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
-  const [isAboutDropdownOpen, setAboutDropdownOpen] = React.useState(false);
-  const [isNewsDropdownOpen, setNewsDropdownOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
@@ -69,131 +59,109 @@ export function Header() {
           <span className="text-2xl font-medium text-foreground">holdings</span>
         </Link>
         
-        <div className="flex items-center gap-2">
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-2 md:flex">
-            <DropdownMenu open={isAboutDropdownOpen} onOpenChange={setAboutDropdownOpen}>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className={cn(
-                    "gap-1 px-4 py-2 text-sm font-medium hover:bg-accent focus:bg-accent data-[state=open]:bg-accent",
-                    isAboutDropdownOpen && "bg-accent"
-                  )}
-                >
-                  About
-                  <ChevronDown className="h-4 w-4 transition-transform duration-200" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="border-none bg-white p-4 shadow-lg">
-                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                    {aboutSubLinks.map((link) => (
-                      <DropdownMenuItem key={link.title} asChild className="p-2 text-base font-medium">
-                        <Link href={link.href}>{link.title}</Link>
-                      </DropdownMenuItem>
+        {/* Desktop Navigation */}
+        <NavigationMenu className="hidden md:flex">
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="text-sm font-medium">About</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="flex h-[400px] flex-col items-start justify-center bg-white p-12">
+                   <ul className="space-y-4">
+                    {aboutMenuItems.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            href={item.href}
+                            className="text-4xl font-light text-foreground hover:text-primary focus:text-primary focus:outline-none"
+                          >
+                            {item.title}
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                     ))}
-                 </div>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  </ul>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
 
             {mainNavLinks.map((link) => (
-              <Button asChild variant="ghost" key={link.title} className="px-4 py-2 text-sm font-medium">
-                <Link href={link.href}>
-                  {link.title}
+              <NavigationMenuItem key={link.title}>
+                <Link href={link.href} legacyBehavior passHref>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-sm font-medium")}>
+                    {link.title}
+                  </NavigationMenuLink>
                 </Link>
-              </Button>
+              </NavigationMenuItem>
             ))}
+          </NavigationMenuList>
+        </NavigationMenu>
 
-            <DropdownMenu open={isNewsDropdownOpen} onOpenChange={setNewsDropdownOpen}>
-                <DropdownMenuTrigger asChild>
-                    <Button
-                    variant="ghost"
-                    className={cn(
-                        "gap-1 px-4 py-2 text-sm font-medium hover:bg-accent focus:bg-accent data-[state=open]:bg-accent",
-                        isNewsDropdownOpen && "bg-accent"
-                    )}
-                    >
-                    News & Updates
-                    <ChevronDown className="h-4 w-4 transition-transform duration-200" />
-                    </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="border-none bg-white p-2 shadow-lg">
-                    {newsSubLinks.map((link) => (
-                        <DropdownMenuItem key={link.title} asChild className="p-2 text-base font-medium">
-                        <Link href={link.href}>{link.title}</Link>
-                        </DropdownMenuItem>
-                    ))}
-                </DropdownMenuContent>
-            </DropdownMenu>
-          </nav>
-
-          {/* Mobile Navigation */}
-          <div className="flex items-center md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <div className="p-4">
-                  <Link
-                    href="/"
-                    className="mb-8 flex items-baseline space-x-1"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <span className="text-2xl font-bold text-foreground">novo</span>
-                    <span className="text-2xl font-medium text-foreground">holdings</span>
-                  </Link>
-                  <nav className="flex flex-col space-y-2">
-                    {mobileNavLinks.map((link) =>
-                      link.subLinks ? (
-                        <Accordion
-                          type="single"
-                          collapsible
-                          key={link.label}
-                          className="w-full"
+        {/* Mobile Navigation */}
+        <div className="flex items-center md:hidden">
+          <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="p-4">
+                <Link
+                  href="/"
+                  className="mb-8 flex items-baseline space-x-1"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span className="text-2xl font-bold text-foreground">novo</span>
+                  <span className="text-2xl font-medium text-foreground">holdings</span>
+                </Link>
+                <nav className="flex flex-col space-y-2">
+                  {mobileNavLinks.map((link) =>
+                    link.subLinks ? (
+                      <Accordion
+                        type="single"
+                        collapsible
+                        key={link.label}
+                        className="w-full"
+                      >
+                        <AccordionItem
+                          value={link.label}
+                          className="border-b-0"
                         >
-                          <AccordionItem
-                            value={link.label}
-                            className="border-b-0"
-                          >
-                            <AccordionTrigger className="py-2 text-lg hover:no-underline">
-                              {link.label}
-                            </AccordionTrigger>
-                            <AccordionContent className="pl-4">
-                              <div className="flex flex-col space-y-2">
-                                {link.subLinks.map((subLink) => (
-                                  <Link
-                                    key={subLink.title}
-                                    href={subLink.href}
-                                    className="text-base text-muted-foreground"
-                                    onClick={() => setMenuOpen(false)}
-                                  >
-                                    {subLink.title}
-                                  </Link>
-                                ))}
-                              </div>
-                            </AccordionContent>
-                          </AccordionItem>
-                        </Accordion>
-                      ) : (
-                        <Link
-                          key={link.href}
-                          href={link.href!}
-                          className="py-2 text-lg"
-                          onClick={() => setMenuOpen(false)}
-                        >
-                          {link.label}
-                        </Link>
-                      )
-                    )}
-                  </nav>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+                          <AccordionTrigger className="py-2 text-lg hover:no-underline">
+                            {link.label}
+                          </AccordionTrigger>
+                          <AccordionContent className="pl-4">
+                            <div className="flex flex-col space-y-2">
+                              {link.subLinks.map((subLink) => (
+                                <Link
+                                  key={subLink.title}
+                                  href={subLink.href}
+                                  className="text-base text-muted-foreground"
+                                  onClick={() => setMenuOpen(false)}
+                                >
+                                  {subLink.title}
+                                </Link>
+                              ))}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href!}
+                        className="py-2 text-lg"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    )
+                  )}
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>

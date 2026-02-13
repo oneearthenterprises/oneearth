@@ -79,6 +79,12 @@
       "imageHint": "cityscape architecture"
     },
     {
+      "id": "core-values-banner",
+      "description": "Abstract image representing corporate responsibility and values.",
+      "imageUrl": "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "responsibility abstract"
+    },
+    {
       "id": "people-careers-banner",
       "description": "A diverse group of professionals in a modern office setting, looking ahead.",
       "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",

@@ -1,5 +1,7 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
+
+import { PageHero } from '@/components/page-hero';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
@@ -55,41 +57,66 @@ const sections = [
 ];
 
 export default function CoreValuesPage() {
-  return (
-    <div className="bg-white">
-      <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
-        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl text-center mb-20">
-          Responsibility
-        </h1>
-        <div className="space-y-24">
-          {sections.map((section, index) => {
-            const image = PlaceHolderImages.find((p) => p.id === section.imageId);
-            const isEven = index % 2 === 0;
+  const pageLinks = [
+    { href: '/aboutus', title: 'About' },
+    { href: '/news', title: 'News' },
+    { href: '/blogs', title: 'Blogs' },
+  ];
 
-            return (
-              <div key={section.title} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className={cn("relative h-80 w-full overflow-hidden rounded-lg shadow-lg", isEven ? 'md:order-1' : 'md:order-2')}>
-                  {image && (
-                    <Image
-                      src={image.imageUrl}
-                      alt={image.description}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={image.imageHint}
-                    />
-                  )}
+  return (
+    <>
+      <PageHero
+        title="Responsibility"
+        bannerImageId="core-values-banner"
+        links={pageLinks}
+      />
+      <div id="responsibility-content" className="bg-white">
+        <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
+          <h2 className="mb-20 text-center text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            Our Core Values
+          </h2>
+          <div className="space-y-24">
+            {sections.map((section, index) => {
+              const image = PlaceHolderImages.find(
+                (p) => p.id === section.imageId
+              );
+              const isEven = index % 2 === 0;
+
+              return (
+                <div
+                  key={section.title}
+                  className="grid grid-cols-1 items-center gap-12 md:grid-cols-2"
+                >
+                  <div
+                    className={cn(
+                      'relative h-80 w-full overflow-hidden rounded-lg shadow-lg',
+                      isEven ? 'md:order-1' : 'md:order-2'
+                    )}
+                  >
+                    {image && (
+                      <Image
+                        src={image.imageUrl}
+                        alt={image.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={image.imageHint}
+                      />
+                    )}
+                  </div>
+                  <div className={cn(isEven ? 'md:order-2' : 'md:order-1')}>
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground">
+                      {section.title}
+                    </h2>
+                    <p className="mt-4 text-base text-foreground">
+                      {section.content}
+                    </p>
+                  </div>
                 </div>
-                <div className={cn(isEven ? 'md:order-2' : 'md:order-1')}>
-                  <h2 className="text-3xl font-bold tracking-tight text-foreground">
-                    {section.title}
-                  </h2>
-                  <p className="mt-4 text-base text-foreground">{section.content}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

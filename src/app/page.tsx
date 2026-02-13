@@ -26,15 +26,13 @@ import { ContactForm } from '@/components/contact-form';
 function HeroSection() {
   return (
     <section id="overview" className="w-full bg-white pt-24 pb-12">
-      <div className="container mx-auto max-w-screen-2xl px-4 text-left sm:px-6 lg:px-8">
-        <div className="max-w-4xl py-12">
-          <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
-            Investing to benefit people and the planet
-          </h1>
-          <p className="mt-6 text-lg text-zinc-600 md:text-xl">
-            The holding and investment company of the Novo Nordisk Foundation
-          </p>
-        </div>
+      <div className="mx-auto max-w-4xl py-12 px-4 text-left sm:px-6 lg:px-8">
+        <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
+          Investing to benefit people and the planet
+        </h1>
+        <p className="mt-6 text-lg text-zinc-600 md:text-xl">
+          The holding and investment company of the Novo Nordisk Foundation
+        </p>
       </div>
       <div className="w-full">
         <video
@@ -53,20 +51,18 @@ function HeroSection() {
 function WhatWeDoSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <p className="font-semibold text-zinc-600">About Us</p>
-            <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-800">
-              What We Do
-            </h2>
-          </div>
-          <div className="md:col-span-8">
-            <p className="text-lg text-zinc-600">
-              At The One Earth Enterprises, we bring together technology, commerce, and infrastructure to build businesses that last. Guided by innovation and grounded execution, we focus on creating long-term value for partners, clients, and communities.
-            </p>
-          </div>
-        </div>
+      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+          About us in Brief
+        </p>
+        <p className="mt-4 text-2xl font-light leading-relaxed text-zinc-800 md:text-3xl">
+          The One Earth Enterprises was founded with a clear vision: to build
+          businesses that are resilient, scalable, and designed for long-term
+          impact. As a diversified parent company operating across IT services,
+          e-commerce, and real estate, we bring together strategy, execution,
+          and trust to create enterprises that are prepared for the future while
+          grounded in strong fundamentals.
+        </p>
       </div>
     </section>
   );

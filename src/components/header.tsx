@@ -27,6 +27,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const aboutSubLinks: { title: string; href: string; description: string }[] = [
   {
@@ -85,7 +86,14 @@ export function Header() {
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                             href="/"
                           >
-                            <Logo className="h-6 w-6 text-primary" />
+                             <div className="relative h-32 w-full">
+                              <Image
+                                src="https://images.unsplash.com/photo-1571475549372-7e8ee93796dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzcwODExMzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                                alt="One Earth Enterprises"
+                                fill
+                                className="rounded-md object-cover"
+                              />
+                            </div>
                             <div className="mb-2 mt-4 text-lg font-medium">
                               One Earth Enterprises
                             </div>
@@ -108,21 +116,21 @@ export function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#investments" legacyBehavior passHref>
+                  <Link href="#investments" asChild>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       Investments
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#people-careers" legacyBehavior passHref>
+                  <Link href="#people-careers" asChild>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       People & Careers
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#news-reports" legacyBehavior passHref>
+                  <Link href="#news-reports" asChild>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       News & Reports
                     </NavigationMenuLink>

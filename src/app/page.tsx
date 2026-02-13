@@ -88,6 +88,12 @@ function AboutUsSection() {
           and trust to create enterprises that are prepared for the future while
           grounded in strong fundamentals.
         </p>
+        <div className="mt-8">
+          <Link href="/aboutus" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">
+            Read more
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
       </div>
     </section>
   );

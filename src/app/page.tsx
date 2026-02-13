@@ -11,10 +11,10 @@ function HeroSection() {
   return (
     <section id="overview" className="w-full bg-white pt-24 pb-12">
       <div className="container mx-auto py-12 px-4 text-left sm:px-6 lg:px-8">
-        <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
+        <h1 className="text-5xl font-light tracking-tight text-foreground sm:text-6xl md:text-7xl">
           Investing to benefit people and the planet
         </h1>
-        <p className="mt-6 text-lg text-zinc-800 md:text-xl">
+        <p className="mt-6 text-base text-foreground md:text-lg">
           The holding and investment company of the Novo Nordisk Foundation
         </p>
       </div>
@@ -40,12 +40,12 @@ function WhatWeDoSection() {
           <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
             What We Do
           </p>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-800">
+          <h2 className="mt-2 text-4xl font-bold tracking-tight text-foreground">
             Building Businesses That Last
           </h2>
         </div>
         <div className="md:col-span-2">
-          <p className="text-lg leading-relaxed text-zinc-800">
+          <p className="text-base leading-relaxed text-foreground">
             At The One Earth Enterprises, we bring together technology, commerce,
             and infrastructure to build businesses that last. Guided by innovation
             and grounded execution, we focus on creating long-term value for
@@ -64,7 +64,7 @@ function AboutUsSection() {
         <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
           About us in Brief
         </p>
-        <p className="mt-4 text-2xl font-light leading-relaxed text-zinc-800 md:text-3xl">
+        <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl">
           The One Earth Enterprises was founded with a clear vision: to build
           businesses that are resilient, scalable, and designed for long-term
           impact. As a diversified parent company operating across IT services,
@@ -106,10 +106,10 @@ function ProjectsSection() {
     <section id="projects" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Our Projects
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-foreground">
             Building communities and infrastructure for a better tomorrow.
           </p>
         </div>
@@ -171,7 +171,7 @@ function FoundersNoteSection() {
             <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
               Founder’s Note
             </p>
-            <p className="mt-4 text-lg font-light leading-relaxed text-zinc-800">
+            <p className="mt-4 text-base font-light leading-relaxed text-foreground">
               The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
             </p>
             <div className="mt-8">

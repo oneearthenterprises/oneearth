@@ -9,10 +9,10 @@ export default function AboutUsPage() {
   return (
     <div className="bg-white">
       <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
           About us in Brief
         </h1>
-        <div className="mt-12 space-y-8 text-lg text-zinc-800">
+        <div className="mt-12 space-y-8 text-base text-foreground">
           <p>
             The One Earth Enterprises was founded with a clear vision: to build
             businesses that are resilient, scalable, and designed for long-term
@@ -73,7 +73,7 @@ export default function AboutUsPage() {
             integrated group of businesses that complement one another and
             contribute meaningfully to the broader economy. Guided by long-term
             thinking and a founder-led mindset, The One Earth Enterprises seeks
-            opportunities that align with our values and strategic direction.
+            opportunities that align with our values and our strategic direction.
             Through innovation, execution, and trust, we are committed to building
             enterprises that stand the test of time.
           </p>

@@ -12,7 +12,7 @@ export default function FoundersNotePage() {
   return (
     <div className="bg-white">
       <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl md:text-6xl">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
           Founder's Note
         </h1>
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3">
@@ -29,14 +29,14 @@ export default function FoundersNotePage() {
               )}
             </div>
           </div>
-          <div className="space-y-6 text-lg text-zinc-800 md:col-span-2">
-              <p className="text-2xl font-light italic text-zinc-700">
+          <div className="space-y-6 text-base text-foreground md:col-span-2">
+              <p className="text-2xl font-light italic text-muted-foreground">
                 "The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility."
               </p>
           </div>
         </div>
 
-        <div className="mt-12 space-y-8 text-lg text-zinc-800">
+        <div className="mt-12 space-y-8 text-base text-foreground">
           <p>
             From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
           </p>

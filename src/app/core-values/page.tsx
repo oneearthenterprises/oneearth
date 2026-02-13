@@ -58,7 +58,7 @@ export default function CoreValuesPage() {
   return (
     <div className="bg-white">
       <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl md:text-6xl text-center mb-20">
+        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl text-center mb-20">
           About The One Earth Enterprises
         </h1>
         <div className="space-y-24">
@@ -80,10 +80,10 @@ export default function CoreValuesPage() {
                   )}
                 </div>
                 <div className={cn(isEven ? 'md:order-2' : 'md:order-1')}>
-                  <h2 className="text-3xl font-bold tracking-tight text-zinc-800">
+                  <h2 className="text-3xl font-bold tracking-tight text-foreground">
                     {section.title}
                   </h2>
-                  <p className="mt-4 text-lg text-zinc-800">{section.content}</p>
+                  <p className="mt-4 text-base text-foreground">{section.content}</p>
                 </div>
               </div>
             );

@@ -3,7 +3,7 @@ import { Logo } from "@/components/icons";
 
 export function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-secondary text-secondary-foreground mx-5 mb-5 rounded-[20px]">
       <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
         <div className="flex flex-col items-start gap-4 md:col-span-2">
           <Link href="/" className="flex items-center gap-2">

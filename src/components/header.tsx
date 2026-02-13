@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import * as React from 'react';
-import { Menu, ChevronDown } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -23,12 +23,6 @@ import {
   NavigationMenuTrigger,
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { cn } from '@/lib/utils';
 
 
@@ -102,23 +96,21 @@ export function Header() {
               ))}
           
               <NavigationMenuItem>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline flex items-center gap-1">
-                          News & Updates
-                          <ChevronDown className="h-4 w-4 relative top-px" />
-                      </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="start" className="min-w-[200px]">
-                      {newsAndUpdatesLinks.map((link) => (
-                          <DropdownMenuItem key={link.title} asChild>
-                              <Link href={link.href}>
-                                  {link.title}
-                              </Link>
-                          </DropdownMenuItem>
-                      ))}
-                      </DropdownMenuContent>
-                  </DropdownMenu>
+                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline">News & Updates</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                      <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
+                          <Link href="/news" legacyBehavior passHref>
+                              <NavigationMenuLink className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                  News
+                              </NavigationMenuLink>
+                          </Link>
+                          <Link href="/blogs" legacyBehavior passHref>
+                              <NavigationMenuLink className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                                  Blogs
+                              </NavigationMenuLink>
+                          </Link>
+                      </div>
+                  </NavigationMenuContent>
               </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

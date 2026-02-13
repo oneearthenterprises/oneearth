@@ -31,11 +31,11 @@ import { cn } from '@/lib/utils';
 const aboutSubLinks: { title: string; href: string }[] = [
   {
     title: 'About',
-    href: '#about',
+    href: '/aboutus',
   },
   {
-    title: 'Novo Group',
-    href: '#',
+    title: 'Core Values',
+    href: '/core-values',
   },
   {
     title: 'Leadership',
@@ -69,7 +69,7 @@ const newsSubLinks: { title: string; href: string }[] = [
 const navLinks = [
   {
     label: 'About',
-    href: '#about',
+    href: '/aboutus',
     subLinks: aboutSubLinks,
   },
   { href: "/founders-note", label: "Founder's Note" },
@@ -217,12 +217,13 @@ export function Header() {
 const ListItem = React.forwardRef<
   React.ElementRef<'a'>,
   React.ComponentPropsWithoutRef<'a'>
->(({ className, title, ...props }, ref) => {
+>(({ className, title, href, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
           ref={ref}
+          href={href || '#'}
           className={cn(
             'block select-none text-3xl leading-none no-underline outline-none transition-colors hover:text-primary focus:text-primary',
             className
@@ -230,7 +231,7 @@ const ListItem = React.forwardRef<
           {...props}
         >
           {title}
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );

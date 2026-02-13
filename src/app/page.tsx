@@ -26,7 +26,7 @@ import { ContactForm } from '@/components/contact-form';
 function HeroSection() {
   return (
     <section id="overview" className="w-full bg-white pt-24 pb-12">
-      <div className="mx-auto max-w-4xl py-12 px-4 text-left sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-4xl py-12 px-4 text-left sm:px-6 lg:px-8">
         <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
           Investing to benefit people and the planet
         </h1>

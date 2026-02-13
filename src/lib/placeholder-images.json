@@ -23,6 +23,48 @@
       "description": "A portrait of the company founder.",
       "imageUrl": "https://images.unsplash.com/photo-1607031542107-f6f46b5d54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA5NjUwNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
+    },
+    {
+      "id": "core-value-future",
+      "description": "Abstract image representing future-ready businesses",
+      "imageUrl": "https://images.unsplash.com/photo-1532072983668-720aad098512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnV0dXJlJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzcwOTc0OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "future business"
+    },
+    {
+      "id": "core-value-growth",
+      "description": "Image representing sustainable growth",
+      "imageUrl": "https://images.unsplash.com/photo-1542794961-5647fd97e6f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdXN0YWluYWJsZSUyMGdyb3d0aHxlbnwwfHx8fDE3NzA5NzQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sustainable growth"
+    },
+    {
+      "id": "core-value-tech",
+      "description": "Image representing technology and IT services",
+      "imageUrl": "https://images.unsplash.com/photo-1768633647910-7e6fb53e5b0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVjaG5vbG9neSUyMHNlcnZpY2VzfGVufDB8fHx8MTc3MDk3NDk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology services"
+    },
+    {
+      "id": "core-value-ecommerce",
+      "description": "Image representing e-commerce",
+      "imageUrl": "https://images.unsplash.com/photo-1605513524042-426bace35fc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjByZXRhaWx8ZW58MHx8fHwxNzcwOTc0OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ecommerce retail"
+    },
+    {
+      "id": "core-value-realestate",
+      "description": "Image representing real estate",
+      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcwOTMzMDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "core-value-governance",
+      "description": "Image representing governance and trust",
+      "imageUrl": "https://images.unsplash.com/photo-1641945512896-271de0eaf90d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cnVzdCUyMGdvdmVybmFuY2V8ZW58MHx8fHwxNzcwOTc0OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "trust governance"
+    },
+    {
+      "id": "core-value-integrated",
+      "description": "Image representing an integrated enterprise",
+      "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbnRlZ3JhdGVkJTIwZW50ZXJwcmlzZXxlbnwwfHx8fDE3NzA5NzQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "integrated enterprise"
     }
   ]
 }

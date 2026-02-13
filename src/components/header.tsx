@@ -76,27 +76,27 @@ export function Header() {
                   <NavigationMenuTrigger className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isAboutActive && "bg-secondary")}>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
                       <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
-                          <Link href="/aboutus" legacyBehavior passHref>
-                              <NavigationMenuLink className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <NavigationMenuLink asChild>
+                              <Link href="/aboutus" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                                   About
-                              </NavigationMenuLink>
-                          </Link>
-                          <Link href="/core-values" legacyBehavior passHref>
-                              <NavigationMenuLink className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                              <Link href="/core-values" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                                   Core Value
-                              </NavigationMenuLink>
-                          </Link>
+                              </Link>
+                          </NavigationMenuLink>
                       </div>
                   </NavigationMenuContent>
               </NavigationMenuItem>
 
               {mainNavLinks.map((link) => (
                   <NavigationMenuItem key={link.title}>
-                      <Link href={link.href} legacyBehavior passHref>
-                          <NavigationMenuLink active={pathname.startsWith(link.href)} className={cn("hover:underline focus:underline", "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-secondary data-[state=open]:bg-secondary")}>
+                      <NavigationMenuLink asChild active={pathname.startsWith(link.href)}>
+                          <Link href={link.href} className={cn("hover:underline focus:underline", "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-secondary data-[state=open]:bg-secondary")}>
                               {link.title}
-                          </NavigationMenuLink>
-                      </Link>
+                          </Link>
+                      </NavigationMenuLink>
                   </NavigationMenuItem>
               ))}
           
@@ -104,16 +104,16 @@ export function Header() {
                   <NavigationMenuTrigger className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isNewsActive && "bg-secondary")}>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
                       <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
-                          <Link href="/news" legacyBehavior passHref>
-                              <NavigationMenuLink className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <NavigationMenuLink asChild>
+                              <Link href="/news" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                                   News
-                              </NavigationMenuLink>
-                          </Link>
-                          <Link href="/blogs" legacyBehavior passHref>
-                              <NavigationMenuLink className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              </Link>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink asChild>
+                              <Link href="/blogs" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                                   Blogs
-                              </NavigationMenuLink>
-                          </Link>
+                              </Link>
+                          </NavigationMenuLink>
                       </div>
                   </NavigationMenuContent>
               </NavigationMenuItem>

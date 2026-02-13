@@ -148,7 +148,7 @@ function ProjectsSection() {
   return (
     <section id="projects" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Our Projects
           </h2>

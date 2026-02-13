@@ -30,7 +30,7 @@ function HeroSection() {
         <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
           Investing to benefit people and the planet
         </h1>
-        <p className="mt-6 text-lg text-zinc-600 md:text-xl">
+        <p className="mt-6 text-lg text-zinc-800 md:text-xl">
           The holding and investment company of the Novo Nordisk Foundation
         </p>
       </div>
@@ -61,7 +61,7 @@ function WhatWeDoSection() {
           </h2>
         </div>
         <div className="md:col-span-2">
-          <p className="text-lg leading-relaxed text-zinc-600">
+          <p className="text-lg leading-relaxed text-zinc-800">
             At The One Earth Enterprises, we bring together technology, commerce,
             and infrastructure to build businesses that last. Guided by innovation
             and grounded execution, we focus on creating long-term value for

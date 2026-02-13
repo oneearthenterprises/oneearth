@@ -12,7 +12,7 @@ export default function AboutUsPage() {
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl md:text-6xl">
           About us in Brief
         </h1>
-        <div className="mt-12 space-y-8 text-lg text-zinc-600">
+        <div className="mt-12 space-y-8 text-lg text-zinc-800">
           <p>
             The One Earth Enterprises was founded with a clear vision: to build
             businesses that are resilient, scalable, and designed for long-term

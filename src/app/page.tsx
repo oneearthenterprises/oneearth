@@ -63,7 +63,7 @@ function AboutUsSection() {
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Our Aspiration
+          Aspiration
         </p>
         <p
           className="mt-4 font-thin text-foreground"

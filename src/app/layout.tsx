@@ -5,9 +5,9 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'novo holdings',
+  title: 'One Earth Enterprises',
   description:
-    'The holding and investment company of the Novo Nordisk Foundation.',
+    'One Earth Enterprises Portal',
 };
 
 export default function RootLayout({

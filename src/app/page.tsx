@@ -47,7 +47,7 @@ function WhatWeDoSection() {
         </div>
         <div className="md:col-span-2">
           <p className="text-lg leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
-            At novo holdings, we bring together technology, commerce,
+            At One Earth Enterprises, we bring together technology, commerce,
             and infrastructure to build businesses that last. Guided by innovation
             and grounded execution, we focus on creating long-term value for
             partners, clients, and communities.
@@ -76,7 +76,7 @@ function FoundersNoteSection() {
               Founder’s Note
             </h2>
             <p className="mt-4 text-lg font-light leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
-              The idea behind novo holdings began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
+              The idea behind One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
             </p>
             <div className="mt-8">
               <Link href="/founders-note" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">

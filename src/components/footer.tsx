@@ -6,11 +6,11 @@ export function Footer() {
       <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
         <div className="flex flex-col items-start gap-4 md:col-span-2">
            <Link href="/" className="flex items-baseline space-x-1">
-            <span className="text-2xl font-bold text-foreground">novo</span>
-            <span className="text-2xl font-medium text-foreground">holdings</span>
+            <span className="text-2xl font-bold text-foreground">One</span>
+            <span className="text-2xl font-medium text-foreground">Earth</span>
           </Link>
           <p className="max-w-md text-sm text-foreground">
-            The holding and investment company of the Novo Nordisk Foundation.
+            Building a sustainable future, one enterprise at a time.
           </p>
         </div>
         <div>
@@ -26,7 +26,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <p className="text-sm text-foreground">
-            © {new Date().getFullYear()} novo holdings. All rights reserved.
+            © {new Date().getFullYear()} One Earth Enterprises. All rights reserved.
           </p>
         </div>
       </div>

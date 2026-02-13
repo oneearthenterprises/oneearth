@@ -5,8 +5,8 @@ import { PageHero } from '@/components/page-hero';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: 'People & Careers | novo holdings',
-  description: 'Join the team at novo holdings.',
+  title: 'People & Careers | One Earth Enterprises',
+  description: 'Join the team at One Earth Enterprises.',
 };
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -44,7 +44,7 @@ export default function PeopleAndCareersPage() {
                 Become a Part of Our Vision
               </h2>
               <p className="mt-6 text-lg leading-8 text-secondary-foreground">
-                At novo holdings, we are building a team of passionate, driven
+                At One Earth Enterprises, we are building a team of passionate, driven
                 individuals who are committed to our long-term vision. We
                 believe that our people are our greatest asset, and we provide
                 an environment where talent can thrive. If you are aligned with

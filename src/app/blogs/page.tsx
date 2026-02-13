@@ -9,8 +9,8 @@ import { blogPosts } from '@/lib/blog-posts';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'Blogs | novo holdings',
-  description: 'Insights and articles from the team at novo holdings.',
+  title: 'Blogs | One Earth Enterprises',
+  description: 'Insights and articles from the team at One Earth Enterprises.',
 };
 
 export default function BlogsPage() {

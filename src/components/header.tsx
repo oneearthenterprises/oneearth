@@ -60,8 +60,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
       <div className="container mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-baseline space-x-1">
-          <span className="text-2xl font-bold text-foreground">novo</span>
-          <span className="text-2xl font-medium text-foreground">holdings</span>
+          <span className="text-2xl font-bold text-foreground">One</span>
+          <span className="text-2xl font-medium text-foreground">Earth</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -131,8 +131,8 @@ export function Header() {
                   className="mb-8 flex items-baseline space-x-1"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <span className="text-2xl font-bold text-foreground">novo</span>
-                  <span className="text-2xl font-medium text-foreground">holdings</span>
+                  <span className="text-2xl font-bold text-foreground">One</span>
+                  <span className="text-2xl font-medium text-foreground">Earth</span>
                 </Link>
                 <nav className="flex flex-col space-y-2">
                   {mobileNavLinks.map((link) =>

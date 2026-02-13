@@ -2,8 +2,8 @@ import { type Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Leadership | novo holdings',
-  description: 'A message from the founder of novo holdings.',
+  title: 'Leadership | One Earth Enterprises',
+  description: 'A message from the founder of One Earth Enterprises.',
 };
 
 export default function FoundersNotePage() {
@@ -29,7 +29,7 @@ export default function FoundersNotePage() {
             </h1>
             <div className="mt-12 space-y-6 text-base text-foreground">
               <p className="text-2xl font-light italic text-muted-foreground">
-                "The idea behind novo holdings began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility."
+                "The idea behind One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility."
               </p>
             </div>
             <div className="mt-12 space-y-8 text-base text-foreground">
@@ -40,19 +40,19 @@ export default function FoundersNotePage() {
                 Throughout our journey as a founder, we have seen how true value is created when strategy and execution move together. Whether in IT services, e-commerce, or real estate, our focus has always been on fundamentals: understanding markets deeply, allocating capital thoughtfully, and building teams and systems that can scale responsibly. These principles guide every decision we make as a parent company.
               </p>
               <p>
-                We view the role of novo holdings as both a steward and a catalyst. As stewards, we provide governance, oversight, and long-term direction to the businesses within our group. As catalysts, we enable innovation, operational excellence, and disciplined growth by empowering our teams while maintaining strong accountability. This balance is essential to creating enterprises that remain resilient across market cycles.
+                We view the role of One Earth Enterprises as both a steward and a catalyst. As stewards, we provide governance, oversight, and long-term direction to the businesses within our group. As catalysts, we enable innovation, operational excellence, and disciplined growth by empowering our teams while maintaining strong accountability. This balance is essential to creating enterprises that remain resilient across market cycles.
               </p>
               <p>
                 Trust and transparency are central to how we engage with investors, partners, and stakeholders. We believe that credibility is earned over time through consistent performance, clear communication, and ethical leadership. Our approach to growth is measured and deliberate, prioritizing sustainable value creation over rapid expansion. For us, success is defined not only by financial performance, but by the strength and integrity of the businesses we build.
               </p>
               <p>
-                As we continue to expand novo holdings, our long-term vision remains clear: to create an integrated group of businesses that deliver lasting economic value and contribute positively to the ecosystems in which they operate. We remain committed to disciplined execution, responsible governance, and continuous improvement.
+                As we continue to expand One Earth Enterprises, our long-term vision remains clear: to create an integrated group of businesses that deliver lasting economic value and contribute positively to the ecosystems in which they operate. We remain committed to disciplined execution, responsible governance, and continuous improvement.
               </p>
               <p>
                 We invite investors, partners, and the wider community to engage with us as we continue this journey—one focused on building future-ready enterprises with purpose, resilience, and integrity.
               </p>
               <p className="mt-8 font-semibold">
-                — Founders, novo holdings
+                — Founders, One Earth Enterprises
               </p>
             </div>
           </div>

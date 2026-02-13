@@ -27,7 +27,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.title} | novo holdings`,
+    title: `${article.title} | One Earth Enterprises`,
     description: article.excerpt,
   };
 }

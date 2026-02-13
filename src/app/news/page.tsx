@@ -9,8 +9,8 @@ import { newsArticles } from '@/lib/news-articles';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'News | novo holdings',
-  description: 'Latest news and announcements from novo holdings.',
+  title: 'News | One Earth Enterprises',
+  description: 'Latest news and announcements from One Earth Enterprises.',
 };
 
 export default function NewsPage() {

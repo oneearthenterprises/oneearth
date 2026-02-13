@@ -51,12 +51,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
       <div className="container mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-baseline space-x-1">
-            <span className="text-2xl font-bold text-foreground">novo</span>
-            <span className="text-2xl font-medium text-foreground">holdings</span>
-          </Link>
+        <Link href="/" className="flex items-baseline space-x-1">
+          <span className="text-2xl font-bold text-foreground">novo</span>
+          <span className="text-2xl font-medium text-foreground">holdings</span>
+        </Link>
         
+        <div className="flex items-center gap-2">
           <nav className="hidden md:flex items-center gap-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -79,9 +79,8 @@ export function Header() {
               </Link>
             ))}
           </nav>
-        </div>
 
-        <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -147,6 +146,7 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
+        </div>
       </div>
     </header>
   );

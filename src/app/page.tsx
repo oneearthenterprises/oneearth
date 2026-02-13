@@ -36,8 +36,8 @@ function HeroSection() {
           </p>
         </div>
       </div>
-      <div className="mx-auto w-full max-w-screen-2xl px-5">
-        <div className="overflow-hidden rounded-xl">
+      <div className="w-full">
+        <div className="overflow-hidden">
           <video
             className="h-full w-full object-cover"
             src="/assets/videos/herosectionbanner.mp4"

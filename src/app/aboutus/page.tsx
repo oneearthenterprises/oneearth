@@ -49,35 +49,6 @@ export default function AboutUsPage() {
               long-term oversight to the ventures within our ecosystem.
             </p>
             <p>
-              Our presence in IT services is driven by a commitment to helping
-              organizations navigate digital transformation with clarity and
-              confidence. We focus on delivering practical, scalable technology
-              solutions that support operational efficiency and long-term
-              growth. By prioritizing reliability, security, and execution
-              excellence, we aim to build technology-driven businesses and
-              partnerships that can adapt to changing markets and emerging
-              opportunities.
-            </p>
-            <p>
-              In the e-commerce space, novo holdings focuses on
-              building and supporting commerce-led ventures with strong
-              operational foundations. We emphasize data-driven
-              decision-making, customer-centric design, and scalable systems
-              that enable consistent performance. Our approach goes beyond
-              transactions, focusing instead on creating sustainable brands and
-              platforms that can grow responsibly and endure market cycles.
-            </p>
-            <p>
-              Our real estate activities are centered on creating long-term
-              asset value through thoughtful development, strategic investment,
-              and responsible management. We view real estate as a critical
-              pillar in building stable, diversified enterprises—one that
-              requires patience, quality execution, and a long-term
-              perspective. By aligning location strategy, design, and asset
-              management, we aim to create developments that deliver lasting
-              value for stakeholders and communities alike.
-            </p>
-            <p>
               At the heart of novo holdings is a strong commitment
               to governance, transparency, and trust. We believe that a parent
               company’s responsibility extends beyond growth to include

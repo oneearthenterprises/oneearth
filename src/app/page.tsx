@@ -63,7 +63,7 @@ function FoundersNoteSection() {
     <section id="founders-note" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-          <div className="relative h-[500px] w-full overflow-hidden rounded-lg">
+          <div className="relative h-[600px] w-full overflow-hidden rounded-lg">
             <Image
               src="/assets/images/founders.png"
               alt="A portrait of the company founder."

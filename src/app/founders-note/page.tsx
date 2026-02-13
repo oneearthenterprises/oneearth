@@ -15,7 +15,7 @@ export default function FoundersNotePage() {
         </h1>
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3">
           <div className="md:col-span-1">
-            <div className="relative h-80 w-full overflow-hidden rounded-lg">
+            <div className="relative h-96 w-full overflow-hidden rounded-lg">
               <Image
                 src="/assets/images/founders.png"
                 alt="A portrait of the company founder."

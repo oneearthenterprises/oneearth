@@ -58,6 +58,44 @@ function WhatWeDoSection() {
   );
 }
 
+function FoundersNoteSection() {
+  const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
+
+  return (
+    <section id="founders-note" className="bg-white py-16 sm:py-24">
+      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div className="relative h-[500px] w-full overflow-hidden rounded-lg">
+            {founderImage && (
+              <Image
+                src={founderImage.imageUrl}
+                alt={founderImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={founderImage.imageHint}
+              />
+            )}
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Founder’s Note
+            </h2>
+            <p className="mt-4 text-lg font-light leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
+              The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
+            </p>
+            <div className="mt-8">
+              <Link href="/founders-note" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">
+                Read more
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AboutUsSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
@@ -168,38 +206,65 @@ function ProjectsSection() {
   );
 }
 
-function FoundersNoteSection() {
-  const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
+function GuidingPrinciplesSection() {
+  const principles = [
+    {
+      title: 'Purpose-Led Values',
+      subtitle: 'Performance guided by integrity',
+      points: [
+        'High performance with accountability and respect',
+        'Leadership through example',
+      ],
+    },
+    {
+      title: 'Long-Term Strategy',
+      subtitle: 'Focused on sustainable growth',
+      points: [
+        'Disciplined capital allocation',
+        'Diversified investments across core sectors',
+      ],
+    },
+    {
+      title: 'Operational Excellence',
+      subtitle: 'Built on strong foundations',
+      points: [
+        'Scalable systems and execution',
+        'Talent development and governance',
+      ],
+    },
+    {
+      title: 'Trust & Stewardship',
+      subtitle: 'Responsible and transparent leadership',
+      points: [
+        'Long-term partnerships',
+        'Ethical governance and risk discipline',
+      ],
+    },
+  ];
 
   return (
-    <section id="founders-note" className="bg-white py-16 sm:py-24">
+    <section id="principles" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-          <div className="relative h-[500px] w-full overflow-hidden rounded-lg">
-            {founderImage && (
-              <Image
-                src={founderImage.imageUrl}
-                alt={founderImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={founderImage.imageHint}
-              />
-            )}
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Founder’s Note
-            </h2>
-            <p className="mt-4 text-lg font-light leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
-              The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
-            </p>
-            <div className="mt-8">
-              <Link href="/founders-note" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">
-                Read more
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Our Guiding Principles
+          </h2>
+        </div>
+        <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          {principles.map((principle) => (
+            <div key={principle.title}>
+              <h3 className="text-lg font-semibold text-foreground">{principle.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{principle.subtitle}</p>
+              <ul className="mt-4 space-y-2 text-sm text-foreground">
+                {principle.points.map((point) => (
+                  <li key={point} className="flex items-start">
+                    <span className="mr-2 mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-primary" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -214,6 +279,7 @@ export default function HomePage() {
       <FoundersNoteSection />
       <AboutUsSection />
       <ProjectsSection />
+      <GuidingPrinciplesSection />
     </>
   );
 }

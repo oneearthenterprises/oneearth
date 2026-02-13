@@ -98,21 +98,11 @@ export default {
             transform: 'translateY(0)'
           }
         },
-        'nav-menu-down': {
-          from: { height: '0px' },
-          to: { height: 'var(--radix-navigation-menu-viewport-height)' },
-        },
-        'nav-menu-up': {
-          from: { height: 'var(--radix-navigation-menu-viewport-height)' },
-          to: { height: '0px' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards var(--animation-delay, 0s)',
-        'nav-menu-down': 'nav-menu-down 0.3s ease-out',
-        'nav-menu-up': 'nav-menu-up 0.3s ease-out',
       },
     },
   },

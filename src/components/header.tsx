@@ -101,28 +101,26 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-                    <ul className="grid w-full gap-y-6 py-12">
-                      {aboutSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        />
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
+                    {aboutSubLinks.map((subLink) => (
+                      <ListItem
+                        key={subLink.title}
+                        href={subLink.href}
+                        title={subLink.title}
+                      />
+                    ))}
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#investments" legacyBehavior passHref>
+                <Link href="#investments" legacyBehavior={false} passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Investments
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#people-careers" legacyBehavior passHref>
+                <Link href="#people-careers" legacyBehavior={false} passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     People & Careers
                   </NavigationMenuLink>
@@ -131,17 +129,15 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-                    <ul className="grid w-full gap-y-6 py-12">
-                      {newsSubLinks.map((subLink) => (
-                         <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        />
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
+                    {newsSubLinks.map((subLink) => (
+                       <ListItem
+                        key={subLink.title}
+                        href={subLink.href}
+                        title={subLink.title}
+                      />
+                    ))}
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>

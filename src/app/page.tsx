@@ -62,15 +62,10 @@ function AboutUsSection() {
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          About us in Brief
+          Our Aspiration
         </p>
         <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl" style={{color: '#27272a', fontSize: '16px'}}>
-          The One Earth Enterprises was founded with a clear vision: to build
-          businesses that are resilient, scalable, and designed for long-term
-          impact. As a diversified parent company operating across IT services,
-          e-commerce, and real estate, we bring together strategy, execution,
-          and trust to create enterprises that are prepared for the future while
-          grounded in strong fundamentals.
+          Our aspiration is to build and scale businesses that deliver consistent performance, long-term growth, and enduring stakeholder confidence.
         </p>
         <div className="mt-8">
           <Link href="/aboutus" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">

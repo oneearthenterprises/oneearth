@@ -85,8 +85,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 max-w-screen-2xl items-center px-4 sm:px-6 lg:px-8">
-        <div className="mr-4 flex">
+      <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo className="h-6 w-6 text-primary" />
             <span className="font-bold sm:inline-block">
@@ -94,36 +94,13 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="hidden flex-1 md:flex md:justify-center">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-full gap-3 p-4 md:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
-                        >
-                           <div className="relative h-32 w-full">
-                            <Image
-                              src="https://images.unsplash.com/photo-1571475549372-7e8ee93796dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzcwODExMzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                              alt="One Earth Enterprises"
-                              fill
-                              className="rounded-md object-cover"
-                            />
-                          </div>
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            One Earth Enterprises
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Our vision, mission, and values.
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
+                  <ul className="grid w-auto gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                     {aboutSubLinks.map((subLink) => (
                       <ListItem
                         key={subLink.title}
@@ -153,7 +130,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-full gap-3 p-4 md:grid-cols-[.75fr_1fr]">
+                  <ul className="container mx-auto grid w-full max-w-screen-2xl gap-3 p-4 md:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <a
@@ -191,7 +168,8 @@ export function Header() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="md:hidden">
+        </div>
+        <div className="flex items-center md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -257,7 +235,6 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-        </div>
       </div>
     </header>
   );

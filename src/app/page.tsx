@@ -263,13 +263,13 @@ function GuidingPrinciplesSection() {
   return (
     <section id="principles" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Our Guiding Principles
             </h2>
           </div>
-          <div className="md:col-span-2 space-y-8">
+          <div className="md:col-span-1 grid grid-cols-1 md:grid-cols-2 gap-8">
             {principles.map((principle) => (
               <div key={principle.title}>
                 <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>

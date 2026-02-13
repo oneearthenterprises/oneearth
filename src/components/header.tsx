@@ -1,21 +1,74 @@
 "use client";
 
 import Link from 'next/link';
+import * as React from 'react';
 import { useState } from 'react';
 import { Logo } from '@/components/icons';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { cn } from '@/lib/utils';
+
+const aboutSubLinks: { title: string; href: string; description: string }[] = [
+  {
+    title: 'About',
+    href: '#about',
+    description: 'Learn more about our vision, mission, and values.',
+  },
+  {
+    title: 'Novo Group',
+    href: '#',
+    description: 'Discover the broader network of companies we are part of.',
+  },
+  {
+    title: 'Leadership',
+    href: '#',
+    description: 'Meet the experienced team guiding our strategic direction.',
+  },
+  {
+    title: 'Responsibility',
+    href: '#',
+    description: 'Our commitment to sustainable and ethical business practices.',
+  },
+  {
+    title: 'Novo Nordisk Foundation',
+    href: '#',
+    description: 'Supporting scientific, humanitarian, and social purposes.',
+  },
+];
+
+const navLinks = [
+  {
+    label: 'About',
+    href: '#about',
+    subLinks: aboutSubLinks,
+  },
+  { href: '#investments', label: 'Investments' },
+  { href: '#people-careers', label: 'People & Careers' },
+  { href: '#news-reports', label: 'News & Reports' },
+];
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#investments', label: 'Investments' },
-    { href: '#people-careers', label: 'People & Careers' },
-    { href: '#news-reports', label: 'News & Reports' },
-  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -29,16 +82,48 @@ export function Header() {
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-foreground/60 transition-colors hover:text-foreground/80"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden items-center space-x-1 text-sm font-medium md:flex">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px]">
+                      {aboutSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        >
+                          {subLink.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#investments" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      Investments
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#people-careers" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      People & Careers
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#news-reports" legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      News & Reports
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
@@ -58,25 +143,82 @@ export function Header() {
                     <Logo className="h-6 w-6 text-primary" />
                     <span className="font-bold">One Earth Enterprises</span>
                   </Link>
-                  <nav className="flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className="text-lg"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
+                  <nav className="flex flex-col space-y-2">
+                    {navLinks.map((link) =>
+                      link.subLinks ? (
+                        <Accordion
+                          type="single"
+                          collapsible
+                          key={link.label}
+                          className="w-full"
+                        >
+                          <AccordionItem
+                            value={link.label}
+                            className="border-b-0"
+                          >
+                            <AccordionTrigger className="py-2 text-lg hover:no-underline">
+                              {link.label}
+                            </AccordionTrigger>
+                            <AccordionContent className="pl-4">
+                              <div className="flex flex-col space-y-2">
+                                {link.subLinks.map((subLink) => (
+                                  <Link
+                                    key={subLink.href}
+                                    href={subLink.href}
+                                    className="text-base text-muted-foreground"
+                                    onClick={() => setMenuOpen(false)}
+                                  >
+                                    {subLink.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
+                        </Accordion>
+                      ) : (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="py-2 text-lg"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {link.label}
+                        </Link>
+                      )
+                    )}
                   </nav>
                 </div>
               </SheetContent>
             </Sheet>
           </div>
-          {/* Add actions here if needed in the future */}
         </div>
       </div>
     </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = 'ListItem';

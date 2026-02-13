@@ -27,7 +27,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 
 const aboutSubLinks: { title: string; href: string }[] = [
   {
@@ -35,11 +34,19 @@ const aboutSubLinks: { title: string; href: string }[] = [
     href: '#about',
   },
   {
+    title: 'Novo Group',
+    href: '#',
+  },
+  {
     title: 'Leadership',
     href: '#',
   },
   {
     title: 'Responsibility',
+    href: '#',
+  },
+  {
+    title: 'Novo Nordisk Foundation',
     href: '#',
   },
 ];
@@ -94,18 +101,16 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-full bg-background">
-                    <div className="container mx-auto max-w-screen-2xl">
-                      <ul className="flex h-[400px] w-full flex-col justify-center gap-4 p-12">
-                        {aboutSubLinks.map((subLink) => (
-                          <ListItem
-                            key={subLink.title}
-                            href={subLink.href}
-                            title={subLink.title}
-                          />
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+                    <ul className="grid w-full gap-y-6 py-12">
+                      {aboutSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        />
+                      ))}
+                    </ul>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -126,18 +131,16 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-full bg-background">
-                    <div className="container mx-auto max-w-screen-2xl">
-                      <ul className="flex h-[400px] w-full flex-col justify-center gap-4 p-12">
-                        {newsSubLinks.map((subLink) => (
-                           <ListItem
-                            key={subLink.title}
-                            href={subLink.href}
-                            title={subLink.title}
-                          />
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+                    <ul className="grid w-full gap-y-6 py-12">
+                      {newsSubLinks.map((subLink) => (
+                         <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        />
+                      ))}
+                    </ul>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -225,7 +228,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            'block select-none text-2xl font-medium leading-none no-underline outline-none transition-colors hover:text-primary focus:text-primary',
+            'block select-none text-3xl leading-none no-underline outline-none transition-colors hover:text-primary focus:text-primary',
             className
           )}
           {...props}

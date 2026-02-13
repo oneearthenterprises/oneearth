@@ -37,10 +37,6 @@ const aboutSubLinks: { title: string; href: string }[] = [
     title: 'Core Values',
     href: '/core-values',
   },
-  {
-    title: 'Responsibility',
-    href: '#',
-  },
 ];
 
 const newsSubLinks: { title: string; href: string }[] = [

@@ -72,22 +72,20 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-screen">
-                      <ul className="container mx-auto p-6">
-                        {aboutSubLinks.map((subLink) => (
-                          <li key={subLink.title}>
-                            <NavigationMenuLink asChild>
-                              <a
-                                href={subLink.href}
-                                className="block select-none p-3 text-3xl font-light leading-tight no-underline outline-none transition-colors hover:bg-accent/50"
-                              >
-                                {subLink.title}
-                              </a>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <ul className="w-[240px] p-4">
+                      {aboutSubLinks.map((subLink) => (
+                        <li key={subLink.title}>
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={subLink.href}
+                              className="block select-none p-2 text-xl font-light leading-tight no-underline outline-none transition-colors hover:bg-accent/50"
+                            >
+                              {subLink.title}
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 {mainNavLinks.map((link) => (

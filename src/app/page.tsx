@@ -71,6 +71,7 @@ function AboutUsSection() {
             fontSize: 'clamp(2.5rem, 5vw + 1rem, 5rem)',
             lineHeight: 1.175,
             color: '#27272a',
+            fontWeight: 100,
           }}
         >
           Our aspiration is to build and scale businesses that deliver consistent performance, long-term growth, and enduring stakeholder confidence.

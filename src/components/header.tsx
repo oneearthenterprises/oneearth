@@ -85,7 +85,7 @@ export function Header() {
                   <ChevronDown className="h-4 w-4 transition-transform duration-200" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-[400px] border-none bg-white p-4 shadow-lg">
+              <DropdownMenuContent align="start" className="border-none bg-white p-4 shadow-lg">
                  <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                     {aboutSubLinks.map((link) => (
                       <DropdownMenuItem key={link.title} asChild className="p-2 text-base font-medium">

@@ -217,22 +217,24 @@ function GuidingPrinciplesSection() {
       ],
     },
     {
-      title: 'Long-Term Strategy',
-      subtitle: 'Focused on sustainable growth',
+      title: 'Ambitious Strategy',
+      subtitle: '',
       points: [
-        'Disciplined capital allocation',
-        'Diversified investments across core sectors',
+        'Return Driven',
+        'Life Science Allocation',
+        'Diversified Capital Investments Allocation',
+        'Significant Direct Investments',
       ],
     },
     {
-      title: 'Operational Excellence',
-      subtitle: 'Built on strong foundations',
-      points: ['Scalable systems and execution', 'Talent development and governance'],
-    },
-    {
-      title: 'Trust & Stewardship',
-      subtitle: 'Responsible and transparent leadership',
-      points: ['Long-term partnerships', 'Ethical governance and risk discipline'],
+      title: 'Excellence in operations',
+      subtitle: '',
+      points: [
+        'Ensuring solid foundations for success',
+        'Talent Nurture & Development',
+        'Governance & Processes',
+        'Strong collaboration and cohesion',
+      ],
     },
   ];
 
@@ -244,7 +246,7 @@ function GuidingPrinciplesSection() {
             Our Guiding Principles
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {principles.map((principle) => (
             <div key={principle.title}>
               <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>

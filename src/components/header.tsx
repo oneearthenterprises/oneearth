@@ -1,7 +1,15 @@
+"use client";
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { Logo } from '@/components/icons';
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   const navLinks = [
     { href: '#about', label: 'About' },
     { href: '#investments', label: 'Investments' },
@@ -32,7 +40,41 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-           {/* Add actions here if needed in the future */}
+          <div className="md:hidden">
+            <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="p-4">
+                  <Link
+                    href="/"
+                    className="mb-8 flex items-center space-x-2"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <Logo className="h-6 w-6 text-primary" />
+                    <span className="font-bold">One Earth Enterprises</span>
+                  </Link>
+                  <nav className="flex flex-col space-y-4">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="text-lg"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </nav>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+          {/* Add actions here if needed in the future */}
         </div>
       </div>
     </header>

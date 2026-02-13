@@ -47,11 +47,27 @@ const aboutSubLinks: { title: string; href: string }[] = [
   },
 ];
 
+const newsSubLinks: { title: string; href: string }[] = [
+  {
+    title: 'News',
+    href: '/news',
+  },
+  {
+    title: 'Blogs',
+    href: '/blogs',
+  },
+];
+
 const navLinks = [
   {
     label: 'About',
     href: '/aboutus',
     subLinks: aboutSubLinks,
+  },
+  {
+    label: 'News & Updates',
+    href: '#',
+    subLinks: newsSubLinks,
   },
   { href: "/founders-note", label: "Founder's Note" },
 ];
@@ -85,6 +101,20 @@ export function Header() {
                   <NavigationMenuContent>
                     <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
                       {aboutSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        />
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>News & Updates</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
+                      {newsSubLinks.map((subLink) => (
                         <ListItem
                           key={subLink.title}
                           href={subLink.href}

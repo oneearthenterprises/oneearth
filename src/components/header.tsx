@@ -16,6 +16,14 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+} from '@/components/ui/navigation-menu';
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -23,9 +31,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from '@/lib/utils';
 
+
 const aboutMenuItems: { title: string; href: string }[] = [
-  { title: 'About us', href: '/aboutus' },
-  { title: 'Core Values', href: '/core-values' },
+    { title: 'About', href: '/aboutus' },
+    { title: 'Core Value', href: '/core-values' },
 ];
 
 const mainNavLinks: { title: string; href: string }[] = [
@@ -41,7 +50,7 @@ const newsAndUpdatesLinks = [
 const mobileNavLinks = [
     {
         label: 'About',
-        subLinks: aboutMenuItems,
+        subLinks: aboutMenuItems.map(item => ({title: item.title, href: item.href})),
     },
     ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
     {
@@ -61,51 +70,59 @@ export function Header() {
           <span className="text-2xl font-medium text-foreground">holdings</span>
         </Link>
         
-        <div className="flex flex-1 justify-end items-center">
+        <div className="flex items-center gap-2">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline flex items-center gap-1">
-                        About
-                        <ChevronDown className="h-4 w-4 relative top-px" />
-                    </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="min-w-[200px]">
-                    {aboutMenuItems.map((link) => (
-                        <DropdownMenuItem key={link.title} asChild>
-                            <Link href={link.href}>
-                                {link.title}
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+                <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline">About</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                        <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
+                            <Link href="/aboutus" legacyBehavior passHref>
+                                <NavigationMenuLink className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 text-5xl font-bold no-underline outline-none focus:shadow-md">
+                                    About
+                                </NavigationMenuLink>
                             </Link>
-                        </DropdownMenuItem>
-                    ))}
-                </DropdownMenuContent>
-            </DropdownMenu>
+                            <Link href="/core-values" legacyBehavior passHref>
+                                <NavigationMenuLink className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 text-5xl font-bold no-underline outline-none focus:shadow-md">
+                                    Core Value
+                                </NavigationMenuLink>
+                            </Link>
+                        </div>
+                    </NavigationMenuContent>
+                </NavigationMenuItem>
 
-            {mainNavLinks.map((link) => (
-                <Button key={link.title} variant="ghost" asChild className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline">
-                    <Link href={link.href}>{link.title}</Link>
-                </Button>
-            ))}
-            
-            <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline flex items-center gap-1">
-                    News & Updates
-                    <ChevronDown className="h-4 w-4 relative top-px" />
-                </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="min-w-[200px]">
-                {newsAndUpdatesLinks.map((link) => (
-                    <DropdownMenuItem key={link.title} asChild>
-                        <Link href={link.href}>
-                            {link.title}
+                {mainNavLinks.map((link) => (
+                    <NavigationMenuItem key={link.title}>
+                        <Link href={link.href} legacyBehavior passHref>
+                            <NavigationMenuLink className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline h-10 px-4 py-2 flex items-center", "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50")}>
+                                {link.title}
+                            </NavigationMenuLink>
                         </Link>
-                    </DropdownMenuItem>
+                    </NavigationMenuItem>
                 ))}
-                </DropdownMenuContent>
-            </DropdownMenu>
-          </nav>
+            
+                <NavigationMenuItem>
+                     <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                        <Button variant="ghost" className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline flex items-center gap-1">
+                            News & Updates
+                            <ChevronDown className="h-4 w-4 relative top-px" />
+                        </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="start" className="min-w-[200px]">
+                        {newsAndUpdatesLinks.map((link) => (
+                            <DropdownMenuItem key={link.title} asChild>
+                                <Link href={link.href}>
+                                    {link.title}
+                                </Link>
+                            </DropdownMenuItem>
+                        ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           {/* Mobile Navigation */}
           <div className="flex items-center md:hidden">

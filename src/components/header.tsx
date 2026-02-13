@@ -94,37 +94,33 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                     <div className="container mx-auto p-6">
-                        <ul className="grid w-[500px] grid-cols-2 gap-6">
-                          {aboutSubLinks.map((subLink) => (
-                            <ListItem
-                              key={subLink.title}
-                              href={subLink.href}
-                              title={subLink.title}
-                            >
-                              {subLink.description}
-                            </ListItem>
-                          ))}
-                        </ul>
-                      </div>
+                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6">
+                      {aboutSubLinks.map((subLink) => (
+                        <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        >
+                          {subLink.description}
+                        </ListItem>
+                      ))}
+                    </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="container mx-auto p-6">
-                      <ul className="grid w-[500px] grid-cols-2 gap-6">
-                        {newsSubLinks.map((subLink) => (
-                            <ListItem
-                            key={subLink.title}
-                            href={subLink.href}
-                            title={subLink.title}
-                          >
-                            {subLink.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </div>
+                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6">
+                      {newsSubLinks.map((subLink) => (
+                          <ListItem
+                          key={subLink.title}
+                          href={subLink.href}
+                          title={subLink.title}
+                        >
+                          {subLink.description}
+                        </ListItem>
+                      ))}
+                    </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>

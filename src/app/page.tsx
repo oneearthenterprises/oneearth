@@ -124,7 +124,7 @@ function AspirationSection() {
 function ProjectsSection() {
   const projects = [
     {
-      title: 'Intgelico',
+      title: 'intellicoit',
       description: 'Sustainable residential development focused on green living and thoughtful planning.',
       imageId: 'project-intgelico',
       tags: ['Sustainable', 'Green Living', 'Residential'],

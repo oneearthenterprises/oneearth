@@ -95,6 +95,24 @@
       "description": "A stack of newspapers, representing news and announcements.",
       "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "news newspapers"
+    },
+    {
+      "id": "blog-post-1",
+      "description": "A person working on a laptop with a cup of coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b3JrJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NzEwMDU2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "work technology"
+    },
+    {
+      "id": "blog-post-2",
+      "description": "A cityscape with modern buildings.",
+      "imageUrl": "https://images.unsplash.com/photo-1617381519460-d87050ddeb92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MDk0MzEwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city architecture"
+    },
+    {
+      "id": "blog-post-3",
+      "description": "A natural landscape with mountains and a lake.",
+      "imageUrl": "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmF0dXJlJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc3MDk2MjQ2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature landscape"
     }
   ]
 }

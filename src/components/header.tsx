@@ -100,30 +100,30 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="container mx-auto max-w-screen-2xl">
-                    <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
-                      {aboutSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        >
-                          {subLink.description}
-                        </ListItem>
-                      ))}
-                    </ul>
+                  <div className="w-full bg-background">
+                    <div className="container mx-auto max-w-screen-2xl">
+                      <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
+                        {aboutSubLinks.map((subLink) => (
+                          <ListItem
+                            key={subLink.title}
+                            href={subLink.href}
+                            title={subLink.title}
+                          />
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#investments" asChild>
+                <Link href="#investments" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Investments
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#people-careers" asChild>
+                <Link href="#people-careers" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     People & Careers
                   </NavigationMenuLink>
@@ -132,18 +132,18 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="container mx-auto max-w-screen-2xl">
-                    <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
-                      {newsSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        >
-                          {subLink.description}
-                        </ListItem>
-                      ))}
-                    </ul>
+                  <div className="w-full bg-background">
+                    <div className="container mx-auto max-w-screen-2xl">
+                      <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
+                        {newsSubLinks.map((subLink) => (
+                           <ListItem
+                            key={subLink.title}
+                            href={subLink.href}
+                            title={subLink.title}
+                          />
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -224,7 +224,7 @@ export function Header() {
 const ListItem = React.forwardRef<
   React.ElementRef<'a'>,
   React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
+>(({ className, title, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -237,9 +237,6 @@ const ListItem = React.forwardRef<
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
         </a>
       </NavigationMenuLink>
     </li>

@@ -94,7 +94,7 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <div className="hidden flex-1 md:flex md:justify-center">
+        <div className="hidden flex-1 items-center justify-end md:flex">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -130,30 +130,7 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="container mx-auto grid w-full max-w-screen-2xl gap-3 p-4 md:grid-cols-[.75fr_1fr]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                          href="#news-reports"
-                        >
-                           <div className="relative h-32 w-full">
-                            <Image
-                              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbG9iYWwlMjBuZXdzJTIwY29ycG9yYXRlfGVufDB8fHx8MTcxMDEyMzU4OXww&ixlib=rb-4.1.0&q=80&w=1080"
-                              alt="News & Reports"
-                              fill
-                              className="rounded-md object-cover"
-                            />
-                          </div>
-                          <div className="mb-2 mt-4 text-lg font-medium">
-                            News & Reports
-                          </div>
-                          <p className="text-sm leading-tight text-muted-foreground">
-                            Stay updated with our latest announcements and publications.
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
+                  <ul className="grid w-auto gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {newsSubLinks.map((subLink) => (
                       <ListItem
                         key={subLink.title}

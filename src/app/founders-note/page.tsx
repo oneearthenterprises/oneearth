@@ -41,16 +41,22 @@ export default function FoundersNotePage() {
             From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
           </p>
           <p>
-            In a world that often prioritizes speed over substance, we chose a different path. We believe in the power of deliberate, thoughtful execution. This means we take the time to understand the fundamentals of each market we enter, whether it’s the fast-paced world of technology, the dynamic e-commerce landscape, or the tangible, long-term value of real estate.
+            Throughout our journey as a founder, we have seen how true value is created when strategy and execution move together. Whether in IT services, e-commerce, or real estate, our focus has always been on fundamentals: understanding markets deeply, allocating capital thoughtfully, and building teams and systems that can scale responsibly. These principles guide every decision we make as a parent company.
           </p>
           <p>
-            Our approach is founder-led and principle-driven. We operate with a deep sense of accountability, not just to our balance sheet, but to our partners, our teams, and the communities we impact. Trust is the cornerstone of every relationship we build, and we earn it through transparency, integrity, and a consistent focus on delivering what we promise.
+            We view the role of The One Earth Enterprises as both a steward and a catalyst. As stewards, we provide governance, oversight, and long-term direction to the businesses within our group. As catalysts, we enable innovation, operational excellence, and disciplined growth by empowering our teams while maintaining strong accountability. This balance is essential to creating enterprises that remain resilient across market cycles.
           </p>
           <p>
-            Building for the long term also requires a commitment to sustainability—in our business models, our environmental footprint, and our corporate governance. We are not just building for today; we are laying the groundwork for enterprises that will thrive for generations to come.
+            Trust and transparency are central to how we engage with investors, partners, and stakeholders. We believe that credibility is earned over time through consistent performance, clear communication, and ethical leadership. Our approach to growth is measured and deliberate, prioritizing sustainable value creation over rapid expansion. For us, success is defined not only by financial performance, but by the strength and integrity of the businesses we build.
           </p>
           <p>
-            Thank you for your interest in One Earth Enterprises. We are excited about the journey ahead and invite you to join us as we continue to build a future grounded in lasting value.
+            As we continue to expand The One Earth Enterprises, our long-term vision remains clear: to create an integrated group of businesses that deliver lasting economic value and contribute positively to the ecosystems in which they operate. We remain committed to disciplined execution, responsible governance, and continuous improvement.
+          </p>
+          <p>
+            We invite investors, partners, and the wider community to engage with us as we continue this journey—one focused on building future-ready enterprises with purpose, resilience, and integrity.
+          </p>
+          <p className="mt-8 font-semibold">
+            — Founders, The One Earth Enterprises
           </p>
         </div>
       </div>

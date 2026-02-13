@@ -37,16 +37,14 @@ function HeroSection() {
         </div>
       </div>
       <div className="w-full">
-        <div className="overflow-hidden">
-          <video
-            className="h-full w-full object-cover"
-            src="/assets/videos/herosectionbanner.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        </div>
+        <video
+          className="mx-auto h-[600px] w-[95%] rounded-[20px] object-cover object-top"
+          src="/assets/videos/herosectionbanner.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
     </section>
   );

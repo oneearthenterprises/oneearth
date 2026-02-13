@@ -51,16 +51,23 @@ function HeroSection() {
 function WhatWeDoSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-          What We Do
-        </p>
-        <p className="mt-4 text-2xl font-light leading-relaxed text-zinc-800 md:text-3xl">
-          At The One Earth Enterprises, we bring together technology, commerce,
-          and infrastructure to build businesses that last. Guided by innovation
-          and grounded execution, we focus on creating long-term value for
-          partners, clients, and communities.
-        </p>
+      <div className="container mx-auto grid max-w-screen-xl grid-cols-1 gap-y-8 px-4 md:grid-cols-3 md:gap-x-16 lg:px-8">
+        <div className="md:col-span-1">
+          <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+            What We Do
+          </p>
+          <h2 className="mt-2 text-4xl font-bold tracking-tight text-zinc-800">
+            Building Businesses That Last
+          </h2>
+        </div>
+        <div className="md:col-span-2">
+          <p className="text-lg leading-relaxed text-zinc-600">
+            At The One Earth Enterprises, we bring together technology, commerce,
+            and infrastructure to build businesses that last. Guided by innovation
+            and grounded execution, we focus on creating long-term value for
+            partners, clients, and communities.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
   title: 'Founder’s Note | One Earth Enterprises',
@@ -8,7 +7,6 @@ export const metadata: Metadata = {
 };
 
 export default function FoundersNotePage() {
-  const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
   return (
     <div className="bg-white">
       <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
@@ -18,15 +16,12 @@ export default function FoundersNotePage() {
         <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-3">
           <div className="md:col-span-1">
             <div className="relative h-80 w-full overflow-hidden rounded-lg">
-             {founderImage && (
-                <Image
-                  src={founderImage.imageUrl}
-                  alt={founderImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={founderImage.imageHint}
-                />
-              )}
+              <Image
+                src="/assets/images/founders.png"
+                alt="A portrait of the company founder."
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
           <div className="space-y-6 text-base text-foreground md:col-span-2">

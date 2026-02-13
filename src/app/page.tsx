@@ -59,22 +59,17 @@ function WhatWeDoSection() {
 }
 
 function FoundersNoteSection() {
-  const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
-
   return (
     <section id="founders-note" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className="relative h-[500px] w-full overflow-hidden rounded-lg">
-            {founderImage && (
-              <Image
-                src={founderImage.imageUrl}
-                alt={founderImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={founderImage.imageHint}
-              />
-            )}
+            <Image
+              src="/assets/images/founders.png"
+              alt="A portrait of the company founder."
+              fill
+              className="object-cover"
+            />
           </div>
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

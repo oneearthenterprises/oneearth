@@ -28,7 +28,7 @@ function HeroSection() {
     <section id="overview" className="w-full bg-white pt-24 pb-12">
       <div className="container mx-auto max-w-screen-2xl px-4 text-left sm:px-6 lg:px-8">
         <div className="max-w-4xl py-12">
-          <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl">
+          <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
             Investing to benefit people and the planet
           </h1>
           <p className="mt-6 text-lg text-zinc-600 md:text-xl">
@@ -36,15 +36,17 @@ function HeroSection() {
           </p>
         </div>
       </div>
-      <div className="w-full">
-        <video
-          className="h-full w-full object-cover"
-          src="/assets/videos/herosectionbanner.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+      <div className="mx-auto w-full max-w-screen-2xl px-5">
+        <div className="overflow-hidden rounded-xl">
+          <video
+            className="h-full w-full object-cover"
+            src="/assets/videos/herosectionbanner.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        </div>
       </div>
     </section>
   );
@@ -76,7 +78,7 @@ function VerticalsSection() {
     <section id="verticals" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
             Our Business Verticals
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -98,7 +100,7 @@ function VerticalsSection() {
                 </div>
               </CardHeader>
               <CardContent className="mt-4 p-0">
-                <CardTitle className="text-xl">{vertical.title}</CardTitle>
+                <CardTitle className="text-xl text-zinc-800">{vertical.title}</CardTitle>
                 <CardDescription className="mt-2 text-base">
                   {vertical.description}
                 </CardDescription>
@@ -134,7 +136,7 @@ function ProjectsSection() {
     <section id="investments" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
             Our Projects
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -163,7 +165,7 @@ function ProjectsSection() {
                   <ArrowUpRight className="h-6 w-6" />
                 </div>
                 <div className="absolute bottom-0 left-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold">{project.title}</h3>
+                  <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                   <p className="mt-2 text-sm opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     {project.description}
                   </p>
@@ -209,7 +211,7 @@ function ValuesSection() {
     <section id="about" className="bg-secondary py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
             Why One Earth
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -227,7 +229,7 @@ function ValuesSection() {
               }
             >
               <value.icon className="mb-4 h-10 w-10 text-primary" />
-              <h3 className="text-xl font-semibold">{value.title}</h3>
+              <h3 className="text-xl font-semibold text-zinc-800">{value.title}</h3>
               <p className="mt-2 text-muted-foreground">{value.description}</p>
             </div>
           ))}
@@ -242,7 +244,7 @@ function PeopleAndCareersSection() {
     <section id="people-careers" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
             People &amp; Careers
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -259,7 +261,7 @@ function NewsAndReportsSection() {
     <section id="news-reports" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
             News &amp; Reports
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

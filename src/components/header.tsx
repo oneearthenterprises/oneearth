@@ -28,10 +28,7 @@ import { cn } from '@/lib/utils';
 
 const aboutMenuItems: { title: string; href: string }[] = [
   { title: 'About', href: '/aboutus' },
-  { title: 'Novo Group', href: '#' },
-  { title: 'Leadership', href: '/founders-note'},
-  { title: 'Responsibility', href: '/core-values' },
-  { title: 'Novo Nordisk Foundation', href: '#' },
+  { title: 'Core Value', href: '/core-values' },
 ];
 
 const mainNavLinks: { title: string; href: string }[] = [
@@ -63,10 +60,10 @@ export function Header() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-sm font-medium">About</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:underline">About</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="flex h-[400px] flex-col items-start justify-center bg-white p-12">
-                   <ul className="space-y-4">
+                <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
+                  <ul className="space-y-4">
                     {aboutMenuItems.map((item) => (
                       <li key={item.title}>
                         <NavigationMenuLink asChild>
@@ -87,7 +84,7 @@ export function Header() {
             {mainNavLinks.map((link) => (
               <NavigationMenuItem key={link.title}>
                 <Link href={link.href} legacyBehavior passHref>
-                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-sm font-medium")}>
+                  <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline")}>
                     {link.title}
                   </NavigationMenuLink>
                 </Link>

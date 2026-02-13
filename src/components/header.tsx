@@ -47,6 +47,24 @@ const aboutSubLinks: { title: string; href: string; description: string }[] = [
   },
 ];
 
+const newsSubLinks: { title: string; href: string; description: string }[] = [
+  {
+    title: 'Press Releases',
+    href: '#',
+    description: 'Read our latest company announcements.',
+  },
+  {
+    title: 'Annual Reports',
+    href: '#',
+    description: 'Review our financial performance and outlook.',
+  },
+  {
+    title: 'Media Coverage',
+    href: '#',
+    description: 'See what the press is saying about us.',
+  },
+];
+
 const navLinks = [
   {
     label: 'About',
@@ -55,7 +73,11 @@ const navLinks = [
   },
   { href: '#investments', label: 'Investments' },
   { href: '#people-careers', label: 'People & Careers' },
-  { href: '#news-reports', label: 'News & Reports' },
+  {
+    href: '#news-reports',
+    label: 'News & Reports',
+    subLinks: newsSubLinks,
+  },
 ];
 
 export function Header() {
@@ -73,72 +95,102 @@ export function Header() {
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="hidden items-center space-x-1 text-sm font-medium md:flex">
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>About</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="container mx-auto grid max-w-screen-2xl gap-3 p-4 md:grid-cols-2">
-                      <li className="row-span-3">
-                        <NavigationMenuLink asChild>
-                          <a
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                            href="/"
-                          >
-                             <div className="relative h-32 w-full">
-                              <Image
-                                src="https://images.unsplash.com/photo-1571475549372-7e8ee93796dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzcwODExMzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                                alt="One Earth Enterprises"
-                                fill
-                                className="rounded-md object-cover"
-                              />
-                            </div>
-                            <div className="mb-2 mt-4 text-lg font-medium">
-                              One Earth Enterprises
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              Our vision, mission, and values.
-                            </p>
-                          </a>
-                        </NavigationMenuLink>
-                      </li>
-                      {aboutSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-full gap-3 p-4 md:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <a
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href="/"
                         >
-                          {subLink.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="#investments" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      Investments
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="#people-careers" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      People & Careers
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="#news-reports" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      News & Reports
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </nav>
+                           <div className="relative h-32 w-full">
+                            <Image
+                              src="https://images.unsplash.com/photo-1571475549372-7e8ee93796dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuYXR1cmUlMjBjb3Jwb3JhdGV8ZW58MHx8fHwxNzcwODExMzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                              alt="One Earth Enterprises"
+                              fill
+                              className="rounded-md object-cover"
+                            />
+                          </div>
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            One Earth Enterprises
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            Our vision, mission, and values.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    {aboutSubLinks.map((subLink) => (
+                      <ListItem
+                        key={subLink.title}
+                        href={subLink.href}
+                        title={subLink.title}
+                      >
+                        {subLink.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="#investments" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Investments
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="#people-careers" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    People & Careers
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-full gap-3 p-4 md:grid-cols-[.75fr_1fr]">
+                    <li className="row-span-3">
+                      <NavigationMenuLink asChild>
+                        <a
+                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                          href="#news-reports"
+                        >
+                           <div className="relative h-32 w-full">
+                            <Image
+                              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbG9iYWwlMjBuZXdzJTIwY29ycG9yYXRlfGVufDB8fHx8MTcxMDEyMzU4OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                              alt="News & Reports"
+                              fill
+                              className="rounded-md object-cover"
+                            />
+                          </div>
+                          <div className="mb-2 mt-4 text-lg font-medium">
+                            News & Reports
+                          </div>
+                          <p className="text-sm leading-tight text-muted-foreground">
+                            Stay updated with our latest announcements and publications.
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    {newsSubLinks.map((subLink) => (
+                      <ListItem
+                        key={subLink.title}
+                        href={subLink.href}
+                        title={subLink.title}
+                      >
+                        {subLink.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>

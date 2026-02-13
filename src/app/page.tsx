@@ -96,7 +96,7 @@ function FoundersNoteSection() {
   );
 }
 
-function AboutUsSection() {
+function AspirationSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,50 +207,50 @@ function ProjectsSection() {
 }
 
 function GuidingPrinciplesSection() {
-  const valuesDriven = {
+  const principles = [
+    {
       title: 'Values Driven',
       subtitle: 'A values-based company:',
       points: [
         'We strive for high performance with respect and responsibility',
         'Leading by example',
       ],
-    };
-  const otherPrinciples = [
+    },
     {
-      title: 'Ambitious Strategy',
+      title: 'Long-Term Strategy',
+      subtitle: 'Focused on sustainable growth',
       points: [
-        'Return Driven',
-        'Life Science Allocation',
-        'Diversified Capital Investments Allocation',
-        'Significant Direct Investments',
+        'Disciplined capital allocation',
+        'Diversified investments across core sectors',
       ],
     },
     {
-      title: 'Excellence in operations',
-      points: [
-        'Ensuring solid foundations for success',
-        'Talent Nurture & Development',
-        'Governance & Processes',
-        'Strong collaboration and cohesion',
-      ],
+      title: 'Operational Excellence',
+      subtitle: 'Built on strong foundations',
+      points: ['Scalable systems and execution', 'Talent development and governance'],
+    },
+    {
+      title: 'Trust & Stewardship',
+      subtitle: 'Responsible and transparent leadership',
+      points: ['Long-term partnerships', 'Ethical governance and risk discipline'],
     },
   ];
 
   return (
     <section id="principles" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-1">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Our guiding principles
-            </h2>
-          </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold text-foreground">{valuesDriven.title}</h3>
-              {valuesDriven.subtitle && <p className="mt-2 text-sm text-foreground">{valuesDriven.subtitle}</p>}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Our Guiding Principles
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {principles.map((principle) => (
+            <div key={principle.title}>
+              <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>
+              {principle.subtitle && <p className="mt-1 text-sm text-muted-foreground">{principle.subtitle}</p>}
               <ul className="mt-4 space-y-2 text-sm text-foreground">
-                {valuesDriven.points.map((point) => (
+                {principle.points.map((point) => (
                   <li key={point} className="flex items-start">
                     <span className="mr-3 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
                     <span>{point}</span>
@@ -258,22 +258,7 @@ function GuidingPrinciplesSection() {
                 ))}
               </ul>
             </div>
-            <div className="space-y-8">
-              {otherPrinciples.map(principle => (
-                <div key={principle.title}>
-                  <h3 className="font-semibold text-foreground">{principle.title}</h3>
-                  <ul className="mt-4 space-y-2 text-sm text-foreground">
-                    {principle.points.map((point) => (
-                      <li key={point} className="flex items-start">
-                        <span className="mr-3 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -286,7 +271,7 @@ export default function HomePage() {
       <HeroSection />
       <WhatWeDoSection />
       <FoundersNoteSection />
-      <AboutUsSection />
+      <AspirationSection />
       <ProjectsSection />
       <GuidingPrinciplesSection />
     </>

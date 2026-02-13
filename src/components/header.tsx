@@ -79,7 +79,7 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    <ul className="container mx-auto grid max-w-screen-2xl gap-3 p-4 md:grid-cols-2">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
                           <a
@@ -116,21 +116,21 @@ export function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#investments" asChild>
+                  <Link href="#investments" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       Investments
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#people-careers" asChild>
+                  <Link href="#people-careers" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       People & Careers
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="#news-reports" asChild>
+                  <Link href="#news-reports" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       News & Reports
                     </NavigationMenuLink>

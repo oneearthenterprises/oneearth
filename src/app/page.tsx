@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  Home as HomeIcon,
   Lightbulb,
   Leaf,
-  Server,
   ShieldCheck,
-  ShoppingCart,
   TrendingUp,
   ArrowRight,
   ArrowUpRight,
@@ -26,7 +23,7 @@ import { ContactForm } from '@/components/contact-form';
 function HeroSection() {
   return (
     <section id="overview" className="w-full bg-white pt-24 pb-12">
-      <div className="container mx-auto max-w-4xl py-12 px-4 text-left sm:px-6 lg:px-8">
+      <div className="container mx-auto py-12 px-4 text-left sm:px-6 lg:px-8">
         <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
           Investing to benefit people and the planet
         </h1>
@@ -93,67 +90,6 @@ function AboutUsSection() {
             Read more
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-const verticals = [
-  {
-    icon: Server,
-    title: 'IT Services',
-    description:
-      'Delivering cutting-edge technology solutions, from cloud infrastructure to bespoke software development.',
-  },
-  {
-    icon: ShoppingCart,
-    title: 'E-commerce',
-    description:
-      'Building and scaling digital marketplaces that connect global consumers with premium products.',
-  },
-  {
-    icon: HomeIcon,
-    title: 'Real Estate',
-    description:
-      'Developing and managing innovative commercial and residential properties for a modern lifestyle.',
-  },
-];
-
-function VerticalsSection() {
-  return (
-    <section id="verticals" className="py-16 sm:py-24">
-      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
-            Our Business Verticals
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Diversified expertise driving innovation across multiple industries.
-          </p>
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {verticals.map((vertical, index) => (
-            <Card
-              key={vertical.title}
-              className="flex animate-fade-in-up flex-col items-center p-6 text-center"
-              style={
-                { '--animation-delay': `${index * 200}ms` } as React.CSSProperties
-              }
-            >
-              <CardHeader className="p-0">
-                <div className="rounded-full bg-primary/10 p-4 text-primary">
-                  <vertical.icon className="h-8 w-8" />
-                </div>
-              </CardHeader>
-              <CardContent className="mt-4 p-0">
-                <CardTitle className="text-xl text-zinc-800">{vertical.title}</CardTitle>
-                <CardDescription className="mt-2 text-base">
-                  {vertical.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </div>
     </section>
@@ -374,7 +310,6 @@ export default function HomePage() {
       <HeroSection />
       <WhatWeDoSection />
       <AboutUsSection />
-      <VerticalsSection />
       <ProjectsSection />
       <ValuesSection />
       <FoundersNoteSection />

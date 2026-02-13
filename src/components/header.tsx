@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import * as React from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -55,6 +56,10 @@ const mobileNavLinks = [
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  const isAboutActive = aboutMenuItems.some((item) => pathname.startsWith(item.href));
+  const isNewsActive = newsAndUpdatesLinks.some((item) => pathname.startsWith(item.href));
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
@@ -68,7 +73,7 @@ export function Header() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
               <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline">About</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isAboutActive && "bg-secondary")}>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
                       <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
                           <Link href="/aboutus" legacyBehavior passHref>
@@ -88,7 +93,7 @@ export function Header() {
               {mainNavLinks.map((link) => (
                   <NavigationMenuItem key={link.title}>
                       <Link href={link.href} legacyBehavior passHref>
-                          <NavigationMenuLink className={cn("hover:underline focus:underline", "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50")}>
+                          <NavigationMenuLink active={pathname.startsWith(link.href)} className={cn("hover:underline focus:underline", "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-secondary data-[state=open]:bg-secondary")}>
                               {link.title}
                           </NavigationMenuLink>
                       </Link>
@@ -96,7 +101,7 @@ export function Header() {
               ))}
           
               <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline">News & Updates</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isNewsActive && "bg-secondary")}>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
                       <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
                           <Link href="/news" legacyBehavior passHref>

@@ -2,15 +2,9 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 
 import { PageHero } from '@/components/page-hero';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { blogPosts } from '@/lib/blog-posts';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -45,34 +39,31 @@ export default function BlogsPage() {
                 <Link
                   key={post.slug}
                   href={`/blogs/${post.slug}`}
-                  className="group"
+                  className="group relative block h-96 overflow-hidden rounded-lg shadow-lg"
                 >
-                  <Card className="h-full overflow-hidden transition-shadow duration-300 hover:shadow-xl">
-                    <div className="relative h-56 w-full">
-                      {image && (
-                        <Image
-                          src={image.imageUrl}
-                          alt={post.title}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                          data-ai-hint={image.imageHint}
-                        />
-                      )}
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-xl font-bold group-hover:text-primary">
-                        {post.title}
-                      </CardTitle>
-                      <CardDescription className="text-sm">
-                        By {post.author} on {post.date}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-base text-muted-foreground">
-                        {post.excerpt}
+                  {image && (
+                    <Image
+                      src={image.imageUrl}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      data-ai-hint={image.imageHint}
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+
+                  <div className="relative flex h-full flex-col justify-between p-6 text-white">
+                    <div className="flex items-start justify-between">
+                      <p className="text-sm font-medium uppercase tracking-wider text-white/80">
+                        {post.author.split(',')[0]}
                       </p>
-                    </CardContent>
-                  </Card>
+                      <ArrowUpRight className="h-6 w-6 text-white/80 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-3xl font-bold">{post.title}</h3>
+                    </div>
+                  </div>
                 </Link>
               );
             })}

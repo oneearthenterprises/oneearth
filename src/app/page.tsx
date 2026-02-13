@@ -120,9 +120,9 @@ function ProjectsSection() {
   const projects = [
     {
       title: 'Intellico',
-      description: 'Sustainable residential development focused on green living and thoughtful planning.',
+      description: 'Next-generation IT solutions driving digital transformation for businesses.',
       imageId: 'project-intgelico',
-      tags: ['Sustainable', 'Green Living', 'Residential'],
+      tags: ['IT Services', 'Innovation', 'Technology'],
       href: 'https://intellicoit.com/',
     },
     {

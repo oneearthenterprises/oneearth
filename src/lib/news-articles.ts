@@ -13,10 +13,10 @@ export const newsArticles: NewsArticle[] = [
     title: 'Intellico Project Launch',
     date: 'August 12, 2024',
     imageId: 'news-article-2',
-    excerpt: 'novo holdings announces the launch of Intellico, a sustainable residential development.',
+    excerpt: 'novo holdings announces the launch of Intellico, a new venture focused on next-generation IT solutions.',
     content: `
-      <p class="mb-4">novo holdings is proud to announce the launch of its latest real estate venture, Intellico. This project is a sustainable residential development focused on green living and thoughtful urban planning. Intellico aims to set a new standard for environmentally conscious communities.</p>
-      <p class="mb-4">"With Intellico, we are creating more than just homes; we are building a community that values sustainability and quality of life," said the Director of Real Estate at novo holdings. "This project embodies our commitment to long-term value and responsible development."</p>
+      <p class="mb-4">novo holdings is proud to announce its expansion into the technology sector with the launch of its latest venture, Intellico. This new company will focus on developing cutting-edge IT services and solutions, aiming to drive digital transformation for businesses worldwide.</p>
+      <p class="mb-4">"With Intellico, we are not just investing in technology; we are investing in the future of business operations," said the CEO of novo holdings. "This project embodies our commitment to innovation and long-term value creation in the digital age."</p>
     `,
   },
   {

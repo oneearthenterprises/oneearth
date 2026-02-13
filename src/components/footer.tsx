@@ -17,9 +17,9 @@ export function Footer() {
           <h3 className="mb-4 text-lg font-semibold text-foreground">Quick Links</h3>
           <ul className="space-y-2">
             <li><Link href="/aboutus" className="text-sm text-foreground hover:text-primary">About</Link></li>
-            <li><Link href="#" className="text-sm text-foreground hover:text-primary">Investments</Link></li>
-            <li><Link href="#" className="text-sm text-foreground hover:text-primary">People & Careers</Link></li>
-            <li><Link href="/news" className="text-sm text-foreground hover:text-primary">News & Reports</Link></li>
+            <li><Link href="/people-and-careers" className="text-sm text-foreground hover:text-primary">People & Careers</Link></li>
+            <li><Link href="/news" className="text-sm text-foreground hover:text-primary">News</Link></li>
+            <li><Link href="/blogs" className="text-sm text-foreground hover:text-primary">Blogs</Link></li>
           </ul>
         </div>
       </div>

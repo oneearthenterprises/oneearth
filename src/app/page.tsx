@@ -263,26 +263,28 @@ function GuidingPrinciplesSection() {
   return (
     <section id="principles" className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Our Guiding Principles
-          </h2>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {principles.map((principle) => (
-            <div key={principle.title}>
-              <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>
-              {principle.subtitle && <p className="mt-1 text-sm text-muted-foreground">{principle.subtitle}</p>}
-              <ul className="mt-4 space-y-2 text-sm text-foreground">
-                {principle.points.map((point) => (
-                  <li key={point} className="flex items-start">
-                    <span className="mr-3 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Our Guiding Principles
+            </h2>
+          </div>
+          <div className="md:col-span-2 space-y-8">
+            {principles.map((principle) => (
+              <div key={principle.title}>
+                <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>
+                {principle.subtitle && <p className="mt-1 text-sm text-muted-foreground">{principle.subtitle}</p>}
+                <ul className="mt-4 space-y-2 text-sm text-foreground">
+                  {principle.points.map((point) => (
+                    <li key={point} className="flex items-start">
+                      <span className="mr-3 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

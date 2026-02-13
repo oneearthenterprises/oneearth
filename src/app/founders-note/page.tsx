@@ -11,7 +11,7 @@ export default function FoundersNotePage() {
   const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
   return (
     <div className="bg-white">
-      <div className="container mx-auto max-w-4xl py-24 px-4 sm:px-6 lg:py-32">
+      <div className="container mx-auto max-w-screen-xl py-24 px-4 sm:px-6 lg:py-32">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl md:text-6xl">
           Founder's Note
         </h1>

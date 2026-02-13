@@ -113,6 +113,24 @@
       "description": "A natural landscape with mountains and a lake.",
       "imageUrl": "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmF0dXJlJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc3MDk2MjQ2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "nature landscape"
+    },
+    {
+      "id": "news-article-1",
+      "description": "Abstract technology background for news article.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWNobm9sb2d5JTIwYWJzdHJhY3R8ZW58MHx8fHwxNzcxMDk4MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology abstract"
+    },
+    {
+      "id": "news-article-2",
+      "description": "Modern sustainable architecture for news article.",
+      "imageUrl": "https://images.unsplash.com/photo-1517976487-165863508127?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3NzEwOTgyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sustainable architecture"
+    },
+    {
+      "id": "news-article-3",
+      "description": "Online shopping scene for e-commerce news article.",
+      "imageUrl": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBzaG9wcGluZ3xlbnwwfHx8fDE3NzEwOTgyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online shopping"
     }
   ]
 }

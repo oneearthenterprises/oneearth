@@ -308,7 +308,7 @@ function FoundersNoteSection() {
             <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
               Founder’s Note
             </p>
-            <p className="mt-4 text-2xl font-light leading-relaxed text-zinc-800 md:text-3xl">
+            <p className="mt-4 text-lg font-light leading-relaxed text-zinc-800">
               The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
             </p>
             <div className="mt-8">

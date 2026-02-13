@@ -113,14 +113,14 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#investments" legacyBehavior={false} passHref>
+                <Link href="#investments" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Investments
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#people-careers" legacyBehavior={false} passHref>
+                <Link href="#people-careers" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     People & Careers
                   </NavigationMenuLink>

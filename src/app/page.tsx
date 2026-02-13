@@ -67,12 +67,6 @@ function AboutUsSection() {
         <p className="mt-4 text-2xl font-light leading-relaxed text-foreground md:text-3xl" style={{color: '#27272a', fontSize: '16px'}}>
           Our aspiration is to build and scale businesses that deliver consistent performance, long-term growth, and enduring stakeholder confidence.
         </p>
-        <div className="mt-8">
-          <Link href="/aboutus" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">
-            Read more
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
       </div>
     </section>
   );

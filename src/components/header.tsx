@@ -29,39 +29,33 @@ import {
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
-const aboutSubLinks: { title: string; href: string; description: string }[] = [
+const aboutSubLinks: { title: string; href: string }[] = [
   {
     title: 'About',
     href: '#about',
-    description: 'Learn more about our vision, mission, and values.',
   },
   {
     title: 'Leadership',
     href: '#',
-    description: 'Meet the experienced team guiding our strategic direction.',
   },
   {
     title: 'Responsibility',
     href: '#',
-    description: 'Our commitment to sustainable and ethical business practices.',
   },
 ];
 
-const newsSubLinks: { title: string; href: string; description: string }[] = [
+const newsSubLinks: { title: string; href: string }[] = [
   {
     title: 'Press Releases',
     href: '#',
-    description: 'Read our latest company announcements.',
   },
   {
     title: 'Annual Reports',
     href: '#',
-    description: 'Review our financial performance and outlook.',
   },
   {
     title: 'Media Coverage',
     href: '#',
-    description: 'See what the press is saying about us.',
   },
 ];
 
@@ -102,7 +96,7 @@ export function Header() {
                 <NavigationMenuContent>
                   <div className="w-full bg-background">
                     <div className="container mx-auto max-w-screen-2xl">
-                      <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
+                      <ul className="flex h-[400px] w-full flex-col justify-center gap-4 p-12">
                         {aboutSubLinks.map((subLink) => (
                           <ListItem
                             key={subLink.title}
@@ -134,7 +128,7 @@ export function Header() {
                 <NavigationMenuContent>
                   <div className="w-full bg-background">
                     <div className="container mx-auto max-w-screen-2xl">
-                      <ul className="grid w-full gap-3 p-4 md:grid-cols-3">
+                      <ul className="flex h-[400px] w-full flex-col justify-center gap-4 p-12">
                         {newsSubLinks.map((subLink) => (
                            <ListItem
                             key={subLink.title}
@@ -231,12 +225,12 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            'block select-none text-2xl font-medium leading-none no-underline outline-none transition-colors hover:text-primary focus:text-primary',
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          {title}
         </a>
       </NavigationMenuLink>
     </li>

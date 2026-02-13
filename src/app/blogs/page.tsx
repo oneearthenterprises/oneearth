@@ -50,7 +50,7 @@ export default function BlogsPage() {
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
 
                   <div className="relative flex h-full flex-col justify-between p-6 text-white">
                     <div className="flex items-start justify-between">

@@ -53,7 +53,7 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
             data-ai-hint={image.imageHint}
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-start justify-end p-8 text-white sm:p-12 lg:p-24">
             <h1 className="max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
               {article.title}

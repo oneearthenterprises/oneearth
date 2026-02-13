@@ -86,9 +86,9 @@ function AboutUsSection() {
 function ProjectsSection() {
   const projects = [
     {
-      title: 'Forestgate',
+      title: 'Intgelico',
       description: 'Sustainable residential development focused on green living and thoughtful planning.',
-      imageId: 'project-forestgate',
+      imageId: 'project-intgelico',
     },
     {
       title: 'Ayubhava',

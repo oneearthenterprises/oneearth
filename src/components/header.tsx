@@ -72,7 +72,7 @@ const navLinks = [
     href: '#about',
     subLinks: aboutSubLinks,
   },
-  { href: "#founders-note", label: "Founder's Note" },
+  { href: "/founders-note", label: "Founder's Note" },
   { href: '#people-careers', label: 'People & Careers' },
   {
     href: '#news-reports',
@@ -85,7 +85,7 @@ export function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
       <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -113,7 +113,7 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#founders-note" legacyBehavior passHref>
+                <Link href="/founders-note" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Founder's Note
                   </NavigationMenuLink>

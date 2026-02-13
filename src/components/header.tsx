@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import * as React from 'react';
 import { Menu } from 'lucide-react';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
@@ -67,21 +67,17 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>About</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="h-[400px] w-auto bg-white">
-                      <div className="container mx-auto flex h-full items-center">
-                          <ul className="grid w-full grid-cols-2 gap-6 p-6 md:grid-cols-3">
-                              {aboutSubLinks.map((link) => (
-                                  <ListItem
-                                      key={link.title}
-                                      title={link.title}
-                                      href={link.href}
-                                  >
-                                      {link.description}
-                                  </ListItem>
-                              ))}
-                          </ul>
-                      </div>
-                  </div>
+                  <ul className="grid w-[600px] gap-4 p-6 md:w-[700px] md:grid-cols-3 lg:w-[800px] ">
+                      {aboutSubLinks.map((link) => (
+                          <ListItem
+                              key={link.title}
+                              title={link.title}
+                              href={link.href}
+                          >
+                              {link.description}
+                          </ListItem>
+                      ))}
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 

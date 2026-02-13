@@ -28,7 +28,7 @@ function HeroSection() {
     <section id="overview" className="w-full bg-white pt-24 pb-12">
       <div className="container mx-auto max-w-screen-2xl px-4 text-left sm:px-6 lg:px-8">
         <div className="max-w-4xl py-12">
-          <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
+          <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl">
             Investing to benefit people and the planet
           </h1>
           <p className="mt-6 text-lg text-zinc-600 md:text-xl">

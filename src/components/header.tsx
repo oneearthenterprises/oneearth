@@ -35,11 +35,6 @@ const aboutSubLinks: { title: string; href: string; description: string }[] = [
     description: 'Learn more about our vision, mission, and values.',
   },
   {
-    title: 'Novo Group',
-    href: '#',
-    description: 'Discover the broader network of companies we are part of.',
-  },
-  {
     title: 'Leadership',
     href: '#',
     description: 'Meet the experienced team guiding our strategic direction.',
@@ -48,11 +43,6 @@ const aboutSubLinks: { title: string; href: string; description: string }[] = [
     title: 'Responsibility',
     href: '#',
     description: 'Our commitment to sustainable and ethical business practices.',
-  },
-  {
-    title: 'Novo Nordisk Foundation',
-    href: '#',
-    description: 'Supporting scientific, humanitarian, and social purposes.',
   },
 ];
 
@@ -88,7 +78,23 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px]">
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <a
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                            href="/"
+                          >
+                            <Logo className="h-6 w-6 text-primary" />
+                            <div className="mb-2 mt-4 text-lg font-medium">
+                              One Earth Enterprises
+                            </div>
+                            <p className="text-sm leading-tight text-muted-foreground">
+                              Our vision, mission, and values.
+                            </p>
+                          </a>
+                        </NavigationMenuLink>
+                      </li>
                       {aboutSubLinks.map((subLink) => (
                         <ListItem
                           key={subLink.title}
@@ -163,7 +169,7 @@ export function Header() {
                               <div className="flex flex-col space-y-2">
                                 {link.subLinks.map((subLink) => (
                                   <Link
-                                    key={subLink.href}
+                                    key={subLink.title}
                                     href={subLink.href}
                                     className="text-base text-muted-foreground"
                                     onClick={() => setMenuOpen(false)}

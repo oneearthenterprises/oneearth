@@ -3,11 +3,10 @@ import { Logo } from '@/components/icons';
 
 export function Header() {
   const navLinks = [
-    { href: '#overview', label: 'Overview' },
-    { href: '#verticals', label: 'Verticals' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#values', label: 'Our Values' },
-    { href: '#contact', label: 'Contact Us' },
+    { href: '#about', label: 'About' },
+    { href: '#investments', label: 'Investments' },
+    { href: '#people-careers', label: 'People & Careers' },
+    { href: '#news-reports', label: 'News & Reports' },
   ];
 
   return (

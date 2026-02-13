@@ -18,10 +18,10 @@ export function Footer() {
         <div>
           <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
           <ul className="space-y-2">
-            <li><Link href="#overview" className="text-sm text-muted-foreground hover:text-primary">Overview</Link></li>
-            <li><Link href="#verticals" className="text-sm text-muted-foreground hover:text-primary">Business Verticals</Link></li>
-            <li><Link href="#projects" className="text-sm text-muted-foreground hover:text-primary">Projects</Link></li>
-            <li><Link href="#values" className="text-sm text-muted-foreground hover:text-primary">Why One Earth</Link></li>
+            <li><Link href="#about" className="text-sm text-muted-foreground hover:text-primary">About</Link></li>
+            <li><Link href="#investments" className="text-sm text-muted-foreground hover:text-primary">Investments</Link></li>
+            <li><Link href="#people-careers" className="text-sm text-muted-foreground hover:text-primary">People & Careers</Link></li>
+            <li><Link href="#news-reports" className="text-sm text-muted-foreground hover:text-primary">News & Reports</Link></li>
             <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact Us</Link></li>
           </ul>
         </div>

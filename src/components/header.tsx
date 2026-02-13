@@ -28,25 +28,29 @@ import {
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
 
-const aboutSubLinks: { title: string; href: string }[] = [
+const aboutSubLinks: { title: string; href: string; description: string; }[] = [
   {
-    title: 'About',
+    title: 'About Us',
     href: '/aboutus',
+    description: 'Learn more about the vision, mission, and values of One Earth Enterprises.',
   },
   {
     title: 'Core Values',
     href: '/core-values',
+    description: 'Discover the principles that guide our long-term strategy and daily operations.',
   },
 ];
 
-const newsSubLinks: { title: string; href: string }[] = [
+const newsSubLinks: { title: string; href: string; description: string; }[] = [
   {
     title: 'News',
     href: '/news',
+    description: 'Stay updated with the latest announcements and press releases.',
   },
   {
     title: 'Blogs',
     href: '/blogs',
+    description: 'Read insights and articles from our team on industry trends and topics.',
   },
 ];
 
@@ -54,12 +58,12 @@ const navLinks = [
   {
     label: 'About',
     href: '/aboutus',
-    subLinks: aboutSubLinks,
+    subLinks: aboutSubLinks.map(l => ({title: l.title, href: l.href})),
   },
   {
     label: 'News & Updates',
     href: '#',
-    subLinks: newsSubLinks,
+    subLinks: newsSubLinks.map(l => ({title: l.title, href: l.href})),
   },
   { href: "/founders-note", label: "Founder's Note" },
 ];
@@ -72,7 +76,6 @@ export function Header() {
     setIsClient(true);
   }, []);
 
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
       <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -84,50 +87,44 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <div className="hidden flex-1 items-center justify-end md:flex">
+        <div className="hidden flex-1 items-center justify-center md:flex">
          {isClient && (
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[200px] gap-1 p-2">
-                      {aboutSubLinks.map((subLink) => (
-                        <li key={subLink.title}>
-                          <NavigationMenuLink asChild>
-                            <Link
+                     <div className="container mx-auto p-6">
+                        <ul className="grid w-[500px] grid-cols-2 gap-6">
+                          {aboutSubLinks.map((subLink) => (
+                            <ListItem
+                              key={subLink.title}
                               href={subLink.href}
-                              className={cn(
-                                'block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
-                              )}
+                              title={subLink.title}
                             >
-                              {subLink.title}
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
+                              {subLink.description}
+                            </ListItem>
+                          ))}
+                        </ul>
+                      </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                     <ul className="grid w-[200px] gap-1 p-2">
-                      {newsSubLinks.map((subLink) => (
-                        <li key={subLink.title}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href={subLink.href}
-                              className={cn(
-                                'block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'
-                              )}
-                            >
-                              {subLink.title}
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="container mx-auto p-6">
+                      <ul className="grid w-[500px] grid-cols-2 gap-6">
+                        {newsSubLinks.map((subLink) => (
+                            <ListItem
+                            key={subLink.title}
+                            href={subLink.href}
+                            title={subLink.title}
+                          >
+                            {subLink.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
@@ -211,3 +208,29 @@ export function Header() {
     </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = 'ListItem';

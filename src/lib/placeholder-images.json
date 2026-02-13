@@ -20,7 +20,7 @@
     },
     {
       "id": "project-globalroots",
-      "description": "A diverse group of hands together, representing Global Roots.",
+      "description": "Connecting communities through globally-inspired and locally-rooted projects.",
       "imageUrl": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBjb21tdW5pdHl8ZW58MHx8fHwxNzcxMDM1MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global community"
     },
@@ -83,6 +83,18 @@
       "description": "A diverse group of professionals in a modern office setting, looking ahead.",
       "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "professional team"
+    },
+    {
+      "id": "blogs-banner",
+      "description": "A person writing in a notebook, symbolizing blog creation.",
+      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "writing blog"
+    },
+    {
+      "id": "news-banner",
+      "description": "A stack of newspapers, representing news and announcements.",
+      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "news newspapers"
     }
   ]
 }

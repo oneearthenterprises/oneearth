@@ -180,7 +180,7 @@ function ProjectsSection() {
   ];
 
   return (
-    <section id="founders-note" className="py-16 sm:py-24">
+    <section id="projects" className="py-16 sm:py-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">
@@ -286,6 +286,44 @@ function ValuesSection() {
   );
 }
 
+function FoundersNoteSection() {
+  const founderImage = PlaceHolderImages.find((p) => p.id === 'founder-portrait');
+
+  return (
+    <section id="founders-note" className="bg-white py-16 sm:py-24">
+      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div className="relative h-[500px] w-full overflow-hidden rounded-lg">
+            {founderImage && (
+              <Image
+                src={founderImage.imageUrl}
+                alt={founderImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={founderImage.imageHint}
+              />
+            )}
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+              Founder’s Note
+            </p>
+            <p className="mt-4 text-2xl font-light leading-relaxed text-zinc-800 md:text-3xl">
+              The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
+            </p>
+            <div className="mt-8">
+              <Link href="/founders-note" className="inline-flex items-center text-lg font-medium text-primary group hover:text-primary/80">
+                Read more
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function PeopleAndCareersSection() {
   return (
     <section id="people-careers" className="py-16 sm:py-24">
@@ -339,6 +377,7 @@ export default function HomePage() {
       <VerticalsSection />
       <ProjectsSection />
       <ValuesSection />
+      <FoundersNoteSection />
       <PeopleAndCareersSection />
       <NewsAndReportsSection />
       <ContactSection />

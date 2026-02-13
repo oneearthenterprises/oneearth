@@ -23,47 +23,28 @@ import {
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ContactForm } from '@/components/contact-form';
 
-const heroImage = PlaceHolderImages.find((p) => p.id === 'hero');
-
 function HeroSection() {
   return (
-    <section id="overview" className="relative h-[80vh] min-h-[500px] w-full">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          data-ai-hint={heroImage.imageHint}
-          priority
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
-      <div className="relative z-10 flex h-full items-center">
-        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-xl animate-fade-in-up">
-            <h1 className="text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
-              One Earth Enterprises
-            </h1>
-            <p className="mt-6 text-lg text-foreground md:text-xl">
-              Our mission is to foster growth and innovation across key sectors,
-              creating sustainable value for our partners and communities. We
-              envision a future where technology and enterprise drive positive
-              global change.
-            </p>
-            <div className="mt-8 flex gap-4">
-              <Button asChild size="lg">
-                <Link href="#verticals">
-                  Explore Our Verticals <ArrowRight className="ml-2" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="#contact">Contact Us</Link>
-              </Button>
-            </div>
-          </div>
+    <section id="overview" className="w-full bg-white pt-24 pb-12">
+      <div className="container mx-auto max-w-screen-2xl px-4 text-left sm:px-6 lg:px-8">
+        <div className="max-w-4xl py-12">
+          <h1 className="text-5xl font-light tracking-tight text-zinc-800 sm:text-6xl md:text-7xl">
+            Investing to benefit people and the planet
+          </h1>
+          <p className="mt-6 text-lg text-zinc-600 md:text-xl">
+            The holding and investment company of the Novo Nordisk Foundation
+          </p>
         </div>
+      </div>
+      <div className="w-full">
+        <video
+          className="h-full w-full object-cover"
+          src="https://videos.pexels.com/video-files/853875/853875-hd_1920_1080_30fps.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
     </section>
   );

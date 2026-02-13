@@ -211,9 +211,9 @@ export default function HomePage() {
     <>
       <HeroSection />
       <WhatWeDoSection />
+      <FoundersNoteSection />
       <AboutUsSection />
       <ProjectsSection />
-      <FoundersNoteSection />
     </>
   );
 }

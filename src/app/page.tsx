@@ -61,7 +61,7 @@ function WhatWeDoSection() {
 function AboutUsSection() {
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
           Our Aspiration
         </p>

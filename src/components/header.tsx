@@ -72,7 +72,7 @@ const navLinks = [
     href: '#about',
     subLinks: aboutSubLinks,
   },
-  { href: '#investments', label: 'Investments' },
+  { href: "#founders-note", label: "Founder's Note" },
   { href: '#people-careers', label: 'People & Careers' },
   {
     href: '#news-reports',
@@ -113,9 +113,9 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="#investments" legacyBehavior passHref>
+                <Link href="#founders-note" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Investments
+                    Founder's Note
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

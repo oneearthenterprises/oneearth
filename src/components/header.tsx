@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Logo } from '@/components/icons';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -26,46 +25,27 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { cn } from '@/lib/utils';
 
-const aboutSubLinks: { title: string; href: string; description: string; }[] = [
-  {
-    title: 'About Us',
-    href: '/aboutus',
-    description: 'Learn more about the vision, mission, and values of One Earth Enterprises.',
-  },
-  {
-    title: 'Core Values',
-    href: '/core-values',
-    description: 'Discover the principles that guide our long-term strategy and daily operations.',
-  },
+const aboutSubLinks: { title: string; href: string }[] = [
+  { title: 'About', href: '/aboutus' },
+  { title: 'Novo Group', href: '#' },
+  { title: 'Leadership', href: '/founders-note' },
+  { title: 'Responsibility', href: '/core-values' },
+  { title: 'Novo Nordisk Foundation', href: '#' },
 ];
 
-const newsSubLinks: { title: string; href: string; description: string; }[] = [
-  {
-    title: 'News',
-    href: '/news',
-    description: 'Stay updated with the latest announcements and press releases.',
-  },
-  {
-    title: 'Blogs',
-    href: '/blogs',
-    description: 'Read insights and articles from our team on industry trends and topics.',
-  },
+const mainNavLinks: { title: string; href: string }[] = [
+    { title: 'Investments', href: '#' },
+    { title: 'People & Careers', href: '#' },
+    { title: 'News & Reports', href: '/news' },
 ];
 
-const navLinks = [
-  {
-    label: 'About',
-    href: '/aboutus',
-    subLinks: aboutSubLinks.map(l => ({title: l.title, href: l.href})),
-  },
-  {
-    label: 'News & Updates',
-    href: '#',
-    subLinks: newsSubLinks.map(l => ({title: l.title, href: l.href})),
-  },
-  { href: "/founders-note", label: "Founder's Note" },
+const mobileNavLinks = [
+    {
+        label: 'About',
+        subLinks: aboutSubLinks,
+    },
+    ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
 ];
 
 export function Header() {
@@ -78,58 +58,45 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
-      <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block">
-              One Earth Enterprises
-            </span>
+          <Link href="/" className="mr-6 flex items-baseline space-x-1">
+            <span className="text-2xl font-bold text-foreground">novo</span>
+            <span className="text-2xl font-medium text-foreground">holdings</span>
           </Link>
         </div>
-        <div className="hidden flex-1 items-center justify-center md:flex">
+        <div className="hidden flex-1 items-center justify-end md:flex">
          {isClient && (
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6" style={{height: '400px'}}>
+                    <ul className="p-6 md:w-[400px]">
                       {aboutSubLinks.map((subLink) => (
-                        <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        >
-                          {subLink.description}
-                        </ListItem>
+                        <li key={subLink.title}>
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={subLink.href}
+                              className="block select-none p-3 text-3xl font-light leading-tight no-underline outline-none transition-colors hover:bg-accent/50"
+                            >
+                              {subLink.title}
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
                       ))}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>News & Updates</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="container mx-auto grid w-full grid-cols-2 gap-6 p-6" style={{height: '400px'}}>
-                      {newsSubLinks.map((subLink) => (
-                          <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        >
-                          {subLink.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/founders-note" legacyBehavior passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                      Founder's Note
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
+                {mainNavLinks.map((link) => (
+                    <NavigationMenuItem key={link.title}>
+                        <Link href={link.href} legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                {link.title}
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
           )}
@@ -146,14 +113,14 @@ export function Header() {
                 <div className="p-4">
                   <Link
                     href="/"
-                    className="mb-8 flex items-center space-x-2"
+                    className="mb-8 flex items-baseline space-x-1"
                     onClick={() => setMenuOpen(false)}
                   >
-                    <Logo className="h-6 w-6 text-primary" />
-                    <span className="font-bold">One Earth Enterprises</span>
+                    <span className="text-2xl font-bold text-foreground">novo</span>
+                    <span className="text-2xl font-medium text-foreground">holdings</span>
                   </Link>
                   <nav className="flex flex-col space-y-2">
-                    {navLinks.map((link) =>
+                    {mobileNavLinks.map((link) =>
                       link.subLinks ? (
                         <Accordion
                           type="single"
@@ -187,7 +154,7 @@ export function Header() {
                       ) : (
                         <Link
                           key={link.href}
-                          href={link.href}
+                          href={link.href!}
                           className="py-2 text-lg"
                           onClick={() => setMenuOpen(false)}
                         >
@@ -204,29 +171,3 @@ export function Header() {
     </header>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';

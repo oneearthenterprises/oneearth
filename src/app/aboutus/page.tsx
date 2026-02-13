@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'About Us | One Earth Enterprises',
+  title: 'About | novo holdings',
   description:
-    'Learn more about the vision, mission, and values of One Earth Enterprises.',
+    'Learn more about the vision, mission, and values of novo holdings.',
 };
 
 function AboutHero() {
@@ -61,7 +61,7 @@ export default function AboutUsPage() {
           </h2>
           <div className="mt-12 space-y-8 text-base text-foreground">
             <p>
-              The One Earth Enterprises was founded with a clear vision: to build
+              novo holdings was founded with a clear vision: to build
               businesses that are resilient, scalable, and designed for long-term
               impact. As a diversified parent company operating across IT
               services, e-commerce, and real estate, we bring together strategy,
@@ -76,7 +76,7 @@ export default function AboutUsPage() {
               evolve over time.
             </p>
             <p>
-              The One Earth Enterprises serves as a holding and operating
+              novo holdings serves as a holding and operating
               company, providing strategic direction, shared capabilities, and
               long-term oversight to the ventures within our ecosystem.
             </p>
@@ -91,7 +91,7 @@ export default function AboutUsPage() {
               opportunities.
             </p>
             <p>
-              In the e-commerce space, The One Earth Enterprises focuses on
+              In the e-commerce space, novo holdings focuses on
               building and supporting commerce-led ventures with strong
               operational foundations. We emphasize data-driven
               decision-making, customer-centric design, and scalable systems
@@ -110,7 +110,7 @@ export default function AboutUsPage() {
               value for stakeholders and communities alike.
             </p>
             <p>
-              At the heart of The One Earth Enterprises is a strong commitment
+              At the heart of novo holdings is a strong commitment
               to governance, transparency, and trust. We believe that a parent
               company’s responsibility extends beyond growth to include
               accountability, ethical leadership, and sustainable value
@@ -122,8 +122,8 @@ export default function AboutUsPage() {
               As we continue to expand, our vision remains rooted in building
               an integrated group of businesses that complement one another and
               contribute meaningfully to the broader economy. Guided by
-              long-term thinking and a founder-led mindset, The One Earth
-              Enterprises seeks opportunities that align with our values and our
+              long-term thinking and a founder-led mindset, novo holdings
+              seeks opportunities that align with our values and our
               strategic direction. Through innovation, execution, and trust, we
               are committed to building enterprises that stand the test of time.
             </p>

@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'News | One Earth Enterprises',
-  description: 'Latest news and announcements from One Earth Enterprises.',
+  title: 'News & Reports | novo holdings',
+  description: 'Latest news and announcements from novo holdings.',
 };
 
 export default function NewsPage() {

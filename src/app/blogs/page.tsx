@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blogs | One Earth Enterprises',
-  description: 'Insights and articles from the team at One Earth Enterprises.',
+  title: 'Blogs | novo holdings',
+  description: 'Insights and articles from the team at novo holdings.',
 };
 
 export default function BlogsPage() {

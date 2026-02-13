@@ -28,18 +28,18 @@ export function Header() {
             </span>
           </Link>
         </div>
-        <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
+          <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-foreground/60 transition-colors hover:text-foreground/80"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
           <div className="md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>

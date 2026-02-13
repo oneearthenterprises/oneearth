@@ -15,21 +15,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { 
+    NavigationMenu, 
+    NavigationMenuList, 
+    NavigationMenuItem, 
+    NavigationMenuTrigger, 
+    NavigationMenuContent, 
+    NavigationMenuLink,
+    navigationMenuTriggerStyle
+} from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 
-const aboutSubLinks: { title: string; href: string }[] = [
-  { title: 'About', href: '/aboutus' },
-  { title: 'Novo Group', href: '#' },
-  { title: 'Leadership', href: '/founders-note' },
-  { title: 'Responsibility', href: '/core-values' },
-  { title: 'Novo Nordisk Foundation', href: '#' },
+const aboutSubLinks: { title: string; href: string, description: string }[] = [
+  { title: 'About', href: '/aboutus', description: 'Learn more about the vision, mission, and values of novo holdings.' },
+  { title: 'Novo Group', href: '#', description: 'Explore the companies and partnerships within our portfolio.' },
+  { title: 'Leadership', href: '/founders-note', description: 'A message from the founder of novo holdings.' },
+  { title: 'Responsibility', href: '/core-values', description: 'Discover the principles that guide our long-term strategy.' },
+  { title: 'Novo Nordisk Foundation', href: '#', description: 'The holding and investment company of the Novo Nordisk Foundation.' },
 ];
+
 
 const mainNavLinks: { title: string; href: string }[] = [
     { title: 'Investments', href: '#' },
@@ -57,29 +61,43 @@ export function Header() {
         </Link>
         
         <div className="flex items-center gap-2">
-          <nav className="hidden md:flex items-center gap-2">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="data-[state=open]:bg-accent data-[state=open]:text-accent-foreground">About</Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-[240px] bg-white">
-                {aboutSubLinks.map((subLink) => (
-                  <DropdownMenuItem key={subLink.title} asChild>
-                    <Link href={subLink.href}>{subLink.title}</Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="h-[400px] w-auto bg-white">
+                      <div className="container mx-auto flex h-full items-center">
+                          <ul className="grid w-full grid-cols-2 gap-6 p-6 md:grid-cols-3">
+                              {aboutSubLinks.map((link) => (
+                                  <ListItem
+                                      key={link.title}
+                                      title={link.title}
+                                      href={link.href}
+                                  >
+                                      {link.description}
+                                  </ListItem>
+                              ))}
+                          </ul>
+                      </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-            {mainNavLinks.map((link) => (
-              <Link key={link.title} href={link.href} legacyBehavior passHref>
-                  <a className={cn(buttonVariants({ variant: 'ghost' }))}>
+              {mainNavLinks.map((link) => (
+                <NavigationMenuItem key={link.title}>
+                  <Link href={link.href} legacyBehavior passHref>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       {link.title}
-                  </a>
-              </Link>
-            ))}
-          </nav>
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
 
+          {/* Mobile Navigation */}
           <div className="flex items-center md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setMenuOpen}>
               <SheetTrigger asChild>
@@ -151,3 +169,29 @@ export function Header() {
     </header>
   );
 }
+
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className
+          )}
+          {...props}
+        >
+          <div className="text-lg font-semibold leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = 'ListItem';

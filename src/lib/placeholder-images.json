@@ -77,6 +77,12 @@
       "description": "A large flock of birds flying in formation against a dusky sky.",
       "imageUrl": "https://images.unsplash.com/photo-1516733989602-4b6e51de1f76?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "birds flock"
+    },
+    {
+      "id": "people-careers-banner",
+      "description": "A diverse group of professionals in a modern office setting, looking ahead.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "professional team"
     }
   ]
 }

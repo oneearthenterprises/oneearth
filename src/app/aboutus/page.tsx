@@ -10,7 +10,7 @@ export default function AboutUsPage() {
     <div className="bg-white">
       <div className="container mx-auto max-w-4xl py-24 px-4 sm:px-6 lg:py-32">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl md:text-6xl">
-          About One Earth Enterprises
+          About us in Brief
         </h1>
         <div className="mt-12 space-y-8 text-lg text-zinc-600">
           <p>
@@ -22,27 +22,61 @@ export default function AboutUsPage() {
             grounded in strong fundamentals.
           </p>
           <p>
-            Our philosophy is rooted in the belief that sustainable growth is achieved
-            by balancing economic success with social and environmental responsibility.
-            We invest in ventures that not only promise financial returns but also
-            contribute positively to the communities they serve.
+            From the beginning, our focus has been on building with intention. We
+            believe that sustainable success is achieved not through short-term
+            wins, but through disciplined execution, ethical governance, and a deep
+            understanding of how businesses evolve over time.
           </p>
-          <div>
-            <h2 className="mt-12 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">Our Mission</h2>
-            <p className="mt-4">
-              To create and nurture a portfolio of businesses that are leaders in their respective
-              industries, known for their innovation, integrity, and commitment to excellence. We aim
-              to build a legacy of value for our stakeholders, employees, and society at large.
-            </p>
-          </div>
-          <div>
-            <h2 className="mt-12 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl">Our Vision</h2>
-            <p className="mt-4">
-              To be a globally recognized enterprise that champions sustainable development and
-              long-term value creation. We envision a future where business success is synonymous
-              with positive global impact.
-            </p>
-          </div>
+          <p>
+            The One Earth Enterprises serves as a holding and operating company,
+            providing strategic direction, shared capabilities, and long-term
+            oversight to the ventures within our ecosystem.
+          </p>
+          <p>
+            Our presence in IT services is driven by a commitment to helping
+            organizations navigate digital transformation with clarity and
+            confidence. We focus on delivering practical, scalable technology
+            solutions that support operational efficiency and long-term growth. By
+            prioritizing reliability, security, and execution excellence, we aim to
+            build technology-driven businesses and partnerships that can adapt to
+            changing markets and emerging opportunities.
+          </p>
+          <p>
+            In the e-commerce space, The One Earth Enterprises focuses on building
+            and supporting commerce-led ventures with strong operational
+            foundations. We emphasize data-driven decision-making,
+            customer-centric design, and scalable systems that enable consistent
+            performance. Our approach goes beyond transactions, focusing instead on
+            creating sustainable brands and platforms that can grow responsibly
+            and endure market cycles.
+          </p>
+          <p>
+            Our real estate activities are centered on creating long-term asset
+            value through thoughtful development, strategic investment, and
+            responsible management. We view real estate as a critical pillar in
+            building stable, diversified enterprises—one that requires patience,
+            quality execution, and a long-term perspective. By aligning location
+            strategy, design, and asset management, we aim to create developments
+            that deliver lasting value for stakeholders and communities alike.
+          </p>
+          <p>
+            At the heart of The One Earth Enterprises is a strong commitment to
+            governance, transparency, and trust. We believe that a parent
+            company’s responsibility extends beyond growth to include
+            accountability, ethical leadership, and sustainable value creation.
+            Our governance frameworks are designed to support disciplined capital
+            allocation, risk management, and consistent performance across all
+            business verticals.
+          </p>
+          <p>
+            As we continue to expand, our vision remains rooted in building an
+            integrated group of businesses that complement one another and
+            contribute meaningfully to the broader economy. Guided by long-term
+            thinking and a founder-led mindset, The One Earth Enterprises seeks
+            opportunities that align with our values and strategic direction.
+            Through innovation, execution, and trust, we are committed to building
+            enterprises that stand the test of time.
+          </p>
         </div>
       </div>
     </div>

@@ -45,25 +45,6 @@ const aboutSubLinks: { title: string; href: string }[] = [
     title: 'Responsibility',
     href: '#',
   },
-  {
-    title: 'Core Values',
-    href: '/core-values',
-  },
-];
-
-const newsSubLinks: { title: string; href: string }[] = [
-  {
-    title: 'Press Releases',
-    href: '#',
-  },
-  {
-    title: 'Annual Reports',
-    href: '#',
-  },
-  {
-    title: 'Media Coverage',
-    href: '#',
-  },
 ];
 
 const navLinks = [
@@ -73,11 +54,6 @@ const navLinks = [
     subLinks: aboutSubLinks,
   },
   { href: "/founders-note", label: "Founder's Note" },
-  {
-    href: '#news-reports',
-    label: 'News & Reports',
-    subLinks: newsSubLinks,
-  },
 ];
 
 export function Header() {
@@ -124,20 +100,6 @@ export function Header() {
                       Founder's Note
                     </NavigationMenuLink>
                   </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>News & Reports</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="container mx-auto grid w-full max-w-screen-2xl gap-y-6 px-4 py-12 sm:px-6 lg:px-8">
-                      {newsSubLinks.map((subLink) => (
-                         <ListItem
-                          key={subLink.title}
-                          href={subLink.href}
-                          title={subLink.title}
-                        />
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>

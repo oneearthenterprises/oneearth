@@ -9,14 +9,14 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
-    slug: 'novo-holdings-acquires-major-stake-in-tech-innovator',
-    title: 'novo holdings Acquires Major Stake in Tech Innovator',
+    slug: 'novo-holdings-launches-intellico-project',
+    title: 'Intellico Project Launch',
     date: 'August 12, 2024',
     imageId: 'news-article-1',
-    excerpt: 'Strategic investment aims to accelerate growth in the AI-driven analytics sector.',
+    excerpt: 'novo holdings announces the launch of Intellico, a sustainable residential development.',
     content: `
-      <p class="mb-4">novo holdings today announced a significant investment in Future Analytica, a pioneering firm in artificial intelligence and machine learning. The acquisition of a majority stake underscores novo holdings\' commitment to expanding its footprint in high-growth technology sectors and driving innovation.</p>
-      <p class="mb-4">"Future Analytica represents the kind of forward-thinking, disruptive company that we are excited to partner with," said the CEO of novo holdings. "Their work in predictive analytics has the potential to transform industries, and we look forward to supporting their journey."</p>
+      <p class="mb-4">novo holdings is proud to announce the launch of its latest real estate venture, Intellico. This project is a sustainable residential development focused on green living and thoughtful urban planning. Intellico aims to set a new standard for environmentally conscious communities.</p>
+      <p class="mb-4">"With Intellico, we are creating more than just homes; we are building a community that values sustainability and quality of life," said the Director of Real Estate at novo holdings. "This project embodies our commitment to long-term value and responsible development."</p>
     `,
   },
   {

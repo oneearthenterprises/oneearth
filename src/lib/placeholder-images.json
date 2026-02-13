@@ -116,9 +116,9 @@
     },
     {
       "id": "news-article-1",
-      "description": "Abstract image representing AI and data analytics.",
-      "imageUrl": "https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=2070&auto=format&fit=crop",
-      "imageHint": "AI analytics"
+      "description": "A modern residential building with lush greenery, representing the Intellico project.",
+      "imageUrl": "https://images.unsplash.com/photo-1594488921098-a8183c79a334?q=80&w=1974&auto=format&fit=crop",
+      "imageHint": "green building"
     },
     {
       "id": "news-article-2",

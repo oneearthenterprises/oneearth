@@ -12,7 +12,7 @@ export const newsArticles: NewsArticle[] = [
     slug: 'novo-holdings-launches-intellico-project',
     title: 'Intellico Project Launch',
     date: 'August 12, 2024',
-    imageId: 'news-article-1',
+    imageId: 'news-article-2',
     excerpt: 'novo holdings announces the launch of Intellico, a sustainable residential development.',
     content: `
       <p class="mb-4">novo holdings is proud to announce the launch of its latest real estate venture, Intellico. This project is a sustainable residential development focused on green living and thoughtful urban planning. Intellico aims to set a new standard for environmentally conscious communities.</p>
@@ -23,7 +23,7 @@ export const newsArticles: NewsArticle[] = [
     slug: 'new-sustainable-real-estate-project-unveiled',
     title: 'New Sustainable Real Estate Project Unveiled',
     date: 'August 1, 2024',
-    imageId: 'news-article-2',
+    imageId: 'news-article-1',
     excerpt: 'The urban development project will feature green building technologies and community-centric design.',
     content: `
       <p class="mb-4">novo holdings has unveiled plans for "Greenwood Commons," a landmark sustainable real estate project. The mixed-use development will prioritize environmental responsibility, featuring solar power, rainwater harvesting, and extensive green spaces.</p>

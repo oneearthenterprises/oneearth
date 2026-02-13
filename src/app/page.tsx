@@ -14,7 +14,7 @@ function HeroSection() {
         <h1 className="text-5xl font-light tracking-tight text-foreground sm:text-6xl md:text-7xl">
           Investing to benefit people and the planet
         </h1>
-        <p className="mt-6 text-base text-foreground md:text-lg">
+        <p className="mt-6 text-lg text-foreground md:text-xl" style={{color: '#27272a', fontSize: '16px'}}>
           The holding and investment company of the Novo Nordisk Foundation
         </p>
       </div>
@@ -45,7 +45,7 @@ function WhatWeDoSection() {
           </h2>
         </div>
         <div className="md:col-span-2">
-          <p className="text-base leading-relaxed text-foreground">
+          <p className="text-lg leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
             At The One Earth Enterprises, we bring together technology, commerce,
             and infrastructure to build businesses that last. Guided by innovation
             and grounded execution, we focus on creating long-term value for
@@ -100,6 +100,11 @@ function ProjectsSection() {
       description: 'An infrastructure-focused brand delivering quality-driven real estate solutions.',
       imageId: 'project-royalinfra',
     },
+    {
+      title: 'Global Roots',
+      description: 'Connecting communities through globally-inspired and locally-rooted projects.',
+      imageId: 'project-globalroots',
+    },
   ];
 
   return (
@@ -109,7 +114,7 @@ function ProjectsSection() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Our Projects
           </h2>
-          <p className="mt-4 text-base text-foreground">
+          <p className="mt-4 text-lg text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
             Building communities and infrastructure for a better tomorrow.
           </p>
         </div>
@@ -171,7 +176,7 @@ function FoundersNoteSection() {
             <p className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
               Founder’s Note
             </p>
-            <p className="mt-4 text-base font-light leading-relaxed text-foreground">
+            <p className="mt-4 text-lg font-light leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
               The idea behind The One Earth Enterprises began with a personal conviction—that enduring businesses are built with patience, clarity, and responsibility. From the very beginning, our intent was not to create a collection of short-term ventures, but to establish a platform capable of building and supporting businesses that can grow steadily, adapt to change, and stand the test of time.
             </p>
             <div className="mt-8">

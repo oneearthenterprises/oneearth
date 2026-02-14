@@ -100,7 +100,7 @@ export default function PeopleAndCareersPage() {
                         asChild
                         size="lg"
                       >
-                        <a href="#">
+                        <a href="https://wa.me/917009984070" target="_blank" rel="noopener noreferrer">
                           Submit Application
                           <ArrowUpRight className="ml-2 h-4 w-4" />
                         </a>

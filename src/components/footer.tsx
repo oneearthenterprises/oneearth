@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -5,9 +6,13 @@ export function Footer() {
     <footer className="bg-secondary text-secondary-foreground mx-5 mb-5 rounded-[20px]">
       <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
         <div className="flex flex-col items-start gap-4 md:col-span-2">
-           <Link href="/" className="flex items-baseline space-x-1">
-            <span className="text-2xl font-bold text-foreground">One</span>
-            <span className="text-2xl font-medium text-foreground">Earth</span>
+           <Link href="/" className="flex items-center">
+            <Image
+              src="/assets/images/oneearth logo.svg"
+              alt="One Earth Logo"
+              width={140}
+              height={40}
+            />
           </Link>
           <p className="max-w-md text-sm text-foreground">
             Building a sustainable future, one enterprise at a time.

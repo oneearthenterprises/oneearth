@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
@@ -42,7 +43,7 @@ const newsAndUpdatesLinks = [
   { title: 'Blogs', href: '/blogs' },
 ];
 
-const mobileNavLinks = [
+const mobileNavLinks :MobileNavLink[]= [
     {
         label: 'About',
         subLinks: aboutMenuItems.map(item => ({title: item.title, href: item.href})),
@@ -53,6 +54,11 @@ const mobileNavLinks = [
         subLinks: newsAndUpdatesLinks
     },
 ];
+type MobileNavLink = {
+  label: string;
+  href?: string;
+  subLinks?: { title: string; href: string }[];
+};
 
 export function Header() {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
@@ -64,9 +70,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white">
       <div className="container mx-auto flex h-20 max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-baseline space-x-1">
-          <span className="text-2xl font-bold text-foreground">One</span>
-          <span className="text-2xl font-medium text-foreground">Earth</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/assets/images/oneearth logo.svg"
+            alt="One Earth Logo"
+            width={140}
+            height={40}
+            priority
+          />
         </Link>
         
         {/* Desktop Navigation */}
@@ -75,17 +86,13 @@ export function Header() {
               <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isAboutActive && "bg-secondary")}>About</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                      <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
-                          <NavigationMenuLink asChild>
-                              <Link href="/aboutus" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <div className=" w-screen flex flex-col gap-x-8 p-12 h-[400px] gap-6">
+                      <Link href="/aboutus" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
                                   About
                               </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                              <Link href="/core-values" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                                  Core Value
+                              <Link href="/core-values" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
+                                  Core Values
                               </Link>
-                          </NavigationMenuLink>
                       </div>
                   </NavigationMenuContent>
               </NavigationMenuItem>
@@ -103,17 +110,13 @@ export function Header() {
               <NavigationMenuItem>
                   <NavigationMenuTrigger className={cn("text-sm font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isNewsActive && "bg-secondary")}>News & Updates</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                      <div className="grid w-screen grid-cols-2 gap-x-8 p-12 h-[400px]">
-                          <NavigationMenuLink asChild>
-                              <Link href="/news" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <div className=" w-screen flex flex-col gap-x-8 p-12 h-[400px] gap-6">
+                      <Link href="/news" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
                                   News
                               </Link>
-                          </NavigationMenuLink>
-                          <NavigationMenuLink asChild>
-                              <Link href="/blogs" className="flex h-full w-full select-none items-center justify-center rounded-md p-6 text-2xl font-semibold no-underline outline-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                              <Link href="/blogs" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
                                   Blogs
                               </Link>
-                          </NavigationMenuLink>
                       </div>
                   </NavigationMenuContent>
               </NavigationMenuItem>
@@ -133,11 +136,15 @@ export function Header() {
               <div className="p-4">
                 <Link
                   href="/"
-                  className="mb-8 flex items-baseline space-x-1"
+                  className="mb-8 flex items-center"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <span className="text-2xl font-bold text-foreground">One</span>
-                  <span className="text-2xl font-medium text-foreground">Earth</span>
+                  <Image
+                    src="/assets/images/oneearth logo.svg"
+                    alt="One Earth Logo"
+                    width={140}
+                    height={40}
+                  />
                 </Link>
                 <nav className="flex flex-col space-y-2">
                   {mobileNavLinks.map((link) =>

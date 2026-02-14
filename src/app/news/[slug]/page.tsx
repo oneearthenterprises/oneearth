@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+
 import { newsArticles } from '@/lib/news-articles';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 

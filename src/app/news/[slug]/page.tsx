@@ -12,6 +12,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 
 
+
 type NewsArticlePageProps = {
   params: {
     slug: string;

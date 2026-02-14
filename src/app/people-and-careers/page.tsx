@@ -58,8 +58,7 @@ export default function PeopleAndCareersPage() {
                 </p>
                 <a
                   href="mailto:careers@oneearthent.com"
-                  className="mt-2 block text-lg hover:underline"
-                  style={{ color: 'hsl(var(--chart-5))' }}
+                  className="mt-2 block text-lg text-primary hover:underline"
                 >
                   careers@oneearthent.com
                 </a>
@@ -100,11 +99,6 @@ export default function PeopleAndCareersPage() {
                       <Button
                         asChild
                         size="lg"
-                        style={{
-                          backgroundColor: 'hsl(var(--chart-5))',
-                          color: 'white',
-                        }}
-                        className="hover:opacity-90"
                       >
                         <a href="#">
                           Submit Application

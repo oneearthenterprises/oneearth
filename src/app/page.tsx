@@ -156,7 +156,7 @@ function ProjectsSection() {
             Building communities and infrastructure for a better tomorrow.
           </p>
         </div>
-        <div className="mt-12 flex h-[60vh] w-full flex-col gap-4 md:flex-row">
+        <div className="mt-12 flex w-full flex-col gap-4 md:h-[60vh] md:flex-row">
           {projects.map((project: any) => {
             const image = PlaceHolderImages.find((p) => p.id === project.imageId);
             
@@ -201,7 +201,7 @@ function ProjectsSection() {
                   key={project.title}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex-1 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out hover:flex-[3]"
+                  className="group relative h-64 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out md:h-auto md:flex-1 md:hover:flex-[3]"
                 >
                   {cardInner}
                 </Link>
@@ -211,7 +211,7 @@ function ProjectsSection() {
             return (
               <div
                 key={project.title}
-                className="group relative flex-1 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out hover:flex-[3]"
+                className="group relative h-64 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out md:h-auto md:flex-1 md:hover:flex-[3]"
               >
                 {cardInner}
               </div>

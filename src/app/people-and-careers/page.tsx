@@ -1,6 +1,6 @@
 
 import { type Metadata } from 'next';
-import { ArrowUpRight, ChevronDown } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import { PageHero } from '@/components/page-hero';
 import { Button } from '@/components/ui/button';
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const openRoles = [
   {
-    title: 'Senior Inventory Specialist',
+    title: 'Backend Developer',
     type: 'Full Time',
     location: 'Zirakpur',
   },
@@ -68,9 +68,6 @@ export default function PeopleAndCareersPage() {
                   key={role.title}
                   className="border-b border-border pb-8 last:border-b-0 last:pb-0"
                 >
-                  <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-                    Open Roles
-                  </p>
                   <div className="mt-4 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
                     <div className="flex-grow">
                       <h3 className="text-3xl font-bold text-foreground">
@@ -83,19 +80,12 @@ export default function PeopleAndCareersPage() {
                       </div>
                     </div>
                     <div className="flex flex-shrink-0 items-center gap-4">
-                      <Button
-                        variant="outline"
-                        size="icon"
-                        className="h-12 w-12 rounded-full"
-                      >
-                        <ChevronDown className="h-5 w-5" />
-                        <span className="sr-only">More info</span>
-                      </Button>
-                      <Button
-                        asChild
-                        size="lg"
-                      >
-                        <a href="https://wa.me/917009984070" target="_blank" rel="noopener noreferrer">
+                      <Button asChild size="lg">
+                        <a
+                          href="https://wa.me/917009984070"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           Submit Application
                           <ArrowUpRight className="ml-2 h-4 w-4" />
                         </a>

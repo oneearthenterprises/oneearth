@@ -15,19 +15,19 @@ const openRoles = [
     title: 'Senior Inventory Specialist',
     type: 'Full Time',
     salary: '$100K – $150K',
-    location: 'Boston, United States',
+    location: 'Zirakpur',
   },
   {
     title: 'Senior Software Developer',
     type: 'Full Time',
     salary: '$120K – $180K',
-    location: 'Boston, United States',
+    location: 'Zirakpur',
   },
   {
     title: 'Junior UI/UX Fullstack Designer',
     type: 'Full Time',
     salary: '$80K – $110K',
-    location: 'Boston, United States',
+    location: 'Zirakpur',
   },
 ];
 

@@ -93,7 +93,7 @@ function FoundersNoteSection() {
 
 function AspirationSection() {
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white py-10 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -260,7 +260,7 @@ function GuidingPrinciplesSection() {
   ];
 
   return (
-    <section id="principles" className="bg-white py-16 sm:py-24">
+    <section id="principles" className="bg-white pt-8 pb-16 sm:py-24">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>

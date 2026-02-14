@@ -35,7 +35,7 @@ function HeroSection() {
 
 function WhatWeDoSection() {
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white py-10">
       <div className="container mx-auto grid max-w-screen-xl grid-cols-1 gap-y-8 px-4 md:grid-cols-3 md:gap-x-16 lg:px-8">
         <div className="md:col-span-1">
           <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">

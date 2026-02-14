@@ -6,6 +6,7 @@ import { newsArticles } from '@/lib/news-articles';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 
+
 type NewsArticlePageProps = {
   params: {
     slug: string;

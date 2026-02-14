@@ -1,9 +1,14 @@
 
 import { type Metadata } from 'next';
-import { ArrowUpRight } from 'lucide-react';
 
 import { PageHero } from '@/components/page-hero';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export const metadata: Metadata = {
   title: 'People & Careers | One Earth Enterprises',
@@ -15,16 +20,22 @@ const openRoles = [
     title: 'Backend Developer',
     type: 'Full Time',
     location: 'Zirakpur',
+    description:
+      'We are looking for a skilled Backend Developer to join our team. You will be responsible for managing the interchange of data between the server and the users. Your primary focus will be the development of all server-side logic, definition and maintenance of the central database, and ensuring high performance and responsiveness to requests from the front-end.',
   },
   {
     title: 'Senior Software Developer',
     type: 'Full Time',
     location: 'Zirakpur',
+    description:
+      'As a Senior Software Developer, you will lead our project teams to design, develop and maintain high-quality software solutions. You will be responsible for the full software development life cycle, from conception to deployment. You are expected to be a team player and a leader with a keen eye for detail and problem-solving skills.',
   },
   {
     title: 'Junior UI/UX Fullstack Designer',
     type: 'Full Time',
     location: 'Zirakpur',
+    description:
+      'We are seeking a talented Junior UI/UX Fullstack Designer to create amazing user experiences. The ideal candidate should have an eye for clean and artful design, possess superior UI/UX skills and be able to translate high-level requirements into interaction flows and artifacts, and transform them into beautiful, intuitive, and functional user interfaces.',
   },
 ];
 
@@ -62,38 +73,49 @@ export default function PeopleAndCareersPage() {
               </div>
             </div>
 
-            <div className="space-y-8 md:col-span-2">
-              {openRoles.map((role) => (
-                <div
-                  key={role.title}
-                  className="border-b border-border pb-8 last:border-b-0 last:pb-0"
-                >
-                  <div className="mt-4 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-                    <div className="flex-grow">
-                      <h3 className="text-3xl font-bold text-foreground">
-                        {role.title}
-                      </h3>
-                      <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
-                        <span>{role.type}</span>
-                        <span className="text-muted-foreground/50">&bull;</span>
-                        <span>{role.location}</span>
+            <div className="md:col-span-2">
+              <Accordion type="single" collapsible className="w-full">
+                {openRoles.map((role) => (
+                  <AccordionItem
+                    key={role.title}
+                    value={role.title}
+                    className="border-b border-border last:border-b-0"
+                  >
+                    <div className="flex flex-col items-start gap-4 py-6 md:flex-row md:items-center">
+                      <AccordionTrigger className="flex-grow p-0 text-left hover:no-underline">
+                        <div>
+                          <h3 className="text-3xl font-bold text-foreground">
+                            {role.title}
+                          </h3>
+                          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                            <span>{role.type}</span>
+                            <span className="text-muted-foreground/50">
+                              &bull;
+                            </span>
+                            <span>{role.location}</span>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
+                      <div className="flex-shrink-0">
+                        <Button asChild size="lg">
+                          <a
+                            href="https://wa.me/917009984070"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Submit Application
+                          </a>
+                        </Button>
                       </div>
                     </div>
-                    <div className="flex flex-shrink-0 items-center gap-4">
-                      <Button asChild size="lg">
-                        <a
-                          href="https://wa.me/917009984070"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Submit Application
-                          <ArrowUpRight className="ml-2 h-4 w-4" />
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                    <AccordionContent className="pb-6">
+                      <p className="text-base text-muted-foreground">
+                        {role.description}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
           </div>
         </div>

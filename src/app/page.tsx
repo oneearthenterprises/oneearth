@@ -60,7 +60,7 @@ function WhatWeDoSection() {
 
 function FoundersNoteSection() {
   return (
-    <section id="founders-note" className="bg-white py-16 sm:py-24">
+    <section id="founders-note" className="bg-white py-12 sm:py-16">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className="relative h-screen w-full overflow-hidden rounded-lg">

@@ -14,19 +14,16 @@ const openRoles = [
   {
     title: 'Senior Inventory Specialist',
     type: 'Full Time',
-    salary: '$100K – $150K',
     location: 'Zirakpur',
   },
   {
     title: 'Senior Software Developer',
     type: 'Full Time',
-    salary: '$120K – $180K',
     location: 'Zirakpur',
   },
   {
     title: 'Junior UI/UX Fullstack Designer',
     type: 'Full Time',
-    salary: '$80K – $110K',
     location: 'Zirakpur',
   },
 ];
@@ -81,8 +78,6 @@ export default function PeopleAndCareersPage() {
                       </h3>
                       <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
                         <span>{role.type}</span>
-                        <span className="text-muted-foreground/50">&bull;</span>
-                        <span>{role.salary}</span>
                         <span className="text-muted-foreground/50">&bull;</span>
                         <span>{role.location}</span>
                       </div>

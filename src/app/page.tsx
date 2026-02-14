@@ -93,7 +93,7 @@ function FoundersNoteSection() {
 
 function AspirationSection() {
   return (
-    <section className="bg-white py-10 sm:py-16">
+    <section className="bg-white py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -146,7 +146,7 @@ function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-16 sm:py-24">
+    <section id="projects" className="pt-8 pb-16 sm:pb-24">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -201,7 +201,7 @@ function ProjectsSection() {
                   key={project.title}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative h-64 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out md:h-auto md:flex-1 md:hover:flex-[3]"
+                  className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out md:h-auto md:flex-1 md:hover:flex-[3]"
                 >
                   {cardInner}
                 </Link>
@@ -211,7 +211,7 @@ function ProjectsSection() {
             return (
               <div
                 key={project.title}
-                className="group relative h-64 cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out md:h-auto md:flex-1 md:hover:flex-[3]"
+                className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out md:h-auto md:flex-1 md:hover:flex-[3]"
               >
                 {cardInner}
               </div>

@@ -82,7 +82,7 @@ export default function PeopleAndCareersPage() {
                     className="border-b border-border last:border-b-0"
                   >
                     <div className="flex flex-col gap-4 py-6 md:flex-row md:items-center">
-                      <AccordionTrigger className="flex-grow p-0 text-left hover:no-underline">
+                      <AccordionTrigger className="p-0 text-left hover:no-underline">
                         <div>
                           <h3 className="text-3xl font-bold text-foreground">
                             {role.title}
@@ -96,7 +96,7 @@ export default function PeopleAndCareersPage() {
                           </div>
                         </div>
                       </AccordionTrigger>
-                      <div className="w-full flex-shrink-0 md:w-auto">
+                      <div className="w-full flex-shrink-0 md:ml-auto md:w-auto">
                         <Button asChild size="lg" className="w-full md:w-auto">
                           <a
                             href="https://wa.me/917009984070"

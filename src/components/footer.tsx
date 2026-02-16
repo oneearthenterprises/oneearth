@@ -1,11 +1,19 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="bg-secondary text-secondary-foreground mx-5 mb-5 rounded-[20px]">
       <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
-        <div className="flex flex-col items-start gap-4 md:col-span-2">
+        <div className="flex flex-col items-start gap-4">
            <Link href="/" className="flex items-center">
             <Image
               src="/assets/images/oneearth logo.svg"
@@ -27,11 +35,17 @@ export function Footer() {
             <li><Link href="/blogs" className="text-sm text-foreground hover:text-primary">Blogs</Link></li>
           </ul>
         </div>
+        <div>
+            <h3 className="mb-4 text-lg font-semibold text-foreground">Location</h3>
+            <p className="text-sm text-foreground">
+            One Earth Enterprises, SCO-67, First Floor, Guru Nanak Enclave, Old Ambala Road, Zirakpur, Punjab 140603
+            </p>
+        </div>
       </div>
       <div className="border-t border-border">
         <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <p className="text-sm text-foreground">
-            © {new Date().getFullYear()} One Earth Enterprises. All rights reserved.
+            © {year} One Earth Enterprises. All rights reserved.
           </p>
         </div>
       </div>

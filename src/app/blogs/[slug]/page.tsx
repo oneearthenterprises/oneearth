@@ -6,6 +6,7 @@ import { blogPosts } from '@/lib/blog-posts';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 
+
 type BlogPostPageProps = {
   params: {
     slug: string;

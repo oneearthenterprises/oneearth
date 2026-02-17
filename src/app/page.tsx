@@ -8,6 +8,7 @@ import {
 
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+
 function HeroSection() {
   return (
     <section id="overview" className="w-full bg-white pt-24 pb-12">

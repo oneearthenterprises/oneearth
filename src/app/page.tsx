@@ -11,8 +11,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 function HeroSection() {
   return (
-    <section id="overview" className="w-full bg-white pt-24 pb-12">
-      <div className="container mx-auto py-12 px-4 text-left sm:px-6 lg:px-8">
+    <section id="overview" className="w-full bg-white md
+    :pt-16 pt-10 pb-12">
+      <div className="container mx-auto md:py-12 py-8 px-4 text-left sm:px-6 lg:px-8">
         <h1 className="text-5xl font-light tracking-tight text-foreground sm:text-6xl md:text-7xl">
         Create. Amaze. Inspire.
         </h1>
@@ -103,7 +104,7 @@ function AspirationSection() {
           <p
             className="mt-4 font-thin text-foreground"
             style={{
-              fontSize: 'clamp(2.5rem, 5vw + 1rem, 5rem)',
+              fontSize: 'clamp(2.5rem, 5vw + 1rem, 4rem)',
               lineHeight: 1.175,
               color: '#27272a',
               fontWeight: 100,
@@ -269,7 +270,7 @@ function GuidingPrinciplesSection() {
               Our Guiding Principles
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1  gap-8">
             {principles.map((principle) => (
               <div key={principle.title}>
                 <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>

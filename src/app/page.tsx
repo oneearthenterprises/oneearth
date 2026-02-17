@@ -13,10 +13,10 @@ function HeroSection() {
     <section id="overview" className="w-full bg-white pt-24 pb-12">
       <div className="container mx-auto py-12 px-4 text-left sm:px-6 lg:px-8">
         <h1 className="text-5xl font-light tracking-tight text-foreground sm:text-6xl md:text-7xl">
-          Investing to benefit people and the planet
+        Create. Amaze. Inspire.
         </h1>
         <p className="mt-6 text-lg text-foreground md:text-xl" style={{color: '#27272a', fontSize: '16px'}}>
-          The holding and investment company of the Novo Nordisk Foundation
+        The One Earth Enterprises builds value across IT, real estate, and e-commerce by engineering growth--driven, future-focused business ecosystems.
         </p>
       </div>
       <div className="w-full">
@@ -36,8 +36,8 @@ function HeroSection() {
 function WhatWeDoSection() {
   return (
     <section className="bg-white py-10">
-      <div className="container mx-auto grid max-w-screen-xl grid-cols-1 gap-y-8 px-4 md:grid-cols-3 md:gap-x-16 lg:px-8">
-        <div className="md:col-span-1">
+      <div className="container mx-auto grid  grid-cols-1 gap-y-8 px-4 md:grid-cols-[3fr_5fr] md:gap-x-16 lg:px-8">
+        <div className="">
           <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
             What We Do
           </p>
@@ -45,7 +45,7 @@ function WhatWeDoSection() {
             Building Businesses That Last
           </h2>
         </div>
-        <div className="md:col-span-2">
+        <div className="">
           <p className="text-lg leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
             At One Earth Enterprises, we bring together technology, commerce,
             and infrastructure to build businesses that last. Guided by innovation
@@ -295,10 +295,13 @@ export default function HomePage() {
     <>
       <HeroSection />
       <WhatWeDoSection />
-      <FoundersNoteSection />
-      <AspirationSection />
       <ProjectsSection />
+      <AspirationSection />
       <GuidingPrinciplesSection />
+      <FoundersNoteSection />
+     
+     
+     
     </>
   );
 }

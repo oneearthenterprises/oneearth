@@ -27,15 +27,14 @@ import {
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 
-
 const aboutMenuItems: { title: string; href: string }[] = [
-    { title: 'About', href: '/aboutus' },
-    { title: 'Core Value', href: '/core-values' },
+  { title: 'About', href: '/aboutus' },
+  { title: 'Core Values', href: '/core-values' },
 ];
 
 const mainNavLinks: { title: string; href: string }[] = [
-    { title: "Founder's Note", href: '/founders-note' },
-    { title: 'People & Careers', href: '/people-and-careers' },
+  { title: "Founder's Note", href: '/founders-note' },
+  { title: 'People & Careers', href: '/people-and-careers' },
 ];
 
 const newsAndUpdatesLinks = [
@@ -43,17 +42,18 @@ const newsAndUpdatesLinks = [
   { title: 'Blogs', href: '/blogs' },
 ];
 
-const mobileNavLinks :MobileNavLink[]= [
-    {
-        label: 'About',
-        subLinks: aboutMenuItems.map(item => ({title: item.title, href: item.href})),
-    },
-    ...mainNavLinks.map(l => ({label: l.title, href: l.href})),
-    {
-        label: 'News & Updates',
-        subLinks: newsAndUpdatesLinks
-    },
+const mobileNavLinks: MobileNavLink[] = [
+  {
+    label: 'About',
+    subLinks: aboutMenuItems.map(item => ({ title: item.title, href: item.href })),
+  },
+  ...mainNavLinks.map(l => ({ label: l.title, href: l.href })),
+  {
+    label: 'News & Updates',
+    subLinks: newsAndUpdatesLinks
+  },
 ];
+
 type MobileNavLink = {
   label: string;
   href?: string;
@@ -64,97 +64,129 @@ export function Header() {
   const [isMenuOpen, setMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
-
   const isAboutActive = aboutMenuItems.some((item) => pathname.startsWith(item.href));
   const isNewsActive = newsAndUpdatesLinks.some((item) => pathname.startsWith(item.href));
 
- const [isScrolled, setIsScrolled] = React.useState(false);
- React.useEffect (()=>{
-
-  const handleScroll =()=>{
-    if(window.scrollY > 0){
-      setIsScrolled(true);
-    }else{
-      setIsScrolled(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+  
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     }
-  }
-  window.addEventListener('scroll', handleScroll);
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  }
- },[])
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
   return (
-<header
-  className={`
-    w-full bg-white border-b border-border/40
-    transition-all duration-300 z-50 flex
-    ${isScrolled ? "fixed top-0 left-0 md:h-[95px] h-[75px]" : "relative h-auto"}
-  `}
->
- <div className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header
+      className={`
+        w-full bg-white border-b border-border/40
+        transition-all duration-300 z-50 flex
+        ${isScrolled ? "fixed top-0 left-0 md:h-[95px] h-[75px]" : "relative h-auto"}
+      `}
+    >
+      <div className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          className={cn(
+            "flex items-center justify-center transition-all duration-300 overflow-hidden",
+            isScrolled ? "md:h-[95px] h-[75px]" : "h-[130px]"
+          )}
+        >
+          <Image
+            src={isScrolled ? `/assets/images/the one earth.svg` : `/assets/images/oneearth logo.jpg`}
+            alt="One Earth Logo"
+            width={180}
+            height={100}
+            priority
+            className={cn(
+              "object-contain transition-all duration-300 relative w-auto",
+              isScrolled ? "md:h-[80px] h-[70px] relative w-auto" : "md:h-[160px] h-[110px] w-auto"
+            )}
+          />
+        </Link>
 
-<Link
-  href="/"
-  className={cn(
-    "flex items-center justify-center transition-all duration-300 overflow-hidden",
-    isScrolled ? "md:h-[95px] h-[75px]" : "h-[130px]"
-  )}
->
-  <Image
-  src={isScrolled ? `/assets/images/the one earth.svg` : `/assets/images/oneearth logo.jpg`}
-    alt="One Earth Logo"
-    width={180}
-    height={100}
-    priority
-    className={cn( 
-      "object-contain transition-all duration-300  relative w-auto",
-      isScrolled ? "md:h-[80px] h-[70px] relative  w-auto" : "md:h-[150px] h-[110px] w-auto"
-     
-    )}
-  />
-</Link>
-
-        
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
-              <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn("text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isAboutActive && "bg-secondary")}>About</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                      <div className="w-screen min-h-[400px] px-12 py-10 flex flex-col gap-6">
-                      <Link href="/aboutus" className="text-xl font-medium tracking-tight text-foreground sm:text-4xl">
-                                  About
-                              </Link>
-                              <Link href="/core-values" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
-                                  Core Values
-                              </Link>
-                      </div>
-                  </NavigationMenuContent>
-              </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger 
+                className={cn(
+                  "text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", 
+                  isAboutActive && "bg-secondary"
+                )}
+              >
+                About
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+  <div className="w-full h-full shadow-none">
+    <div className="px-8 py-16 ">
+      <div className="flex flex-col space-y-6">
+        <Link href="/aboutus" className="text-4xl font-medium">
+          About
+        </Link>
+        <Link href="/core-values" className="text-4xl font-medium">
+          Core Values
+        </Link>
+      </div>
+    </div>
+  </div>
+</NavigationMenuContent>
 
-              {mainNavLinks.map((link) => (
-                  <NavigationMenuItem key={link.title}>
-                      <NavigationMenuLink asChild active={pathname.startsWith(link.href)}>
-                          <Link href={link.href} className={cn("hover:underline focus:underline", "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-secondary data-[state=open]:bg-secondary")}>
-                              {link.title}
-                          </Link>
-                      </NavigationMenuLink>
-                  </NavigationMenuItem>
-              ))}
-           
-              <NavigationMenuItem>
-                  <NavigationMenuTrigger className={cn("text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", isNewsActive && "bg-secondary")}>News & Updates</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                      <div className=" w-screen flex flex-col gap-x-8 p-12 h-[400px] gap-6">
-                      <Link href="/news" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
-                                  News
-                              </Link>
-                              <Link href="/blogs" className="text-3xl font-medium tracking-tight text-foreground sm:text-4xl">
-                                  Blogs
-                              </Link>
-                      </div>
-                  </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {mainNavLinks.map((link) => (
+              <NavigationMenuItem key={link.title}>
+                <NavigationMenuLink asChild active={pathname.startsWith(link.href)}>
+                  <Link 
+                    href={link.href} 
+                    className={cn(
+                      "hover:underline focus:underline", 
+                      "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-lg font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-secondary data-[state=open]:bg-secondary"
+                    )}
+                  >
+                    {link.title}
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
+            ))}
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger 
+                className={cn(
+                  "text-lg font-medium bg-transparent hover:bg-transparent focus:bg-transparent hover:underline focus:underline data-[state=open]:underline data-[state=open]:bg-secondary", 
+                  isNewsActive && "bg-secondary"
+                )}
+              >
+                News & Updates
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <div className="w-screen bg-white ">
+                  <div className=" px-4 sm:px-6 lg:px-8 py-16">
+                    <div className="flex flex-col space-y-6">
+                      <Link 
+                        href="/news" 
+                        className="text-4xl font-medium tracking-tight text-foreground hover:text-gray-600 transition-colors w-fit"
+                      >
+                        News
+                      </Link>
+                      <Link 
+                        href="/blogs" 
+                        className="text-4xl font-medium tracking-tight text-foreground hover:text-gray-600 transition-colors w-fit"
+                      >
+                        Blogs
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
 

@@ -16,7 +16,7 @@ export function Footer() {
         <div className="flex flex-col items-start gap-4">
            <Link href="/" className="flex items-center">
             <Image
-              src="/assets/images/oneearth logo.jpg"
+              src="/assets/images/TH ONE EARTH.png"
               alt="One Earth Logo"
               width={140}
               height={40}
@@ -43,8 +43,8 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-foreground">
+        <div className="  flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8 w-full">
+          <p className="text-sm text-foreground  text-center w-full">
             © {year} One Earth Enterprises. All rights reserved.
           </p>
         </div>

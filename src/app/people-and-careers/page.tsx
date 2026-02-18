@@ -65,10 +65,10 @@ export default function PeopleAndCareersPage() {
                   OR CONTACT US WITH
                 </p>
                 <a
-                  href="mailto:careers@oneearthent.com"
+                  href="mailto:jobs@theoneearthenterprises.com"
                   className="mt-2 block text-lg text-primary hover:underline"
                 >
-                  careers@oneearthent.com
+                  jobs@theoneearthenterprises.com
                 </a>
               </div>
             </div>

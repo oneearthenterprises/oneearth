@@ -118,7 +118,7 @@ function AspirationSection() {
 function ProjectsSection() {
   const projects = [
     {
-      title: 'Intellico',
+      title: 'Intellico IT Services',
       description: 'Next-generation IT solutions driving digital transformation for businesses.',
       imageId: 'project-intgelico',
       tags: ['IT Services', 'Innovation', 'Technology'],
@@ -128,10 +128,10 @@ function ProjectsSection() {
       title: 'Ayubhava',
       description: 'A wellness-oriented project designed around nature, balance, and lifestyle.',
       imageId: 'project-ayubhava',
-      tags: ['Wellness', 'Nature', 'Lifestyle'],
+      tags: ['Wellness', 'Nature', 'Herbal Lifestyle'],
     },
     {
-      title: 'Royal Infra',
+      title: 'Royal Infra Group',
       description: 'An infrastructure-focused brand delivering quality-driven real estate solutions.',
       imageId: 'project-royalinfra',
       tags: ['Infrastructure', 'Quality', 'Real Estate'],
@@ -140,7 +140,7 @@ function ProjectsSection() {
       title: 'Global Roots',
       description: 'Connecting communities through globally-inspired and locally-rooted projects.',
       imageId: 'project-globalroots',
-      tags: ['Community', 'Global', 'Local'],
+      tags: ['E commerse', 'Global', 'Local'],
     },
   ];
 

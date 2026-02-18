@@ -16,7 +16,7 @@ export function Footer() {
         <div className="flex flex-col items-start gap-4">
            <Link href="/" className="flex items-center">
             <Image
-              src="/assets/images/oneearth logo.svg"
+              src="/assets/images/oneearth logo.jpg"
               alt="One Earth Logo"
               width={140}
               height={40}

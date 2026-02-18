@@ -15,7 +15,7 @@ const NavigationMenu = React.forwardRef<
   <NavigationMenuPrimitive.Root
     ref={ref}
     className={cn(
-      "relative z-10 flex max-w-max flex-1 items-center justify-center",
+      "relative z-50 flex w-full items-center justify-end",
       className
     )}
     {...props}
@@ -33,7 +33,7 @@ const NavigationMenuList = React.forwardRef<
   <NavigationMenuPrimitive.List
     ref={ref}
     className={cn(
-      "group flex flex-1 list-none items-center justify-center space-x-1",
+      "group flex list-none items-center space-x-2",
       className
     )}
     {...props}
@@ -72,12 +72,15 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+      "absolute left-0 top-0 w-screen max-w-none",
+      "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out",
+      "data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out",
       className
     )}
     {...props}
   />
 ))
+
 
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
@@ -89,19 +92,28 @@ const NavigationMenuViewport = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => (
-  <div className={cn("absolute top-full left-1/2 -translate-x-[74%] flex box-shadow-none")}>
+  <div className="absolute top-full left-0 right-0 w-screen translate-x-[-9%] translate-y-[11%]">
+
     <NavigationMenuPrimitive.Viewport
+      ref={ref}
       className={cn(
-        "!shadow-none origin-top-center relative mt-0 h-[var(--radix-navigation-menu-viewport-height)] w-screen overflow-hidden bg-white text-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in",
+        "relative w-screen max-w-none",
+        "h-[var(--radix-navigation-menu-viewport-height)]",
+        "bg-white text-foreground",
+        "overflow-hidden",
+        "!shadow-none",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out",
+        "data-[state=open]:fade-in data-[state=closed]:fade-out",
         className
       )}
-      ref={ref}
       {...props}
     />
   </div>
-))
+));
+
 NavigationMenuViewport.displayName =
-  NavigationMenuPrimitive.Viewport.displayName
+  NavigationMenuPrimitive.Viewport.displayName;
+
 
 const NavigationMenuIndicator = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Indicator>,

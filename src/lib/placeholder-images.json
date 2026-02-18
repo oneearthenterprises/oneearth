@@ -9,19 +9,19 @@
     {
       "id": "project-ayubhava",
       "description": "A serene wellness-oriented setting for Ayubhava.",
-      "imageUrl": "https://images.unsplash.com/photo-1666009711663-a9c51b15a05b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3ZWxsbmVzcyUyMG5hdHVyZXxlbnwwfHx8fDE3NzA5NjEwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/top-view-lentils-with-goji-berries-table (1).jpg",
       "imageHint": "wellness nature"
     },
     {
       "id": "project-royalinfra",
       "description": "Modern infrastructure representing Royal Infra.",
-      "imageUrl": "https://images.unsplash.com/photo-1759111135279-a5c517599412?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBpbmZyYXN0cnVjdHVyZXxlbnwwfHx8fDE3NzA5NjEwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/Modern infrastructure representing Royal Infra..jpg",
       "imageHint": "modern infrastructure"
     },
     {
       "id": "project-globalroots",
       "description": "Connecting communities through globally-inspired and locally-rooted projects.",
-      "imageUrl": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBjb21tdW5pdHl8ZW58MHx8fHwxNzcxMDM1MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/Global Roots.jpg",
       "imageHint": "global community"
     },
     {
@@ -33,8 +33,8 @@
     {
       "id": "core-value-future",
       "description": "Abstract image representing future-ready businesses",
-      "imageUrl": "https://images.unsplash.com/photo-1532072983668-720aad098512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnV0dXJlJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzcwOTc0OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "future business"
+      "imageUrl": "/assets/images/lasseholsthansen-town-3082001_1280.jpg",
+      "imageHint": "future business" 
     },
     {
       "id": "core-value-growth",
@@ -45,19 +45,19 @@
     {
       "id": "core-value-tech",
       "description": "Image representing technology and IT services",
-      "imageUrl": "https://images.unsplash.com/photo-1768633647910-7e6fb53e5b0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVjaG5vbG9neSUyMHNlcnZpY2VzfGVufDB8fHx8MTc3MDk3NDk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/buffik-business-5475661_1280.jpg",
       "imageHint": "technology services"
     },
     {
       "id": "core-value-ecommerce",
       "description": "Image representing e-commerce",
-      "imageUrl": "https://images.unsplash.com/photo-1605513524042-426bace35fc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjByZXRhaWx8ZW58MHx8fHwxNzcwOTc0OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/core-value-ecommerce.jpg",
       "imageHint": "ecommerce retail"
-    },
+    }, 
     {
       "id": "core-value-realestate",
       "description": "Image representing real estate",
-      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzcwOTMzMDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/gregorybutler-large-home-389271_1280.jpg",
       "imageHint": "modern architecture"
     },
     {

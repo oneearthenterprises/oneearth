@@ -13,12 +13,12 @@ function HeroSection() {
   return (
     <section id="overview" className="w-full bg-white md
     :pt-16 pt-10 pb-12">
-      <div className="container mx-auto md:py-12 py-8 px-4 text-left sm:px-6 lg:px-8">
+      <div className="container mx-auto md:py-12 py-4 px-4 text-left sm:px-6 lg:px-8">
         <h1 className="text-5xl font-light tracking-tight text-foreground sm:text-6xl md:text-7xl">
         Create. Amaze. Inspire.
         </h1>
         <p className="mt-6 text-lg text-foreground md:text-xl" style={{color: '#27272a', fontSize: '16px'}}>
-        The One Earth Enterprises builds value across IT, real estate, and e-commerce by engineering growth--driven, future-focused business ecosystems.
+        The One Earth Enterprises builds value across IT, real estate, and e-commerce by engineering growth-driven, future-focused business ecosystems.
         </p>
       </div>
       <div className="w-full">
@@ -37,7 +37,7 @@ function HeroSection() {
 
 function WhatWeDoSection() {
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white md:py-16 py-8"> 
       <div className="container mx-auto grid  grid-cols-1 gap-y-8 px-4 md:grid-cols-[3fr_5fr] md:gap-x-16 lg:px-8">
         <div className="">
           <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
@@ -47,12 +47,9 @@ function WhatWeDoSection() {
             Building Businesses That Last
           </h2>
         </div>
-        <div className="">
+        <div className=" md:mt-8">
           <p className="text-lg leading-relaxed text-foreground" style={{color: '#27272a', fontSize: '16px'}}>
-            At One Earth Enterprises, we bring together technology, commerce,
-            and infrastructure to build businesses that last. Guided by innovation
-            and grounded execution, we focus on creating long-term value for
-            partners, clients, and communities.
+           One Earth Enterprises was founded with a long-term vision to build and scale resilient businesses that create sustainable value across India and global markets. As a diversified parent company, we provide strategic leadership, governance, and disciplined capital allocation to our subsidiaries operating in real estate, e-commerce, IT services, and social media marketing. Our focus is on developing scalable enterprises that drive digital transformation, commerce innovation, brand growth, and infrastructure development. Through operational excellence and responsible stewardship, we empower our businesses to compete globally while remaining anchored in strong fundamentals. Our ambition is to build an integrated group of companies that deliver consistent performance, foster strategic partnerships, and generate enduring value for investors, clients, and communities.
           </p>
         </div>
       </div>
@@ -64,7 +61,7 @@ function FoundersNoteSection() {
   return (
     <section id="founders-note" className="bg-white py-12 sm:py-16">
       <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16">
           <div className="relative h-screen w-full overflow-hidden rounded-lg">
             <Image
               src="/assets/images/founders.png"
@@ -148,7 +145,7 @@ function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="pt-8 pb-16 sm:pb-24">
+    <section id="projects" className="pt-8 pb-16 sm:pb-14">
       <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -262,15 +259,15 @@ function GuidingPrinciplesSection() {
   ];
 
   return (
-    <section id="principles" className="bg-white pt-8 pb-16 sm:py-24">
-      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="principles" className="bg-white pt-8 pb-4 sm:py-18">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Our Guiding Principles
             </h2>
           </div>
-          <div className="grid grid-cols-1  gap-8">
+          <div className=" grid grid-cols-1 md:grid-cols-4 py-8 gap-8 md:pt-16 pt-8">
             {principles.map((principle) => (
               <div key={principle.title}>
                 <h3 className="font-semibold text-foreground text-lg">{principle.title}</h3>

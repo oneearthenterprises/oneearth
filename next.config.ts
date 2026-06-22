@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // 👈 static export (IMPORTANT)
-
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -12,7 +10,7 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    unoptimized: true, // 👈 required for static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

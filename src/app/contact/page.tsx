@@ -24,6 +24,8 @@ export const metadata: Metadata = {
   ],
 };
 
+export const dynamic = "force-static";
+
 const page = () => {
   const phoneNumber = "+91 700 998 4070";
   const whatsappNumber = "+91 700 998 4070";
@@ -196,40 +198,6 @@ const page = () => {
           </aside>
         </div>
       </main>
-
-      <section className="container mx-auto md:py-12 py-4 px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border bg-white shadow-sm p-6">
-          <h2 className="text-3xl font-semibold">Still need help?</h2>
-          <p className="mt-2 text-muted-foreground">
-            If you'd like a simple summary, use the details below to reach us directly.
-          </p>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <div className="rounded-3xl border bg-slate-50 p-5">
-              <p className="text-sm font-medium text-slate-500">Phone</p>
-              <p className="mt-3 text-lg font-semibold text-slate-900">{phoneNumber}</p>
-              <a href={`tel:${phoneNumber.replace(/\s+/g, "")}`} className="mt-4 inline-block text-sm font-medium text-teal-600 hover:underline">
-                Call now
-              </a>
-            </div>
-            <div className="rounded-3xl border bg-slate-50 p-5">
-              <p className="text-sm font-medium text-slate-500">Email</p>
-              <p className="mt-3 text-lg font-semibold text-slate-900">{email}</p>
-              <a href={`mailto:${email}`} className="mt-4 inline-block text-sm font-medium text-teal-600 hover:underline">
-                Send email
-              </a>
-            </div>
-            <div className="rounded-3xl border bg-slate-50 p-5">
-              <p className="text-sm font-medium text-slate-500">Office</p>
-              <p className="mt-3 text-lg font-semibold text-slate-900">{addressLine1}</p>
-              <p className="text-sm text-slate-600">{addressLine2}</p>
-              <a href={mapsLink} target="_blank" rel="noreferrer" className="mt-4 inline-block text-sm font-medium text-teal-600 hover:underline">
-                Find us on Google Maps
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

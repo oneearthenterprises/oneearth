@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Phone, MessageCircle, Mail } from 'lucide-react';
 
 export function Footer() {
   const [year, setYear] = useState(new Date().getFullYear());
@@ -33,13 +34,31 @@ export function Footer() {
             <li><Link href="/people-and-careers" className="text-sm text-foreground hover:text-primary">People & Careers</Link></li>
             <li><Link href="/news" className="text-sm text-foreground hover:text-primary">News</Link></li>
             <li><Link href="/blogs" className="text-sm text-foreground hover:text-primary">Blogs</Link></li>
+            <li><Link href="/contact" className="text-sm text-foreground hover:text-primary">Contact</Link></li>
           </ul>
         </div>
         <div>
-            <h3 className="mb-4 text-lg font-semibold text-foreground">Location</h3>
+            <h3 className="mb-4 text-lg font-semibold text-foreground">Location & Contact</h3>
             <p className="text-sm text-foreground">
-            One Earth Enterprises, SCO-67, First Floor, Guru Nanak Enclave, Old Ambala Road, Zirakpur, Punjab 140603
+            SCO 67, Old Ambala Rd, Guru Nanak Enclave, Dhakoli, Zirakpur, Punjab 140603
             </p>
+            <div className="mt-4 space-y-2">
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-foreground" />
+                <a href="tel:+917009984070" className="text-sm hover:underline">+91 700 998 4070</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4 text-foreground" />
+                <a href="https://wa.me/917009984070" target="_blank" rel="noreferrer" className="text-sm hover:underline">WhatsApp</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-foreground" />
+                <a href="mailto:info@theoneearthenterprises.com" className="text-sm hover:underline">info@theoneearthenterprises.com</a>
+              </div>
+              <div className="mt-2">
+                <Link href="/contact" className="text-sm font-medium hover:underline">Visit our contact page</Link>
+              </div>
+            </div>
         </div>
       </div>
       <div className="border-t border-border">

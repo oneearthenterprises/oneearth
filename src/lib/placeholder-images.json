@@ -3,12 +3,12 @@
     {
       "id": "project-intgelico",
       "description": "An image representing the IT sector and technology services for the Intellico project.",
-      "imageUrl": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/buffik-business-5475661_1280.jpg",
       "imageHint": "IT technology"
     },
     {
       "id": "project-ayubhava",
-      "description": "A serene wellness-oriented setting for Ayubhava.",
+      "description": "A serene wellness-oriented setting for Sage & soul.",
       "imageUrl": "/assets/images/project-ayubhava.jpg",
       "imageHint": "wellness nature"
     },
@@ -27,7 +27,7 @@
     {
       "id": "founder-portrait",
       "description": "A portrait of the company founder.",
-      "imageUrl": "https://images.unsplash.com/photo-1607031542107-f6f46b5d54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzA5NjUwNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/founders.png",
       "imageHint": "man portrait"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "core-value-growth",
       "description": "Image representing sustainable growth",
-      "imageUrl": "https://images.unsplash.com/photo-1542794961-5647fd97e6f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdXN0YWluYWJsZSUyMGdyb3d0aHxlbnwwfHx8fDE3NzA5NzQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/gregorybutler-large-home-389271_1280.jpg",
       "imageHint": "sustainable growth"
     },
     {
@@ -63,80 +63,116 @@
     {
       "id": "core-value-governance",
       "description": "Image representing governance and trust",
-      "imageUrl": "https://images.unsplash.com/photo-1641945512896-271de0eaf90d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cnVzdCUyMGdvdmVybmFuY2V8ZW58MHx8fHwxNzcwOTc0OTQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/oneearth logo.jpg",
       "imageHint": "trust governance"
     },
     {
       "id": "core-value-integrated",
       "description": "Image representing an integrated enterprise",
-      "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxpbnRlZ3JhdGVkJTIwZW50ZXJwcmlzZXxlbnwwfHx8fDE3NzA5NzQ5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/TH ONE EARTH.png",
       "imageHint": "integrated enterprise"
     },
     {
       "id": "about-us-banner",
       "description": "A modern cityscape view, representing a corporate holding company.",
-      "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/Global Roots.jpg",
       "imageHint": "cityscape architecture"
     },
     {
       "id": "core-values-banner",
       "description": "Abstract image representing corporate responsibility and values.",
-      "imageUrl": "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/lasseholsthansen-town-3082001_1280.jpg",
       "imageHint": "responsibility abstract"
     },
     {
       "id": "people-careers-banner",
       "description": "A diverse group of professionals in a modern office setting, looking ahead.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/people-careers-banner.png",
       "imageHint": "professional team"
     },
     {
       "id": "blogs-banner",
       "description": "A person writing in a notebook, symbolizing blog creation.",
-      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/blog.png",
       "imageHint": "writing blog"
     },
     {
       "id": "news-banner",
       "description": "A stack of newspapers, representing news and announcements.",
-      "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/news.png",
       "imageHint": "news newspapers"
     },
     {
       "id": "blog-post-1",
       "description": "A person working on a laptop with a cup of coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b3JrJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NzEwMDU2Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/buffik-business-5475661_1280.jpg",
       "imageHint": "work technology"
     },
     {
       "id": "blog-post-2",
       "description": "A cityscape with modern buildings.",
-      "imageUrl": "https://images.unsplash.com/photo-1617381519460-d87050ddeb92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3MDk0MzEwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/Global Roots.jpg",
       "imageHint": "city architecture"
     },
     {
       "id": "blog-post-3",
       "description": "A natural landscape with mountains and a lake.",
-      "imageUrl": "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmF0dXJlJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc3MDk2MjQ2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/project-ayubhava.jpg",
       "imageHint": "nature landscape"
+    },
+    {
+      "id": "blog-post-4",
+      "description": "A modern mixed-use community with green spaces and urban design.",
+      "imageUrl": "/assets/images/Modern infrastructure representing Royal Infra..jpg",
+      "imageHint": "mixed-use development"
+    },
+    {
+      "id": "blog-post-5",
+      "description": "A creative workspace representing smart infrastructure and innovation.",
+      "imageUrl": "/assets/images/oneearth logo.jpg",
+      "imageHint": "smart infrastructure"
+    },
+    {
+      "id": "blog-post-6",
+      "description": "A collaborative urban retail space representing community-driven growth.",
+      "imageUrl": "/assets/images/Global Roots.jpg",
+      "imageHint": "urban retail"
     },
     {
       "id": "news-article-1",
       "description": "A modern residential building with lush greenery, representing the Intellico project.",
-      "imageUrl": "https://images.unsplash.com/photo-1594488921098-a8183c79a334?q=80&w=1974&auto=format&fit=crop",
+      "imageUrl": "/assets/images/project-ayubhava.jpg",
       "imageHint": "green building"
     },
     {
       "id": "news-article-2",
       "description": "An image representing the IT sector and technology services for the Intellico project.",
-      "imageUrl": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "/assets/images/buffik-business-5475661_1280.jpg",
       "imageHint": "IT technology"
     },
     {
       "id": "news-article-3",
       "description": "Online shopping scene for e-commerce news article.",
-      "imageUrl": "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBzaG9wcGluZ3xlbnwwfHx8fDE3NzEwOTgyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/assets/images/oneearth logo.jpg",
       "imageHint": "online shopping"
+    },
+    {
+      "id": "news-article-4",
+      "description": "A city partnership announcement with sustainable infrastructure imagery.",
+      "imageUrl": "/assets/images/Global Roots.jpg",
+      "imageHint": "city partnership"
+    },
+    {
+      "id": "news-article-5",
+      "description": "Education and accelerator news with a modern innovation visual.",
+      "imageUrl": "/assets/images/news-article-5.jpg",
+      "imageHint": "education innovation"
+    },
+    {
+      "id": "news-article-6",
+      "description": "A vibrant retail and community hub image for a city center launch.",
+      "imageUrl": "/assets/images/core-value-ecommerce.jpg",
+      "imageHint": "urban retail hub"
     }
   ]
 }

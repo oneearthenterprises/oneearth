@@ -29,8 +29,16 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | One Earth Enterprises`,
+    title: `${post.title} | One Earth Enterprises Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://www.theoneearthenterprises.com/blogs/${params.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    keywords: [post.title, 'business blog', 'One Earth Enterprises', 'insights', 'articles'],
   };
 }
 

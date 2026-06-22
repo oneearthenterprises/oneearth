@@ -6,8 +6,36 @@ import {
   ArrowUpRight,
 } from 'lucide-react';
 
+import type { Metadata } from 'next';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+export const metadata: Metadata = {
+  title: 'One Earth Enterprises | IT Solutions, E-Commerce & Ayurvedic Wellness, Real Estate',
+  description:
+    'One Earth Enterprises is a premier business group driving growth across core IT sectors, real estate, global e-commerce, and premium Ayurvedic herbal infusion wellness.',
+  alternates: {
+    canonical: 'https://www.theoneearthenterprises.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  keywords: [
+    'One Earth Enterprises',
+    'IT solutions',
+    'e-commerce',
+    'real estate',
+    'Ayurvedic wellness',
+    'business group',
+    'digital transformation',
+    'sustainable growth',
+    'business ecosystem',
+  ],
+};
 
 function HeroSection() {
   return (
@@ -125,10 +153,11 @@ function ProjectsSection() {
       href: 'https://intellicoit.com/',
     },
     {
-      title: 'Ayubhava',
+      title: 'Sage & soul',
       description: 'A wellness-oriented project designed around nature, balance, and lifestyle.',
       imageId: 'project-ayubhava',
       tags: ['Wellness', 'Nature', 'Herbal Lifestyle'],
+      href: 'https://www.mysagensoul.com/',
     },
     {
       title: 'Royal Infra Group',

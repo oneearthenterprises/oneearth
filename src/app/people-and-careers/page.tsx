@@ -11,8 +11,25 @@ import {
 } from '@/components/ui/accordion';
 
 export const metadata: Metadata = {
-  title: 'People & Careers | One Earth Enterprises',
-  description: 'Join the team at One Earth Enterprises. See our open roles.',
+  title: 'Careers | One Earth Enterprises | Join Our Team',
+  description: 'Explore career opportunities at One Earth Enterprises. Join our team across IT, real estate, and e-commerce.',
+  alternates: {
+    canonical: 'https://www.theoneearthenterprises.com/people-and-careers',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    'careers',
+    'job opportunities',
+    'hiring',
+    'employment',
+    'team',
+    'career development',
+    'work culture',
+    'One Earth jobs',
+  ],
 };
 
 const openRoles = [

@@ -63,4 +63,58 @@ export const blogPosts: BlogPost[] = [
       <p class="mb-4">By adhering to these principles, we create assets that appreciate not just in financial value, but in their value to the people and communities they serve. It's a patient, thoughtful approach that defines our commitment to building for the future.</p>
     `,
   },
+  {
+    slug: 'building-value-with-mixed-use-communities',
+    title: 'Building Value with Mixed-Use Communities',
+    author: 'Priya Kapoor, Urban Planning Lead',
+    date: 'September 3, 2024',
+    imageId: 'blog-post-4',
+    excerpt:
+      'How mixed-use developments are creating resilient, pedestrian-friendly communities that drive long-term value.',
+    content: `
+      <p class="mb-4">Mixed-use communities are a key part of our strategy at One Earth Enterprises. By combining residential, retail, and workspace within walkable neighbourhoods, we create places that support everyday convenience, stronger social connections, and greater economic resilience.</p>
+      <p class="mb-4">These developments are designed to reduce commute times, increase foot traffic for local businesses, and offer residents easy access to amenities. They also attract a diverse mix of tenants and buyers, helping communities remain vibrant through market cycles.</p>
+      <h3 class="text-2xl font-bold mt-8 mb-4">The Benefits of Mixed-Use Design</h3>
+      <p class="mb-4"><strong>Convenience:</strong> Residents can access shops, services, and workspaces without long trips, improving quality of life and lowering environmental impact.</p>
+      <p class="mb-4"><strong>Community Activation:</strong> A blend of uses brings people together throughout the day, supporting local businesses and creating safer, more engaging streetscapes.</p>
+      <p class="mb-4"><strong>Investment Stability:</strong> Mixed-use assets often have more diverse income streams, making them more resilient during market changes.</p>
+      <p class="mb-4">At One Earth Enterprises, we are committed to building the kinds of neighbourhoods that future generations will value—for their sustainability, their convenience, and their ability to foster community.</p>
+    `,
+  },
+  {
+    slug: 'smart-infrastructure-for-sustainable-growth',
+    title: 'Smart Infrastructure for Sustainable Growth',
+    author: 'Ankit Mehra, Infrastructure Director',
+    date: 'September 18, 2024',
+    imageId: 'blog-post-5',
+    excerpt:
+      'Using smart infrastructure to reduce waste, improve comfort, and create more efficient urban environments.',
+    content: `
+      <p class="mb-4">Smart infrastructure is a major theme for our projects. By introducing connected systems for energy, water, and mobility, we can make buildings more efficient and make cities easier to live in.</p>
+      <p class="mb-4">Our approach includes smart lighting, building management systems, and digital tenant services that improve performance while lowering operating costs. It also enables faster responses to changing conditions and tenant needs.</p>
+      <h3 class="text-2xl font-bold mt-8 mb-4">Why Smart Infrastructure Matters</h3>
+      <p class="mb-4"><strong>Efficiency:</strong> Real-time monitoring allows us to reduce energy and water use without sacrificing comfort.</p>
+      <p class="mb-4"><strong>Tenant Experience:</strong> Connected buildings make it easier for occupants to interact with services, access spaces, and enjoy healthier environments.</p>
+      <p class="mb-4"><strong>Scalability:</strong> Smart systems can be tuned for different asset classes, from offices to retail and residential communities.</p>
+      <p class="mb-4">In every project, we look for ways to weave smart infrastructure into the design so it delivers both practical value and better long-term sustainability.</p>
+    `,
+  },
+  {
+    slug: 'ventures-that-create-meaningful-impact',
+    title: 'Ventures That Create Meaningful Impact',
+    author: 'Riya Sharma, Ventures Lead',
+    date: 'October 2, 2024',
+    imageId: 'blog-post-6',
+    excerpt:
+      'Exploring how One Earth Enterprises invests in startups and business models that generate positive social and environmental outcomes.',
+    content: `
+      <p class="mb-4">Our venture investments are guided by a simple belief: impact and return can coexist. We back companies that solve real problems in real estate, commerce, and technology while creating good outcomes for people and the planet.</p>
+      <p class="mb-4">From sustainable product brands to logistics startups and proptech platforms, we look for founders with a clear vision, strong execution, and a commitment to measurable impact.</p>
+      <h3 class="text-2xl font-bold mt-8 mb-4">What We Look For</h3>
+      <p class="mb-4"><strong>Market fit:</strong> Products and services that address meaningful demand in growing markets.</p>
+      <p class="mb-4"><strong>Impact potential:</strong> Startups that reduce waste, improve access, or enable more efficient use of resources.</p>
+      <p class="mb-4"><strong>Founder strength:</strong> Teams that combine domain expertise with the ability to build and scale responsibly.</p>
+      <p class="mb-4">By investing thoughtfully, we support ventures that not only grow financially, but also contribute to a better future.</p>
+    `,
+  },
 ];

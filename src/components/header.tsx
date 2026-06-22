@@ -35,6 +35,7 @@ const aboutMenuItems: { title: string; href: string }[] = [
 const mainNavLinks: { title: string; href: string }[] = [
   { title: "Founder's Note", href: '/founders-note' },
   { title: 'People & Careers', href: '/people-and-careers' },
+  { title: 'Contact', href: '/contact' },
 ];
 
 const newsAndUpdatesLinks = [

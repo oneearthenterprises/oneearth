@@ -2,8 +2,24 @@ import { type Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Leadership | One Earth Enterprises",
-  description: "A message from the founder of One Earth Enterprises.",
+  title: "Founder's Note | One Earth Enterprises | Leadership Vision",
+  description: "A message from the founder of One Earth Enterprises sharing the vision and philosophy behind the company.",
+  alternates: {
+    canonical: 'https://www.theoneearthenterprises.com/founders-note',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    'founder message',
+    'leadership vision',
+    'company philosophy',
+    'long-term strategy',
+    'business values',
+    'founder insight',
+    'corporate vision',
+  ],
 };
 
 export default function FoundersNotePage() {

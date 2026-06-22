@@ -35,8 +35,16 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.title} | One Earth Enterprises`,
+    title: `${article.title} | One Earth Enterprises News`,
     description: article.excerpt,
+    alternates: {
+      canonical: `https://www.theoneearthenterprises.com/news/${params.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    keywords: [article.title, 'news', 'One Earth Enterprises', 'announcements', 'updates'],
   };
 }
 

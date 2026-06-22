@@ -9,8 +9,25 @@ import { newsArticles } from '@/lib/news-articles';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'News | One Earth Enterprises',
-  description: 'Latest news and announcements from One Earth Enterprises.',
+  title: 'News | One Earth Enterprises | Latest Updates',
+  description: 'Latest news and announcements from One Earth Enterprises on projects, partnerships, and business developments.',
+  alternates: {
+    canonical: 'https://www.theoneearthenterprises.com/news',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    'One Earth news',
+    'business announcements',
+    'company updates',
+    'project launches',
+    'partnerships',
+    'real estate developments',
+    'IT solutions news',
+    'e-commerce updates',
+  ],
 };
 
 export default function NewsPage() {

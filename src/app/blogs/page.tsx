@@ -9,8 +9,25 @@ import { blogPosts } from '@/lib/blog-posts';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
-  title: 'Blogs | One Earth Enterprises',
-  description: 'Insights and articles from the team at One Earth Enterprises.',
+  title: 'Blogs | One Earth Enterprises | Business Insights & Articles',
+  description: 'Insights and articles from the team at One Earth Enterprises on IT, real estate, e-commerce, and sustainable business growth.',
+  alternates: {
+    canonical: 'https://www.theoneearthenterprises.com/blogs',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    'business blogs',
+    'IT insights',
+    'real estate articles',
+    'e-commerce strategies',
+    'digital transformation',
+    'sustainable growth',
+    'business development',
+    'entrepreneurship',
+  ],
 };
 
 export default function BlogsPage() {

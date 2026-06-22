@@ -21,7 +21,7 @@ export function PageHero({ title, bannerImageId, links }: PageHeroProps) {
   const contentId = `#${title.toLowerCase().replace(/ & /g, '-and-').replace(/\s+/g, '-')}-content`;
 
   return (
-    <section id={`${title.toLowerCase()}-hero`} className="relative h-screen w-full">
+    <section id={`${title.toLowerCase()}-hero`} className="relative md:h-screen h-[500px] w-full">
       {bannerImage && (
         <Image
           src={bannerImage.imageUrl}

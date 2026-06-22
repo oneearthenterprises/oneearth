@@ -6,9 +6,25 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Responsibility | One Earth Enterprises',
+  title: 'Core Values | One Earth Enterprises | Our Principles',
   description:
-    'Learn about our long-term vision for building future-ready businesses.',
+    'Learn about the core values and guiding principles of One Earth Enterprises.',
+  alternates: {
+    canonical: 'https://www.theoneearthenterprises.com/core-values',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    'core values',
+    'business principles',
+    'corporate responsibility',
+    'governance',
+    'ethical leadership',
+    'sustainable business',
+    'company culture',
+  ],
 };
 
 const sections = [

@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Phone, MessageCircle, Mail } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
+
 
 export function Footer() {
   const [year, setYear] = useState(new Date().getFullYear());
@@ -39,10 +40,11 @@ export function Footer() {
         </div>
         <div>
             <h3 className="mb-4 text-lg font-semibold text-foreground">Location & Contact</h3>
-            <p className="text-sm text-foreground">
-            SCO 67, Old Ambala Rd, Guru Nanak Enclave, Dhakoli, Zirakpur, Punjab 140603
-            </p>
             <div className="mt-4 space-y-2">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-foreground" />
+                <a href="https://maps.app.goo.gl/QFY3kSQf7y31LrJb8" target="_blank" rel="noreferrer" className="text-sm hover:underline">Get directions</a>
+              </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-foreground" />
                 <a href="tel:+917009984070" className="text-sm hover:underline">+91 700 998 4070</a>
@@ -61,6 +63,7 @@ export function Footer() {
             </div>
         </div>
       </div>
+    
       <div className="border-t border-border">
         <div className="  flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8 w-full">
           <p className="text-sm text-foreground  text-center w-full">

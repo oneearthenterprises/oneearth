@@ -63,13 +63,13 @@
     {
       "id": "core-value-governance",
       "description": "Image representing governance and trust",
-      "imageUrl": "/assets/images/oneearth logo.jpg",
+      "imageUrl": "/assets/images/1core-value-governance.png",
       "imageHint": "trust governance"
     },
     {
       "id": "core-value-integrated",
       "description": "Image representing an integrated enterprise",
-      "imageUrl": "/assets/images/TH ONE EARTH.png",
+      "imageUrl": "/assets/images/integrated enterprise.png",
       "imageHint": "integrated enterprise"
     },
     {

@@ -72,81 +72,66 @@ export default function RootLayout({
         </Script>
 
 
-
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Sage and Soul",
-      "item": "https://www.mysagensoul.com/",
-      "description": "Sage and Soul offers thoughtfully designed lifestyle and wellness products focused on comfort, quality, and mindful living."
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Forest Gate Trails",
-      "item": "https://forestgatetrails.com/",
-      "description": "Forest Gate Trails is a peaceful nature getaway offering comfortable stays, scenic surroundings, and a relaxing experience in Morni Hills."
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "IntellicoIT",
-      "item": "https://intellicoit.com/",
-      "description": "IntellicoIT provides technology and digital solutions designed to help businesses build, manage, and grow their online presence."
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Order Now",
-      "item": "https://www.mysagensoul.com/",
-      "description": "Order products online from Sage and Soul with a convenient shopping experience and quality lifestyle products."
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Book Now",
-      "item": "https://forestgatetrails.com/",
-      "description": "Book your stay at Forest Gate Trails and enjoy a peaceful nature retreat surrounded by the scenic beauty of Morni Hills."
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "name": "Online Presence",
-      "item": "https://intellicoit.com/",
-      "description": "Explore IntellicoIT's digital solutions and services for creating a strong and effective online presence."
-    }
-  ]
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Sage and Soul',
+                  item: 'https://www.mysagensoul.com/',
+                  description:
+                    'Sage and Soul offers thoughtfully designed lifestyle and wellness products focused on comfort, quality, and mindful living.',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Forest Gate Trails',
+                  item: 'https://forestgatetrails.com/',
+                  description:
+                    'Forest Gate Trails is a peaceful nature getaway offering comfortable stays, scenic surroundings, and a relaxing experience in Morni Hills.',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: 'IntellicoIT',
+                  item: 'https://intellicoit.com/',
+                  description:
+                    'IntellicoIT provides technology and digital solutions designed to help businesses build, manage, and grow their online presence.',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 4,
+                  name: 'Order Now',
+                  item: 'https://www.mysagensoul.com/',
+                  description:
+                    'Order products online from Sage and Soul with a convenient shopping experience and quality lifestyle products.',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 5,
+                  name: 'Book Now',
+                  item: 'https://forestgatetrails.com/',
+                  description:
+                    'Book your stay at Forest Gate Trails and enjoy a peaceful nature retreat surrounded by the scenic beauty of Morni Hills.',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 6,
+                  name: 'Online Presence',
+                  item: 'https://intellicoit.com/',
+                  description:
+                    "Explore IntellicoIT's digital solutions and services for creating a strong and effective online presence.",
+                },
+              ],
+            }),
+          }}
+        />
 
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
